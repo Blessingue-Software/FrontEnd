@@ -1,3 +1,15 @@
 body {
   font-family: "Noto Sans KR", sans-serif;
 }
+
+#left_margin {
+  margin-left: 24px;
+}
+
+#top_margin {
+  margin-top: 140px;
+}
+
+#way_top_margin {
+  margin-top: 50px;
+}
