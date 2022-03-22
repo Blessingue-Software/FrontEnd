@@ -7,7 +7,7 @@ body {
 }
 
 #top_margin {
-  margin-top: 140px;
+  margin-top: 200px;
 }
 
 #way_top_margin {
@@ -42,4 +42,5 @@ label {
 
 ::placeholder {
   color: #e5e5e5;
+  font-weight: 500  ;
 }

@@ -39,9 +39,9 @@ export const LoginButton = styled.button`
   color: #ffffff;
   border: 0;
   border-radius: 12px;
-  width: 30%;
+  width: 300px;
   height: 54px;
-  margin: 24px auto;
+  margin: 48px auto;
   font-size: 24px;
   font-weight: 900;
 `;
