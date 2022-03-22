@@ -20,7 +20,7 @@ export const Signup = styled.div`
 
 export const SignupInput = styled.input`
   display: block;
-  width: 30%;
+  width: 80%;
   height: 12px;
   margin: 20px 20px;
   padding: 20px;
@@ -52,7 +52,7 @@ export const SignupButton = styled.button`
   color: #ffffff;
   border: 0;
   border-radius: 12px;
-  width: 50%;
+  width:200px;
   height: 72px;
   margin: 24px auto;
   font-size: 24px;
@@ -65,7 +65,7 @@ export const SignupCancelButton = styled.button`
   color: #ffffff;
   border: 0;
   border-radius: 12px;
-  width: 50%;
+  width:150px;
   height: 72px;
   margin: 24px auto;
   font-size: 24px;
@@ -74,7 +74,6 @@ export const SignupCancelButton = styled.button`
 
 export const BtnFlex = styled.div`
   display: flex;
-  width: 30%;
   margin: 0 auto;
 `;
 

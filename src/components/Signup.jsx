@@ -3,54 +3,27 @@ import * as S from "./Style";
 import "../index.css";
 export default function Signup() {
   return (
-    <div>
-      <form action="/라우터" method="post">
-        <S.MainText>Way</S.MainText>
-        <S.BlueTopBar_Signup></S.BlueTopBar_Signup>
-          <S.SignupLabel htmlFor="ID">ID</S.SignupLabel>
-        <S.Signup>
-          <S.SignupInput
-            type="text"
-            placeholder="ID"
-            name="ID"
-            required
-          ></S.SignupInput>
-          <S.OverlapButton>
-            중복검사
-          </S.OverlapButton>
-        </S.Signup>
-        <S.Signup>
-          <S.SignupLabel htmlFor="PW">PW</S.SignupLabel>
-          <S.SignupInput
-            type="text"
-            placeholder="PW"
-            name="PW"
-            required
-          ></S.SignupInput>
-        </S.Signup>
-        <S.Signup>
-          <S.SignupLabel htmlFor="PW 2">PW 2</S.SignupLabel>
-          <S.SignupInput
-            type="text"
-            placeholder="PW 2"
-            name="PW 2"
-            required
-          ></S.SignupInput>
-        </S.Signup>
-        <S.Signup>
-          <S.SignupLabel htmlFor="Email">Email</S.SignupLabel>
-          <S.SignupInput
-            type="text"
-            placeholder="Email"
-            name="Email"
-            required
-          ></S.SignupInput>
-        </S.Signup>
-        <S.BtnFlex>
-          <S.SignupButton>회원가입</S.SignupButton>
-          <S.SignupCancelButton id="left_margin">취소</S.SignupCancelButton>
-        </S.BtnFlex>
-      </form>
-    </div>
+    <form action="/라우터" method="post">
+      <S.MainText>Way</S.MainText>
+      <S.BlueTopBar></S.BlueTopBar>
+      <S.SignupLabel htmlFor="username">Username</S.SignupLabel>
+      <S.SignupInput type="text" placeholder="ID" id="username" />
+
+      <S.SignupLabel htmlFor="password">Password</S.SignupLabel>
+      <S.SignupInput type="password" placeholder="Password" id="password" />
+
+      <S.BtnFlex>
+        <S.SignupButton>회원가입</S.SignupButton>
+        <S.SignupCancelButton>취소</S.SignupCancelButton>
+      </S.BtnFlex>
+      {/* <div class="social">
+        <div class="go">
+          <i class="fab fa-google"></i> Google
+        </div>
+        <div class="fb">
+          <i class="fab fa-facebook"></i> Facebook
+        </div>
+      </div> */}
+    </form>
   );
 }
