@@ -5,7 +5,7 @@ import Signup from "./Signup";
 export default function main() {
   return (
     <div>
-      <Login />
+      <Signup />
     </div>
   );
 }

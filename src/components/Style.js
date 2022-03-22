@@ -14,6 +14,7 @@ export const LoginInput = styled.input`
 export const Signup = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
 `;
 
@@ -28,8 +29,6 @@ export const SignupInput = styled.input`
   border: 1px solid #ccc;
 `;
 export const SignupLabel = styled.label`
-  display: flex;
-  align-items: center;
   font-size: 24px;
   font-weight: 700;
 `;
@@ -101,4 +100,15 @@ export const MainText = styled.h1`
   color: #61dafb;
   font-size: 36px;
   text-align: center;
+`;
+export const OverlapButton = styled.button`
+  display: flex;
+  background-color: #61dafb;
+  color: #ffffff;
+  border-radius: 4px;
+  border: 0;
+  height: 24px;
+  font-size: 12px;
+  text-align: center;
+  align-items: center;
 `;
