@@ -21,16 +21,22 @@ export const Signup = styled.div`
 export const SignupInput = styled.input`
   display: block;
   width: 80%;
-  height: 12px;
-  margin: 20px 20px;
+  height: 6px;
+  margin: 10px 20px;
   padding: 20px;
   font-size: 24px;
   border-radius: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #6E92FA;
 `;
 export const SignupLabel = styled.label`
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
+`;
+
+export const RedStar = styled.span`
+  font-size: 24px;
+  color: red;
+  display: inline;
 `;
 
 export const LoginButton = styled.button`
@@ -52,7 +58,7 @@ export const SignupButton = styled.button`
   color: #ffffff;
   border: 0;
   border-radius: 12px;
-  width:200px;
+  width: 200px;
   height: 72px;
   margin: 24px auto;
   font-size: 24px;
@@ -65,7 +71,7 @@ export const SignupCancelButton = styled.button`
   color: #ffffff;
   border: 0;
   border-radius: 12px;
-  width:150px;
+  width: 150px;
   height: 72px;
   margin: 24px auto;
   font-size: 24px;
@@ -75,6 +81,10 @@ export const SignupCancelButton = styled.button`
 export const BtnFlex = styled.div`
   display: flex;
   margin: 0 auto;
+`;
+
+export const Flex = styled.div`
+  display: flex;
 `;
 
 export const BlueTopBar = styled.hr`

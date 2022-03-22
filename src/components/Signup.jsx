@@ -1,22 +1,47 @@
+/* eslint-disable */
 import React from "react";
+import { useState } from "react";
 import * as S from "./Style";
+import $ from "jquery";
 import "../index.css";
 export default function Signup() {
+
+  let [id, setId] = useState();
+
   return (
     <form action="/라우터" method="post">
       <S.MainText id="top_margin">Way</S.MainText>
       <S.BlueTopBar></S.BlueTopBar>
-      <S.SignupLabel htmlFor="username">ID</S.SignupLabel>
-      <S.SignupInput type="text" placeholder="ID" id="username" />
-
-      <S.SignupLabel htmlFor="password">Password</S.SignupLabel>
-      <S.SignupInput type="password" placeholder="Password" id="password" />
-
-      <S.SignupLabel htmlFor="re-password">Password 재입력</S.SignupLabel>
+      <S.Flex>
+        <S.SignupLabel htmlFor="username">ID</S.SignupLabel>
+        <S.RedStar>&nbsp;*</S.RedStar>
+      </S.Flex>
       <S.SignupInput
-        type="re-password"
+        type="text"
+        placeholder="ID"
+        id="username"
+        required
+      />
+      <S.Flex>
+        <S.SignupLabel htmlFor="password">Password</S.SignupLabel>
+        <S.RedStar>&nbsp;*</S.RedStar>
+      </S.Flex>
+
+      <S.SignupInput
+        type="password"
+        placeholder="Password"
+        id="password"
+        required
+      />
+      <S.Flex>
+        <S.SignupLabel htmlFor="re-password">Password 재입력</S.SignupLabel>
+        <S.RedStar>&nbsp;*</S.RedStar>
+      </S.Flex>
+      <S.SignupInput
+        type="password"
         placeholder="Password 재입력"
         id="re-password"
+        required
       />
 
       <S.SignupLabel htmlFor="email">Email</S.SignupLabel>
