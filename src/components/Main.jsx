@@ -4,13 +4,14 @@ import Login from "./Login";
 import Signup from "./Signup";
 import { Link } from "react-router-dom";
 import Slider from "./ui/Silder";
+import * as S from "./Style";
+import Header from "./ui/Header";
 export default function main() {
+  const Logo = "127.0.0.1";
   return (
     <div>
-      <b>메인페이지입니다</b> <br />
-      <Link to="login">로그인</Link> <br />
-      <Link to="signup">회원가입</Link> <br />
-      <Slider></Slider>
+      <Header />
+      <Slider />
     </div>
   );
 }

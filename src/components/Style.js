@@ -163,3 +163,10 @@ export const OverlapButton = styled.button`
   text-align: center;
   align-items: center;
 `;
+
+export const LoginMenu = styled.div`
+  
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+`;

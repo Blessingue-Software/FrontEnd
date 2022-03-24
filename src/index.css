@@ -60,3 +60,7 @@ form * {
   font-weight: normal;
   font-style: normal;
 }
+
+.flo {
+  float: right
+}
