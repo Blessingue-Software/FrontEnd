@@ -45,7 +45,7 @@ export default function Signup() {
       />
 
       <S.SignupLabel htmlFor="email">Email</S.SignupLabel>
-      <S.SignupInput type="email" placeholder="Email" id="email" />
+      <S.SignupInput type="text" placeholder="Email" id="email" />
 
       <S.SignupLabel htmlFor="Major">Major</S.SignupLabel>
       <S.SignupInput

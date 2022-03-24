@@ -1,5 +1,9 @@
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "MinSans-Medium";
+}
+input {
+  font-weight: 700;
+
 }
 
 #left_margin {
@@ -7,7 +11,7 @@ body {
 }
 
 #top_margin {
-  margin-top: 120px;
+  margin-top: 180px;
 }
 
 #way_top_margin {
@@ -43,4 +47,12 @@ label {
   color: #a5a3a3;
   font-weight: 500;
   font-size: 16px;
+}
+
+@font-face {
+  font-family: "MinSans-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }

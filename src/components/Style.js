@@ -26,7 +26,7 @@ export const SignupInput = styled.input`
   padding: 20px;
   font-size: 24px;
   border-radius: 12px;
-  border: 1px solid #6E92FA;
+  border: 1px solid #6e92fa;
 `;
 export const SignupLabel = styled.label`
   font-size: 22px;
@@ -50,6 +50,11 @@ export const LoginButton = styled.button`
   margin: 48px auto;
   font-size: 24px;
   font-weight: 900;
+  &:hover {
+    background-color: #6e92fa;
+    transition: 0.3s;
+  }
+  transition: 0.3s;
 `;
 
 export const SignupButton = styled.button`
@@ -61,8 +66,14 @@ export const SignupButton = styled.button`
   width: 200px;
   height: 72px;
   margin: 24px auto;
+  margin-right: 10px;
   font-size: 24px;
   font-weight: 900;
+  &:hover {
+    background-color: #6e92fa;
+    transition: 0.3s;
+  }
+  transition: 0.3s;
 `;
 
 export const SignupCancelButton = styled.button`
@@ -76,6 +87,11 @@ export const SignupCancelButton = styled.button`
   margin: 24px auto;
   font-size: 24px;
   font-weight: 900;
+  &:hover {
+    background-color: #b1b1b1;
+    transition: 0.3s;
+  }
+  transition: 0.3s;
 `;
 
 export const BtnFlex = styled.div`
