@@ -9,7 +9,7 @@ export default function Signup() {
 
   return (
     <form action="/라우터" method="post">
-      <S.MainText id="top_margin">Way</S.MainText>
+      <S.MainText id="top_margin" href="/">127.0.0.1</S.MainText>
       <S.BlueTopBar></S.BlueTopBar>
       <S.Flex>
         <S.SignupLabel htmlFor="username">ID</S.SignupLabel>

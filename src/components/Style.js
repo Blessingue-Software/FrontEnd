@@ -134,7 +134,9 @@ export const BlueTopBar_Signup = styled.hr`
   border: 0;
 `;
 
-export const MainText = styled.h1`
+export const MainText = styled.a`
+  text-align: center;
+  display: block;
   color: #61dafb;
   font-size: 36px;
   text-align: center;

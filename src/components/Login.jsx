@@ -4,7 +4,10 @@ import "../index.css";
 export default function Signup() {
   return (
     <form action="/라우터" method="post">
-      <S.MainText>Way</S.MainText>
+      <S.MainText id="top_margin" href="/">
+        127.0.0.1
+      </S.MainText>
+
       <S.BlueTopBar></S.BlueTopBar>
       <S.SignupLabel htmlFor="username">Username</S.SignupLabel>
       <S.SignupInput type="text" placeholder="ID" id="username" />
