@@ -17,23 +17,22 @@ export default function Silder() {
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-      Autoplay={{
+      autoplay={{
         delay: 2500,
         disableOnInteraction: false,
       }}
     >
       <SwiperSlide>
-        <img src={SeaIg} alt="바다" class="slide" />
+        <img src={SeaIg} alt="바다" className="slide" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={SeaIg} alt="바다" class="slide" />
+        <img src={SeaIg} alt="바다" className="slide" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={SeaIg} alt="바다" class="slide" />
+        <img src={SeaIg} alt="바다" className="slide" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={SeaIg} alt="바다" class="slide" />
+        <img src={SeaIg} alt="바다" className="slide" />
       </SwiperSlide>
     </Swiper>
   );
