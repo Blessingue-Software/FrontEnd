@@ -22,7 +22,8 @@ export const SignupInput = styled.input`
   display: block;
   width: 80%;
   height: 6px;
-  margin: 10px 20px;
+  margin: 0 20px;
+  margin-bottom: 45px;
   padding: 20px;
   font-size: 24px;
   border-radius: 12px;
@@ -30,7 +31,10 @@ export const SignupInput = styled.input`
 `;
 export const SignupLabel = styled.label`
   font-size: 22px;
+  display: block;
   font-weight: 700;
+  margin-left: 20px;
+  margin-bottom: 10px;
 `;
 
 export const RedStar = styled.span`
@@ -41,7 +45,7 @@ export const RedStar = styled.span`
 
 export const LoginButton = styled.button`
   display: block;
-  background-color: #61dafb;
+  background-color: #6e92fa;
   color: #ffffff;
   border: 0;
   border-radius: 12px;
@@ -51,7 +55,7 @@ export const LoginButton = styled.button`
   font-size: 24px;
   font-weight: 900;
   &:hover {
-    background-color: #6e92fa;
+    background-color: #61dafb;
     transition: 0.3s;
   }
   transition: 0.3s;
@@ -72,7 +76,7 @@ export const LoginBottom = styled.a`
 `;
 export const SignupButton = styled.button`
   display: block;
-  background-color: #61dafb;
+  background-color: #6e92fa;
   color: #ffffff;
   border: 0;
   border-radius: 12px;
@@ -83,7 +87,7 @@ export const SignupButton = styled.button`
   font-size: 24px;
   font-weight: 900;
   &:hover {
-    background-color: #6e92fa;
+    background-color: #61dafb;
     transition: 0.3s;
   }
   transition: 0.3s;
@@ -120,7 +124,7 @@ export const BlueTopBar = styled.hr`
   display: block;
   width: 30%;
   height: 5px;
-  background-color: #61dafb;
+  background-color: #6e92fa;
   margin: 36px auto;
   border: 0;
 `;
@@ -129,7 +133,7 @@ export const BlueTopBar_Signup = styled.hr`
   display: block;
   width: 30%;
   height: 5px;
-  background-color: #61dafb;
+  background-color: #6e92fa;
   margin: 36px auto;
   border: 0;
 `;
@@ -137,13 +141,20 @@ export const BlueTopBar_Signup = styled.hr`
 export const MainText = styled.a`
   text-align: center;
   display: block;
-  color: #61dafb;
+  color: #6e92fa;
+  font-size: 36px;
+  text-align: center;
+`;
+export const LoginMainText = styled.a`
+  text-align: center;
+  display: block;
+  color: #6e92fa;
   font-size: 36px;
   text-align: center;
 `;
 export const OverlapButton = styled.button`
   display: flex;
-  background-color: #61dafb;
+  background-color: #6e92fa;
   color: #ffffff;
   border-radius: 4px;
   border: 0;
