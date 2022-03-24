@@ -1,9 +1,11 @@
 body {
   font-family: "MinSans-Medium";
 }
+a {
+  text-decoration: none;
+}
 input {
   font-weight: 700;
-
 }
 
 #left_margin {

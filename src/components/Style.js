@@ -57,6 +57,19 @@ export const LoginButton = styled.button`
   transition: 0.3s;
 `;
 
+export const LoginBottom = styled.a`
+  display: block;
+  color: #000000;
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration-line: none;
+  &:hover {
+    color: #6e92fa;
+    transition: 0.3s;
+  }
+  transition: 0.3s;
+`;
 export const SignupButton = styled.button`
   display: block;
   background-color: #61dafb;

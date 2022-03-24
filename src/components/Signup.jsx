@@ -5,7 +5,6 @@ import * as S from "./Style";
 import $ from "jquery";
 import "../index.css";
 export default function Signup() {
-
   let [id, setId] = useState();
 
   return (
@@ -16,17 +15,11 @@ export default function Signup() {
         <S.SignupLabel htmlFor="username">ID</S.SignupLabel>
         <S.RedStar>&nbsp;*</S.RedStar>
       </S.Flex>
-      <S.SignupInput
-        type="text"
-        placeholder="ID"
-        id="username"
-        required
-      />
+      <S.SignupInput type="text" placeholder="ID" id="username" required />
       <S.Flex>
         <S.SignupLabel htmlFor="password">Password</S.SignupLabel>
         <S.RedStar>&nbsp;*</S.RedStar>
       </S.Flex>
-
       <S.SignupInput
         type="password"
         placeholder="Password"
@@ -43,17 +36,15 @@ export default function Signup() {
         id="re-password"
         required
       />
-
       <S.SignupLabel htmlFor="email">Email</S.SignupLabel>
       <S.SignupInput type="text" placeholder="Email" id="email" />
-
       <S.SignupLabel htmlFor="Major">Major</S.SignupLabel>
       <S.SignupInput
         type="Major"
         placeholder="전공분야를 입력해주세요"
+        required
         id="Major"
       />
-
       <S.BtnFlex>
         <S.SignupButton>회원가입</S.SignupButton>
         <S.SignupCancelButton>취소</S.SignupCancelButton>
