@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const LoginInput = styled.input`
   display: block;
-  width: 30%;
-  height: 48px;
-  margin: 20px auto;
+  width: 100%;
+  height: 8px;
+  margin: 0 20px;
+  margin-bottom: 45px;
   padding: 20px;
   font-size: 24px;
   border-radius: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #6e92fa;
 `;
 
 export const Signup = styled.div`
@@ -20,9 +21,9 @@ export const Signup = styled.div`
 
 export const SignupInput = styled.input`
   display: block;
-  width: 80%;
-  height: 6px;
-  margin: 0 20px;
+  width: 100%;
+  height: 8px;
+  margin: 0 auto;
   margin-bottom: 45px;
   padding: 20px;
   font-size: 24px;
@@ -33,7 +34,6 @@ export const SignupLabel = styled.label`
   font-size: 22px;
   display: block;
   font-weight: 700;
-  margin-left: 20px;
   margin-bottom: 10px;
 `;
 
@@ -49,9 +49,11 @@ export const LoginButton = styled.button`
   color: #ffffff;
   border: 0;
   border-radius: 12px;
-  width: 300px;
+  width: 100%;
   height: 54px;
-  margin: 48px auto;
+  text-align: center;
+  margin-bottom: 48px;
+  margin-left: 18px;
   font-size: 24px;
   font-weight: 900;
   &:hover {
@@ -80,10 +82,10 @@ export const SignupButton = styled.button`
   color: #ffffff;
   border: 0;
   border-radius: 12px;
-  width: 200px;
+  margin: 0 auto;
+  width: 80%;
   height: 72px;
-  margin: 24px auto;
-  margin-right: 10px;
+  text-align: center;
   font-size: 24px;
   font-weight: 900;
   &:hover {
@@ -165,7 +167,6 @@ export const OverlapButton = styled.button`
 `;
 
 export const LoginMenu = styled.div`
-  
   display: inline-block;
   justify-content: center;
   align-items: center;

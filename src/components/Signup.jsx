@@ -1,16 +1,24 @@
 /* eslint-disable */
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import * as S from "./Style";
 import $ from "jquery";
 import "../index.css";
 export default function Signup() {
   let [id, setId] = useState();
+  const navigate = useNavigate();
 
+  function goBack() {
+    navigate(-1);
+  }
+  function goMain() {
+    navigate("/");
+  }
   return (
     <form action="/라우터" method="post">
-      <S.MainText href="/" style={{ marginTop: "360px" }}>
-        127.0.0.1
+      <S.MainText href="/" style={{ marginTop: "260px" }}>
+        localhost
       </S.MainText>
       <S.BlueTopBar></S.BlueTopBar>
       <S.Flex>
@@ -47,18 +55,12 @@ export default function Signup() {
         required
         id="Major"
       />
+
       <S.BtnFlex>
-        <S.SignupButton>회원가입</S.SignupButton>
-        <S.SignupCancelButton>취소</S.SignupCancelButton>
+        <S.SignupButton type="submit">회원가입</S.SignupButton>
+
+        {/* <S.SignupCancelButton onClick={goMain()}>취소</S.SignupCancelButton> */}
       </S.BtnFlex>
-      {/* <div class="social">
-        <div class="go">
-          <i class="fab fa-google"></i> Google
-        </div>
-        <div class="fb">
-          <i class="fab fa-facebook"></i> Facebook
-        </div>
-      </div> */}
     </form>
   );
 }

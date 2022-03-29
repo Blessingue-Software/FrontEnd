@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "../../index.css"
 import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,8 +16,8 @@ export default function Silder() {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSlideChange={() => console.log("slide change")}
+      // scrollbar={{ draggable: true }}
+      // onSlideChange={() => console.log("slide change")}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,

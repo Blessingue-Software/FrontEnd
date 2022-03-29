@@ -4,6 +4,17 @@ body {
 a {
   text-decoration: none;
 }
+.swiper-pagination-bullet {
+  background-color: #6e92fa !important;
+}
+.swiper-button-prev {
+  /* background-color: #6e92fa !important; */
+  color: #6e92fa !important;
+}
+.swiper-button-next {
+  /* color: #6e92fa !important; */
+  color: #6e92fa !important;
+}
 input {
   font-weight: 700;
 }
@@ -62,5 +73,9 @@ form * {
 }
 
 .flo {
-  float: right
+  float: right;
+}
+
+.swiper-pagenation-bullet {
+  background-color: #6e92fa !important;
 }

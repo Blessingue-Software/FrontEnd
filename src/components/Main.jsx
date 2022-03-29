@@ -7,7 +7,7 @@ import Slider from "./ui/Silder";
 import * as S from "./Style";
 import Header from "./ui/Header";
 export default function main() {
-  const Logo = "127.0.0.1";
+  const Logo = "localhost";
   return (
     <div>
       <Header />

@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as S from "../Style";
 export default function main() {
-  const Logo = "127.0.0.1";
+  const Logo = "localhost";
   return (
     <div>
       <S.Flex>
