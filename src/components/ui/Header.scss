@@ -1,0 +1,126 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /*중심축 배치 (현재는 중심축이 수평축)*/
+  align-items: center; /*반대축(현재는 반대축이 수직축)의 속성값 활용 */
+  background-color: olive;
+  padding: 8px 12px; /*위아래 8px, 양옆 12px*/
+}
+
+body {
+  margin: 0; /*바디태그 margin defalut값 때문에 흰선 발생. 이를 제거*/
+  font-family: "Source Sans Pro";
+}
+a {
+  text-decoration: none; /*모든 ankor태그의 컨텐츠에는 defalut로 밑줄 존재. 이를 제거*/
+  color: black;
+}
+
+.navbar__logo {
+  font-size: 24px;
+  color: white;
+}
+
+.navbar__logo i {
+  color: black;
+}
+
+.navbar__menu {
+  display: flex; /*메뉴를 일렬로 배치*/
+  list-style: none; /*ul태그의 점을 제거*/
+  padding-left: 0; /*패딩때문에 우측으로 치우쳐있는것을 되돌림*/
+}
+
+.navbar__menu li {
+  padding: 8px 12px; /*마우스 클릭영역확보*/
+}
+
+.navbar__menu li:hover {
+  background-color: yellow;
+  border-radius: 10px; /*테두리 둥글게*/
+}
+
+.navbar__icons {
+  padding-left: 0px; /*가운데 정렬*/
+  list-style: none;
+  color: white;
+  display: flex;
+}
+
+.navbar__icons li {
+  padding: 8px 12px;
+}
+
+/*
+레이아웃을 반응형으로 만들때는 media쿼리 사용
+특정 사이즈 이하가 될 경우, 웹 사이트의 메뉴가 제대로 보이지 않음
+이럴때 메뉴바를 아래로 내려가도록 만들자.
+*/
+
+@media screen and (max-width: 768px) {
+  /*로고,메뉴바가 수직으로 나오도록*/
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start; /*로고,메뉴바 모두 왼쪽 정렬*/
+    padding: 8px 24px; /*hover시 한줄 가득 색상표시 안되도록 */
+  }
+  /*메뉴바가 한줄에 하나씩*/
+  .navbar__menu {
+    flex-direction: column;
+    align-items: center; /*메뉴바만 가운데 정렬 */
+    width: 100%; /*메뉴바의 가운데 정렬을 위해 너비를 늘림*/
+  }
+
+  /*메뉴바 hover시 컨텐츠박스가 아닌 한 줄에 색상표시 */
+  .navbar__menu li {
+    width: 100%;
+    text-align: center; /*text는 왼쪽 정렬이 기본값이므로 center로 수정*/
+  }
+
+  /*로고를 가운데로*/
+  .navbar__icons {
+    justify-content: center; /*로고는 현재 반대축이므로 justify-content 사용*/
+    width: 100%;
+  }
+}
+
+.navbar__toogleBtn {
+  position: absolute; /*소속된 배치와 무관하게 위치 설정*/
+  right: 15px; /*우측에서 32px 거리둠*/
+  font-size: 24px;
+  color: black;
+}
+.navbar__toogleBtn {
+  display: none; /*일반 사이즈에선 나타나지 않음*/
+  position: absolute; /*소속된 배치와 무관하게 위치 설정*/
+  right: 15px; /*우측에서 32px 거리둠*/
+  font-size: 24px;
+  color: black;
+}
+@media screen and (max-width: 768px) {
+  .navbar__toogleBtn {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*메뉴바가 한줄에 하나씩*/
+  .navbar__menu {
+    display: none; /*현 사이즈에선 메뉴가 나타나지 않음*/
+    flex-direction: column;
+    align-items: center; /*메뉴바만 가운데 정렬 */
+    width: 100%; /*메뉴바의 가운데 정렬을 위해 너비를 늘림*/
+  }
+  /*로고를 가운데로*/
+  .navbar__icons {
+    display: none; /*현 사이즈에선 아이콘이 나타나지 않음*/
+    justify-content: center; /*로고는 현재 반대축이므로 justify-content 사용*/
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  /*active요소 추가*/
+  .active,
+  .active {
+    display: flex;
+  }
+}

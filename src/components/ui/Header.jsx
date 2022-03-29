@@ -1,21 +1,52 @@
 /* eslint-disable */
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as S from "../Style";
+import "./Header.scss";
 export default function main() {
   const Logo = "localhost";
+  let [open, setOpen] = useState(false);
+
+  let active = () => {
+    console.log("ok");
+    setOpen(!open);
+  };
+
   return (
-    <div>
-      <S.Flex>
-        <S.MainText href="/" style={{ margin: "0 auto" }}>
-          {Logo}
-        </S.MainText>
-        <br />
-        <S.LoginMenu>
-          <Link to="login" className="flo">로그인</Link> <br />
-          <Link to="signup" className="flo">회원가입</Link> <br />
-        </S.LoginMenu>
-      </S.Flex>
-    </div>
+    <nav className="navbar">
+      <div className="navbar__logo">
+        <i className="fab fa-amazon"></i>
+        <a href="">{Logo}</a>
+      </div>
+      <ul className="navbar__menu">
+        <li>
+          <a href="">home</a>
+        </li>
+        <li>
+          <a href="">Gallery</a>
+        </li>
+        <li>
+          <a href="">Service</a>
+        </li>
+        <li>
+          <a href="">FAQ</a>
+        </li>
+        <li>
+          <a href="">Contact</a>
+        </li>
+      </ul>
+      <ul className="navbar__icons">
+        <li>
+          <a className="fab fa-facebook">로그인</a>
+        </li>
+        <li>
+          <a className="fab fa-google">회원가입</a>
+        </li>
+      </ul>
+      {/* navbar__toogleBtn*/}
+      <a href="#" className={open ? "active" : ""} onClick={active}>
+        <i className="fas fa-bars">햄버거</i>
+      </a>
+    </nav>
   );
 }
