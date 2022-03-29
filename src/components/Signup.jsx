@@ -52,7 +52,6 @@ export default function Signup() {
       <S.SignupInput
         type="Major"
         placeholder="전공분야를 입력해주세요"
-        required
         id="Major"
       />
 

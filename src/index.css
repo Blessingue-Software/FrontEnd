@@ -30,7 +30,14 @@ input {
 #way_top_margin {
   margin-top: 50px;
 }
-
+a {
+  transition: 0.3s;
+}
+a:hover {
+  text-decoration: none;
+  transition: 0.3s;
+  color: #61dafb;
+}
 form {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -73,7 +80,7 @@ form * {
 }
 
 .flo {
-  float: right;
+  float: left;
 }
 
 .swiper-pagenation-bullet {
