@@ -1,69 +1,85 @@
-ul {
-  list-style:none;
+body {
+  margin: 0;
+  font-family: "Jua";
 }
-#header{
-  font-weight: bold;
-  font-size: 30px;
+
+a {
+  text-decoration: none;
   color: black;
 }
-.wrapper{
-  width: 100%;
-  min-height: 64px;
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: beige;
+  padding: 8px 12px;
 }
-.lists{
+
+.navbar__logo {
+  font-size: 24px;
+  color: violet;
+}
+
+.navbar__menu {
   display: flex;
-  margin-right: 60px;
+  list-style: none;
+  padding-left: 0;
 }
-.lists li{
-  margin-right: 20px;
-  margin-top: 10px;
+
+.navbar__menu li {
+  padding: 8px 12px;
 }
-.title{
-  font-size: 40px;
-  margin-left: 30px;
+.navbar__menu li:hover {
+  background-color: grey;
+  border-radius: 4px;
 }
-.log{
-  margin-right: 30px;
+
+.navbar__links {
+  list-style: none;
+  padding-left: 0;
+  color: teal;
+  display: flex;
 }
-#toggle{
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  color: black;
-  font-size: 40px;
+
+.navbar__links li {
+  padding: 8px 12px;
+}
+
+.navbar__toggleBtn {
   display: none;
-} // 화면이 작아졌을 때 목록을 보기위한 버튼 생성 none 으로 숨겨두기!!
-
-
-@media screen and (max-width: 960px) { 
-  .wrapper{
-      flex-direction: column;
-      align-items: flex-start;
-  }
-  .lists{
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-  }
-  .lists li{
-      padding: 5px 15px;
-  }
-  .log{
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      text-align: center;
-      padding-left: 30px;
-  }
-  #toggle{
-      display: block;
-  }
-
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
 }
 
-// 화면이 768px 보다 작아졌을 때에 해당할 스타일들 먹여놓기 
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar__links {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar__toggleBtn {
+    display: block;
+  }
 
-//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ//
+  .navbar__menu.active,
+  .navbar__links.active {
+    display: flex;
+  }
+}
