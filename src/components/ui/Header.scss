@@ -1,38 +1,36 @@
 body {
   margin: 0;
-  font-family: "Jua";
+  transition: all 0.3s;
+  background: #ebebeb;
 }
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: beige;
+  background-color: rgb(255, 255, 255);
   padding: 8px 12px;
 }
 
 .navbar__logo {
   font-size: 24px;
-  color: violet;
 }
 
 .navbar__menu {
   display: flex;
   list-style: none;
+  width: 60%;
+  justify-content: space-between;
   padding-left: 0;
+  padding-top: 20px;
 }
 
 .navbar__menu li {
   padding: 8px 12px;
-}
-.navbar__menu li:hover {
-  background-color: grey;
-  border-radius: 4px;
 }
 
 .navbar__links {
@@ -40,6 +38,7 @@ a {
   padding-left: 0;
   color: teal;
   display: flex;
+  padding-top: 20px;
 }
 
 .navbar__links li {
@@ -53,7 +52,7 @@ a {
   font-size: 24px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -81,5 +80,166 @@ a {
   .navbar__menu.active,
   .navbar__links.active {
     display: flex;
+  }
+}
+// --------------------
+
+h1,
+h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #262626;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#btn {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 25px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  background: white;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+#btn span {
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  top: 50%;
+  left: 50%;
+  background: #262626;
+  border-radius: 2px;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+#btn span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: gray;
+  transition: all 0.3s linear;
+}
+
+#btn span:nth-child(1) {
+  animation: span-first-off 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#btn span:nth-child(2) {
+  animation: span-second-off 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#btn span:nth-child(3) {
+  animation: span-third-off 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#btn.on:hover span::before {
+  width: 100%;
+  transition: all 0.3s linear;
+}
+
+#btn.on span:nth-child(1) {
+  animation: span-first-on 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#btn.on span:nth-child(2) {
+  animation: span-second-on 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#btn.on span:nth-child(3) {
+  animation: span-third-on 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes span-first-on {
+  0% {
+    transform: translate(-50%, -300%);
+  }
+  30% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+@keyframes span-first-off {
+  0% {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  30% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -300%);
+  }
+}
+
+@keyframes span-second-on {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    background: gray;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-150%, -50%) scale(0);
+  }
+}
+
+@keyframes span-second-off {
+  0% {
+    transform: translate(-150%, -50%) scale(0);
+  }
+  25% {
+    background: gray;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes span-third-on {
+  0% {
+    transform: translate(-50%, 200%);
+  }
+  30% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+@keyframes span-third-off {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  30% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, 200%);
   }
 }

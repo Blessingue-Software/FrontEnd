@@ -4,14 +4,10 @@ import { Link } from "react-router-dom";
 import * as S from "../Style";
 import "./Header.scss";
 import $ from "jquery";
-import { Navbar, NavDropdown, Container, Nav } from "react-bootstrap";
-export default function main() {
+export default function Header() {
   const Logo = "localhost";
-
-  const toggleBtn = document.querySelector(".navbar__toggleBtn");
-  const menu = document.querySelector(".navbar__menu");
-  const links = document.querySelector(".navbar__links");
   let status = 0;
+  let eStatus = 0;
   let click = () => {
     if (!status) {
       $(".navbar__menu").addClass("active");
@@ -24,41 +20,55 @@ export default function main() {
     }
   };
 
+  let eClick = () => {
+    if (status) {
+      $("#btn").removeClass("on");
+      eStatus = 1;
+    } else {
+      $("#btn").addClass("on");
+      eStatus = 0;
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar__logo">
         <i className="fab fa-apple"></i>
-        <a href="">민브로 코딩</a>
+        <S.MainText>{Logo}</S.MainText>
       </div>
       <ul className="navbar__menu">
         <li>
-          <a href="">홈</a>
+          <Link to="#">홈</Link>
         </li>
         <li>
-          <a href="">핫딜</a>
+          <Link to="#">핫딜</Link>
         </li>
         <li>
-          <a href="">포럼</a>
+          <Link to="#">포럼</Link>
         </li>
         <li>
-          <a href="">FAQ</a>
+          <Link to="#">FAQ</Link>
         </li>
         <li>
-          <a href="">채용</a>
+          <Link to="#">채용</Link>
         </li>
       </ul>
       <ul className="navbar__links">
         <li>
-          <i className="fab fa-facebook-square">페북</i>
+          <Link to="/login">로그인</Link>
         </li>
         <li>
-          <i className="fab fa-instagram">인스타</i>
+          <Link to="/signup">회원가입</Link>
         </li>
       </ul>
 
-      <a href="#" className="navbar__toggleBtn" onClick={click}>
-        <i className="fas fa-bars">함박</i>
-      </a>
+      <Link to="#" className="navbar__toggleBtn" onClick={click}>
+        <button id="btn" onClick={eClick}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </Link>
     </nav>
   );
 }
