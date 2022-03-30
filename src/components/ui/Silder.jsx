@@ -7,7 +7,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
-import SeaIg from "../img/바다이미지.png";
+// import SeaIg from "../img/바다이미지.png";
+import Emilia from "../img/에밀리아-멍.jpg";
 export default function Silder() {
   return (
     <Swiper
@@ -24,16 +25,16 @@ export default function Silder() {
       }}
     >
       <SwiperSlide>
-        <img src={SeaIg} alt="바다" className="slide" />
+        <img src={Emilia} alt="바다" className="slide" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={SeaIg} alt="바다" className="slide" />
+        <img src={Emilia} alt="바다" className="slide" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={SeaIg} alt="바다" className="slide" />
+        <img src={Emilia} alt="바다" className="slide" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={SeaIg} alt="바다" className="slide" />
+        <img src={Emilia} alt="바다" className="slide" />
       </SwiperSlide>
     </Swiper>
   );
