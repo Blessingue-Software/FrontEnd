@@ -42,7 +42,13 @@ export const RedStar = styled.span`
   color: red;
   display: inline;
 `;
-
+export const Nav = styled.li`
+  text-align: center;
+  display: block;
+  color: #787878;
+  font-size: 24px;
+  text-align: center;
+`;
 export const LoginButton = styled.button`
   display: block;
   background-color: #6e92fa;

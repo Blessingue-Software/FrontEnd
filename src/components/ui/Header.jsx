@@ -3,88 +3,36 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as S from "../Style";
 import "./Header.scss";
+import $ from "jquery";
+import { Navbar, NavDropdown, Container, Nav } from "react-bootstrap";
 export default function main() {
   const Logo = "localhost";
-  let [open, setOpen] = useState(false);
-
-  let active = () => {
-    console.log("ok");
-    setOpen(!open);
-  };
-
+  $("#toggle").click(function () {
+    $(".lists").toggle(400);
+    $(".log").toggle(400);
+  });
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">
-        Navbar
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">
-              Home <span className="sr-only">(current)</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Features
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Pricing
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link disabled">Disabled</a>
-          </li>
+    <section id="header">
+      <div className="wrapper">
+        <S.MainText className="title">{Logo}</S.MainText>
+        <ul className="lists">
+          <S.Nav>
+            <Link to="community">커뮤니티</Link>
+          </S.Nav>
+          <S.Nav>
+            <Link to="community">커뮤니티</Link>
+          </S.Nav>
+          <S.Nav>
+            <Link to="community">커뮤니티</Link>
+          </S.Nav>
+          <S.Nav>
+            <Link to="community">커뮤니티</Link>
+          </S.Nav>
         </ul>
+        <S.Nav className="log">
+          <Link to="login">Log In</Link>
+        </S.Nav>
       </div>
-    </nav>
-    // <nav className="navbar">
-    //   <div className="navbar__logo">
-    //     <i className="fab fa-amazon"></i>
-    //     <a href="">{Logo}</a>
-    //   </div>
-    //   <ul className="navbar__menu">
-    //     <li>
-    //       <a href="">home</a>
-    //     </li>
-    //     <li>
-    //       <a href="">Gallery</a>
-    //     </li>
-    //     <li>
-    //       <a href="">Service</a>
-    //     </li>
-    //     <li>
-    //       <a href="">FAQ</a>
-    //     </li>
-    //     <li>
-    //       <a href="">Contact</a>
-    //     </li>
-    //   </ul>
-    //   <ul className="navbar__icons">
-    //     <li>
-    //       <a className="fab fa-facebook">로그인</a>
-    //     </li>
-    //     <li>
-    //       <a className="fab fa-google">회원가입</a>
-    //     </li>
-    //   </ul>
-    //   {/* navbar__toogleBtn*/}
-    //   <a href="#" className={open ? "active" : ""} onClick={active}>
-    //     <i className="fas fa-bars">햄버거</i>
-    //   </a>
-    // </nav>
+    </section>
   );
 }
