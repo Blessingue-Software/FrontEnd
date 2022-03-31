@@ -1,7 +1,5 @@
 body {
-  margin: 0;
-  transition: all 0.3s;
-  background: #ebebeb;
+  transition: all 0.2s ease-in-out;
 }
 
 a {
@@ -14,10 +12,12 @@ a {
   align-items: center;
   background-color: rgb(255, 255, 255);
   padding: 8px 12px;
+  transition: all 0.2s ease-in-out;
 }
 
 .navbar__logo {
   font-size: 24px;
+  transition: all 0.2s ease-in-out;
 }
 
 .navbar__menu {
@@ -27,22 +27,26 @@ a {
   justify-content: space-between;
   padding-left: 0;
   padding-top: 20px;
+  transition: all 0.2s ease-in-out;
 }
 
 .navbar__menu li {
   padding: 8px 12px;
+  transition: all 0.2s ease-in-out;
 }
 
 .navbar__links {
   list-style: none;
   padding-left: 0;
-  color: teal;
   display: flex;
   padding-top: 20px;
+
+  transition: all 0.2s ease-in-out;
 }
 
 .navbar__links li {
   padding: 8px 12px;
+  transition: all 0.2s ease-in-out;
 }
 
 .navbar__toggleBtn {
@@ -50,6 +54,7 @@ a {
   position: absolute;
   right: 32px;
   font-size: 24px;
+  transition: all 0.3s linear;
 }
 
 @media screen and (max-width: 800px) {
@@ -57,6 +62,7 @@ a {
     flex-direction: column;
     align-items: flex-start;
     padding: 8px 24px;
+    transition: all 0.2s ease-in-out;
   }
   .navbar__menu {
     display: none;
@@ -75,6 +81,7 @@ a {
   }
   .navbar__toggleBtn {
     display: block;
+    transition: all 0.3s linear;
   }
 
   .navbar__menu.active,
@@ -93,6 +100,7 @@ h2 {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
+  transition: all 0.3s linear;
 }
 
 #btn {
@@ -106,6 +114,7 @@ h2 {
   border-radius: 50%;
   border: none;
   outline: none;
+  transition: 0.3s;
 }
 
 #btn span {
@@ -241,5 +250,23 @@ h2 {
   }
   100% {
     transform: translate(-50%, 200%);
+  }
+}
+
+.fadein {
+  font-size: medium;
+  position: relative;
+  overflow: hidden;
+  animation: fadein 7s ease-in-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
