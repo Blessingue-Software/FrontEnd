@@ -66,6 +66,10 @@ form * {
   font-weight: 600;
   font-family: "MinSans-Medium";
 }
+::selection {
+  background-color: #a5a3a3;
+
+}
 
 .slide {
   width: 100%;

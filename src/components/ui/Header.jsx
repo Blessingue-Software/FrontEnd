@@ -38,7 +38,8 @@ export default function Header() {
           <S.MainText>{Logo}</S.MainText>
         </div>
         <ul className="navbar__menu">
-          <li>
+        <li style={{marginLeft:"30px"}}>
+
             <Link to="#">홈</Link>
           </li>
           <li>
@@ -50,7 +51,7 @@ export default function Header() {
           <li>
             <Link to="#">FAQ</Link>
           </li>
-          <li>
+          <li style={{marginRight:"30px"}}>
             <Link to="#">채용</Link>
           </li>
         </ul>
