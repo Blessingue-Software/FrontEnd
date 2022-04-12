@@ -22,6 +22,7 @@ a {
 
 .navbar__menu {
   display: flex;
+  font-size: 24px;
   list-style: none;
   width: 60%;
   justify-content: space-between;
@@ -58,7 +59,7 @@ a {
   transition: all 0.3s linear;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;

@@ -33,10 +33,7 @@ export default function Header() {
 
   return (
     <nav className="navbar">
-      <div className="navbar__logo">
-        <i className="fab fa-apple"></i>
         <S.MainText>{Logo}</S.MainText>
-      </div>
       <ul className="navbar__menu">
         <li>
           <Link to="#">홈</Link>
