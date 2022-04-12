@@ -4,9 +4,7 @@ import "../index.css";
 export default function Signup() {
   return (
     <form action="/라우터" method="post">
-      <S.LoginMainText href="/">
-      localhost
-      </S.LoginMainText>
+      <S.LoginMainText href="/">localhost</S.LoginMainText>
 
       <S.BlueTopBar></S.BlueTopBar>
       <S.SignupLabel htmlFor="username">ID</S.SignupLabel>
@@ -17,7 +15,9 @@ export default function Signup() {
 
       <S.LoginButton>로그인</S.LoginButton>
       <S.Flex>
-        <S.LoginBottom href="/signup">회원가입</S.LoginBottom>
+        <S.LoginBottom href="/signup" style={{ marginLeft: "70px" }}  >
+          회원가입
+        </S.LoginBottom>
         <S.LoginBottom href="/signup">비밀번호 찾기</S.LoginBottom>
         <S.LoginBottom href="/signup">아이디 찾기</S.LoginBottom>
       </S.Flex>

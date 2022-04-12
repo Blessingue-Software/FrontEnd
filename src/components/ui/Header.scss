@@ -35,6 +35,7 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
+
 .navbar__links {
   list-style: none;
   padding-left: 0;
@@ -71,6 +72,10 @@ a {
     width: 100%;
   }
   .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar__menu li:first-child {
     width: 100%;
     text-align: center;
   }

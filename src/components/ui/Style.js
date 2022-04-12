@@ -1,0 +1,50 @@
+import styled from "styled-components";
+
+export const Squre = styled.div`
+  text-align: center;
+  font-size: 36px;
+  width: 240px;
+  height: 180px;
+  margin-left: 150px;
+  margin-right: 0;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  background-color: #ccc;
+`;
+export const Num = styled.span`
+  text-align: center;
+  margin-top: 10px;
+  display: block;
+`;
+export const Text = styled.span``;
+
+export const Post = styled.ul`
+  width: 800px;
+  min-width: 100px;
+  height: 300px;
+  margin-right: 100px;
+  margin-left: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #ccc;
+  list-style: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+`;
+export const PostList = styled.li`
+  font-size: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+`;
+// export const PostedPeople = styled.span`
+//   font-size: 28px;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   -o-text-overflow: ellipsis;
+//   -ms-text-overflow: ellipsis;
+// `;

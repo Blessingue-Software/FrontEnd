@@ -4,17 +4,7 @@ body {
 a {
   text-decoration: none;
 }
-.swiper-pagination-bullet {
-  background-color: #6e92fa !important;
-}
-.swiper-button-prev {
-  /* background-color: #6e92fa !important; */
-  color: #6e92fa !important;
-}
-.swiper-button-next {
-  /* color: #6e92fa !important; */
-  color: #6e92fa !important;
-}
+
 input {
   font-weight: 700;
 }
@@ -68,11 +58,6 @@ form * {
 }
 ::selection {
   background-color: #a5a3a3;
-
-}
-
-.slide {
-  width: 100%;
 }
 
 @font-face {
@@ -85,8 +70,4 @@ form * {
 
 .flo {
   float: left;
-}
-
-.swiper-pagenation-bullet {
-  background-color: #6e92fa !important;
 }
