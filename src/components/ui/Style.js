@@ -3,8 +3,11 @@ import styled from "styled-components";
 export const Squre = styled.div`
   text-align: center;
   font-size: 36px;
-  width: 240px;
-  height: 180px;
+  width: 20%;
+  min-width: 140px;
+  height: 15%;
+  min-height: 100px;
+  padding: 10px;
   margin-left: 150px;
   margin-right: 0;
   margin-top: 100px;
@@ -22,6 +25,7 @@ export const Post = styled.ul`
   width: 800px;
   min-width: 100px;
   height: 300px;
+  padding: 30px;
   margin-right: 100px;
   margin-left: 50px;
   margin-top: 40px;
