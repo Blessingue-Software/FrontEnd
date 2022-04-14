@@ -16,7 +16,14 @@ export default function main() {
       {/* <Test /> */}
       <Header />
       <Slider />
-      <div style={{ display: "flex" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          width: "80%",
+          margin: "0 auto",
+        }}
+      >
         <Project />
         <Post />
       </div>

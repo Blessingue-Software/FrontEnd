@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import * as S from "../Style";
+import * as S from "./Style";
 import "./Header.scss";
 import $ from "jquery";
 import { CSSTransition } from "react-transition-group";
@@ -33,7 +33,7 @@ export default function Header() {
 
   return (
     <nav className="navbar">
-        <S.MainText>{Logo}</S.MainText>
+      <S.HeaderLogo>{Logo}</S.HeaderLogo>
       <ul className="navbar__menu">
         <li>
           <Link to="#">홈</Link>

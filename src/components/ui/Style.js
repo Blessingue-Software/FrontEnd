@@ -8,7 +8,7 @@ export const Squre = styled.div`
   height: 15%;
   min-height: 100px;
   padding: 10px;
-  margin-left: 150px;
+  margin-left: 100px;
   margin-right: 0;
   margin-top: 100px;
   margin-bottom: 40px;
@@ -22,8 +22,7 @@ export const Num = styled.span`
 export const Text = styled.span``;
 
 export const Post = styled.ul`
-  width: 800px;
-  min-width: 100px;
+  width: 600px;
   height: 300px;
   padding: 30px;
   margin-right: 100px;
@@ -52,3 +51,10 @@ export const PostList = styled.li`
 //   -o-text-overflow: ellipsis;
 //   -ms-text-overflow: ellipsis;
 // `;
+export const HeaderLogo = styled.span`
+  text-align: center;
+  display: block;
+  color: #6e92fa;
+  font-size: 26px;
+  text-align: center;
+`;

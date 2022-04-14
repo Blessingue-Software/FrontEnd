@@ -10,14 +10,15 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 70px;
   background-color: rgb(255, 255, 255);
   padding: 8px 12px;
   transition: all 0.2s ease-in-out;
 }
 
 .navbar__logo {
-  font-size: 24px;
   transition: all 0.2s ease-in-out;
+  align-items: center;
 }
 
 .navbar__menu {
@@ -25,14 +26,16 @@ a {
   font-size: 24px;
   list-style: none;
   width: 60%;
+  height: 7%;
   justify-content: space-between;
+  align-items: center;
   padding-left: 0;
-  padding-top: 20px;
   transition: all 0.2s ease-in-out;
 }
 
 .navbar__menu li {
   padding: 8px 12px;
+  font-size: 16px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -40,8 +43,6 @@ a {
   list-style: none;
   padding-left: 0;
   display: flex;
-  padding-top: 20px;
-
   transition: all 0.2s ease-in-out;
 }
 
