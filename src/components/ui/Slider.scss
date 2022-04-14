@@ -3,8 +3,10 @@
   text-align: center;
   margin: 0 auto;
   display: block;
+  max-width: 1000px;
   min-width: 600px;
-  min-height: 400px;
+  max-height: 400px;
+  // min-height: 400px;
 }
 .swiper-pagenation-bullet {
   background-color: #6e92fa !important;
