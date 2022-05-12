@@ -8,17 +8,17 @@ a {
 
 .navbar {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
-  background-color: rgb(255, 255, 255);
-  padding: 8px 12px;
+  background-color: black;
+  font-size: 12px;
   transition: all 0.2s ease-in-out;
 }
 
 .navbar__logo {
+  font-size: 24px;
   transition: all 0.2s ease-in-out;
-  align-items: center;
 }
 
 .navbar__menu {
@@ -26,30 +26,29 @@ a {
   font-size: 24px;
   list-style: none;
   width: 60%;
-  height: 7%;
+  margin: 0;
   justify-content: space-between;
-  align-items: center;
   padding-left: 0;
   transition: all 0.2s ease-in-out;
 }
 
 .navbar__menu li {
-  padding: 8px 12px;
-  font-size: 16px;
   transition: all 0.2s ease-in-out;
+  font-size: 16px;
 }
 
 .navbar__links {
   list-style: none;
   padding-left: 0;
   display: flex;
+  justify-content: space-between;
   transition: all 0.2s ease-in-out;
+  margin: 0;
 }
-
 .navbar__links li {
-  padding: 8px 12px;
   transition: all 0.2s ease-in-out;
 }
+.navbar__links li
 
 .navbar__toggleBtn {
   display: none;
@@ -111,9 +110,9 @@ h2 {
 
 #btn {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 30px;
+  width: 80px;
+  height: 80px;
+  top: 25px;
   transform: translate(-50%, -50%);
   cursor: pointer;
   background: white;
@@ -125,7 +124,7 @@ h2 {
 
 #btn span {
   position: absolute;
-  width: 40px;
+  width: 50px;
   height: 4px;
   top: 50%;
   left: 50%;
