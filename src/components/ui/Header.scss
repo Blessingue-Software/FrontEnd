@@ -7,12 +7,10 @@ a {
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(255, 255, 255);
-  padding: 8px 12px;
+  align-items: flex-start;
+  padding: 8px 24px;
   transition: all 0.2s ease-in-out;
+  height: 60px;
 }
 
 .navbar__logo {
@@ -22,12 +20,11 @@ a {
 
 .navbar__menu {
   display: flex;
-  font-size: 24px;
+  margin-bottom: 0px;
   list-style: none;
   width: 60%;
   justify-content: space-between;
   padding-left: 0;
-  padding-top: 20px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -40,8 +37,6 @@ a {
   list-style: none;
   padding-left: 0;
   display: flex;
-  padding-top: 20px;
-
   transition: all 0.2s ease-in-out;
 }
 
@@ -112,7 +107,7 @@ h2 {
   position: absolute;
   width: 40px;
   height: 40px;
-  top: 30px;
+  top: 20px;
   transform: translate(-50%, -50%);
   cursor: pointer;
   background: white;
