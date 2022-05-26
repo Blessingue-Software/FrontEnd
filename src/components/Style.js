@@ -140,7 +140,7 @@ export const Flex = styled.div`
 
 export const BlueTopBar = styled.hr`
   display: block;
-  width: 30%;
+  width: 15%;
   height: 5px;
   background-color: #6e92fa;
   margin: 36px auto;
