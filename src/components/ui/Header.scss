@@ -39,7 +39,6 @@ a {
 .navbar__links {
   list-style: none;
   padding-left: 0;
-  padding-right: 10px;
   display: flex;
   transition: all 0.2s ease-in-out;
   margin: 0;
@@ -106,7 +105,7 @@ h2 {
 
 #btn {
   position: absolute;
-  width: 80px;
+  width: 8px;
   height: 50px;
   top: 18px;
   transform: translate(-50%, -50%);

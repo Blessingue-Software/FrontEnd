@@ -24,7 +24,7 @@ export const Signup = styled.div`
 
 export const SignupInput = styled.input`
   display: block;
-  width: 100%;
+  width: 60%;
   height: 8px;
   margin: 0 auto;
   margin-bottom: 45px;
@@ -36,8 +36,8 @@ export const SignupInput = styled.input`
 export const SignupLabel = styled.label`
   font-size: 18px;
   display: block;
+  margin: 0 auto;
   font-weight: 700;
-  margin-bottom: 10px;
 `;
 
 export const LoginLabel = styled.label`
@@ -64,7 +64,8 @@ export const LoginButton = styled.button`
   color: #ffffff;
   border: 0;
   border-radius: 8px;
-  width: 270px;
+  width: 100%;
+
   height: 54px;
   text-align: center;
   margin: 50px auto;
@@ -80,9 +81,8 @@ export const LoginButton = styled.button`
 export const LoginBottom = styled.a`
   display: block;
   color: #000000;
-  margin: 0 auto;
+  padding: 0 10px;
   font-size: 12px;
-  font-weight: 900;
   text-decoration-line: none;
   &:hover {
     color: #6e92fa;
@@ -134,7 +134,6 @@ export const BtnFlex = styled.div`
 
 export const Flex = styled.div`
   display: flex;
-  width: 250px;
   margin: 0 auto;
 `;
 

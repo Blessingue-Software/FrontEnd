@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import * as S from "./Style";
 import $ from "jquery";
 import "../index.css";
+import Header from "./ui/Header";
 export default function Signup() {
   let [id, setId] = useState();
   const navigate = useNavigate();
@@ -16,50 +17,58 @@ export default function Signup() {
     navigate("/");
   }
   return (
-    <form action="/라우터" method="post">
-      <S.MainText href="/" style={{ marginTop: "260px" }}>
-        localhost
-      </S.MainText>
-      <S.BlueTopBar></S.BlueTopBar>
-      <S.Flex>
-        <S.SignupLabel htmlFor="username">ID</S.SignupLabel>
-        <S.RedStar>&nbsp;*</S.RedStar>
-      </S.Flex>
-      <S.SignupInput type="text" placeholder="ID" id="username" required />
-      <S.Flex>
-        <S.SignupLabel htmlFor="password">Password</S.SignupLabel>
-        <S.RedStar>&nbsp;*</S.RedStar>
-      </S.Flex>
-      <S.SignupInput
-        type="password"
-        placeholder="Password"
-        id="password"
-        required
-      />
-      <S.Flex>
-        <S.SignupLabel htmlFor="re-password">Password 재입력</S.SignupLabel>
-        <S.RedStar>&nbsp;*</S.RedStar>
-      </S.Flex>
-      <S.SignupInput
-        type="password"
-        placeholder="Password 재입력"
-        id="re-password"
-        required
-      />
-      <S.SignupLabel htmlFor="email">Email</S.SignupLabel>
-      <S.SignupInput type="text" placeholder="Email" id="email" />
-      <S.SignupLabel htmlFor="Major">Major</S.SignupLabel>
-      <S.SignupInput
-        type="Major"
-        placeholder="전공분야를 입력해주세요"
-        id="Major"
-      />
+    <div>
+      <Header />
+      <div className="container">
+        <form action="/라우터" method="post">
+          <S.LoginMainText href="/">localhost</S.LoginMainText>
 
-      <S.BtnFlex>
-        <S.SignupButton type="submit">회원가입</S.SignupButton>
+          <S.BlueTopBar></S.BlueTopBar>
 
-        {/* <S.SignupCancelButton onClick={goMain()}>취소</S.SignupCancelButton> */}
-      </S.BtnFlex>
-    </form>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-start",
+              flexDirection: "column",
+            }}
+          >
+            <div style={{ display: "block", margin: "0 auto" }}>
+              <S.LoginLabel htmlFor="userid">
+                ID
+                <S.RedStar>&nbsp;*</S.RedStar>
+              </S.LoginLabel>
+              <S.LoginInput type="text" placeholder="ID" id="userid" />
+            </div>
+            <div style={{ display: "block", margin: "0 auto" }}>
+              <S.LoginLabel htmlFor="password">
+                Password
+                <S.RedStar>&nbsp;*</S.RedStar>
+              </S.LoginLabel>
+              <S.LoginInput type="password" placeholder="Password" id="password" />
+            </div>
+            <div style={{ display: "block", margin: "0 auto" }}>
+              <S.LoginLabel htmlFor="re-password">
+                Password 재입력
+                <S.RedStar>&nbsp;*</S.RedStar>
+              </S.LoginLabel>
+              <S.LoginInput
+                type="password"
+                placeholder="Password 재입력"
+                id="re-password"
+              />
+            </div>
+            <div style={{ display: "block", margin: "0 auto" }}>
+              <S.LoginLabel htmlFor="email">Email</S.LoginLabel>
+              <S.LoginInput type="text" placeholder="Email" id="email" />
+            </div>
+            <div style={{ display: "block", margin: "0 auto" }}>
+              <S.LoginLabel htmlFor="major">Major</S.LoginLabel>
+              <S.LoginInput type="text" placeholder="Major" id="major" />
+              <S.LoginButton>회원가입</S.LoginButton>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 }

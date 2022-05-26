@@ -30,15 +30,14 @@ export default function Signup() {
                 placeholder="Password"
                 id="password"
               />
+              <S.LoginButton>로그인</S.LoginButton>
             </div>
           </div>
-          <S.LoginButton>로그인</S.LoginButton>
-
-          <S.Flex>
+          <div style={{ display: "flex", padding: "0px 10px", justifyContent:"center" }}>
             <S.LoginBottom href="/signup">회원가입</S.LoginBottom>
             <S.LoginBottom href="/signup">비밀번호 찾기</S.LoginBottom>
             <S.LoginBottom href="/signup">아이디 찾기</S.LoginBottom>
-          </S.Flex>
+          </div>
         </form>
       </div>
     </div>

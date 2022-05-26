@@ -36,10 +36,10 @@ export default function Header() {
       <S.MainText>{Logo}</S.MainText>
       <ul className="navbar__menu">
         <li>
-          <Link to="#">홈</Link>
+          <Link to="#">커뮤니티</Link>
         </li>
         <li>
-          <Link to="#">핫딜</Link>
+          <Link to="#">뱅드림</Link>
         </li>
         <li>
           <Link to="#">포럼</Link>
