@@ -3,13 +3,15 @@ import styled from "styled-components";
 export const LoginInput = styled.input`
   display: block;
   width: 100%;
-  height: 8px;
+  height: 10px;
   margin: 0 20px;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
   padding: 20px;
-  font-size: 24px;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid #6e92fa;
+  &::placeholder {
+    font-size: 16px;
+  }
 `;
 
 export const Signup = styled.div`
@@ -31,7 +33,8 @@ export const SignupInput = styled.input`
   border: 1px solid #6e92fa;
 `;
 export const SignupLabel = styled.label`
-  font-size: 22px;
+  margin-left: 25px;
+  font-size: 18px;
   display: block;
   font-weight: 700;
   margin-bottom: 10px;
@@ -59,6 +62,8 @@ export const LoginButton = styled.button`
   height: 54px;
   text-align: center;
   margin-bottom: 48px;
+  margin-top: 60px;
+
   margin-left: 18px;
   font-size: 24px;
   font-weight: 900;

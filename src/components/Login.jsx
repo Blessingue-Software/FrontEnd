@@ -18,9 +18,7 @@ export default function Signup() {
 
         <S.LoginButton>로그인</S.LoginButton>
         <S.Flex>
-          <S.LoginBottom href="/signup" style={{ marginLeft: "70px" }}>
-            회원가입
-          </S.LoginBottom>
+          <S.LoginBottom href="/signup">회원가입</S.LoginBottom>
           <S.LoginBottom href="/signup">비밀번호 찾기</S.LoginBottom>
           <S.LoginBottom href="/signup">아이디 찾기</S.LoginBottom>
         </S.Flex>
