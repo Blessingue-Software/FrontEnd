@@ -55,9 +55,9 @@ export default function Header() {
         <li>
           <Link to="/login">로그인</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/signup">회원가입</Link>
-        </li>
+        </li> */}
       </ul>
 
       <Link to="#" className="navbar__toggleBtn" onClick={click}>

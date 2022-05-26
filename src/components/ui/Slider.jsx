@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Banner from "../img/메인배너.png";
+import Banner from "../img/에밀리아-멍.jpg";
 import "swiper/css";
 import "../../index.css";
 import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper";

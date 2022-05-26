@@ -151,7 +151,7 @@ export const BlueTopBar_Signup = styled.hr`
   display: block;
   width: 30%;
   height: 5px;
-  background-color: #6e92fa;
+  background-color: #63500f692fa;
   margin: 36px auto;
   border: 0;
 `;
