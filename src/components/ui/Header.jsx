@@ -1,40 +1,39 @@
 /* eslint-disable */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import * as S from "./Style";
+import * as S from "../Style";
 import "./Header.scss";
-// import $ from "jquery";
-const $ = "document.querySelector";
+import $ from "jquery";
+import { CSSTransition } from "react-transition-group";
 export default function Header() {
   const Logo = "localhost";
   let status = 0;
   let eStatus = 0;
   let click = () => {
     if (!status) {
-      console.log($(".navbar__menu"));
-      // $(".navbar__menu").classList.add("active");
-      // $(".navbar__links").classList.add("active");
+      $(".navbar__menu").addClass("active");
+      $(".navbar__links").addClass("active");
       status = 1;
     } else {
-      // $(".navbar__menu").classList.remove("active");
-      // $(".navbar__links").classList.remove("active");
+      $(".navbar__menu").removeClass("active");
+      $(".navbar__links").removeClass("active");
       status = 0;
     }
   };
 
   let eClick = () => {
     if (status) {
-      // $("#btn").classList.remove("on");
+      $("#btn").removeClass("on");
       eStatus = 1;
     } else {
-      // $("#btn").classList.add("on");
+      $("#btn").addClass("on");
       eStatus = 0;
     }
   };
 
   return (
-    <div className="navbar">
-      <S.HeaderLogo>{Logo}</S.HeaderLogo>
+    <nav className="navbar">
+      <S.MainText>{Logo}</S.MainText>
       <ul className="navbar__menu">
         <li>
           <Link to="#">홈</Link>
@@ -68,6 +67,6 @@ export default function Header() {
           <span></span>
         </button>
       </Link>
-    </div>
+    </nav>
   );
 }

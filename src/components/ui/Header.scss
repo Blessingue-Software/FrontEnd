@@ -7,11 +7,12 @@ a {
 }
 
 .navbar {
-  align-items: flex-start;
-  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 8px 12px;
   transition: all 0.2s ease-in-out;
-  height: 60px;
-  background-color: #000;
 }
 
 .navbar__logo {
@@ -21,11 +22,12 @@ a {
 
 .navbar__menu {
   display: flex;
-  margin-bottom: 0px;
+  font-size: 24px;
   list-style: none;
   width: 60%;
   justify-content: space-between;
   padding-left: 0;
+  padding-top: 20px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -34,10 +36,13 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
+
 .navbar__links {
   list-style: none;
   padding-left: 0;
   display: flex;
+  padding-top: 20px;
+
   transition: all 0.2s ease-in-out;
 }
 
@@ -106,13 +111,12 @@ h2 {
 
 #btn {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 20px;
+  width: 80px;
+  height: 80px;
+  top: 25px;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  background: black;
-  color: beige;
+  background: white;
   border-radius: 50%;
   border: none;
   outline: none;
@@ -121,11 +125,11 @@ h2 {
 
 #btn span {
   position: absolute;
-  width: 40px;
+  width: 50px;
   height: 4px;
   top: 50%;
   left: 50%;
-  background: beige;
+  background: #262626;
   border-radius: 2px;
   overflow: hidden;
   transition: all 0.3s linear;
