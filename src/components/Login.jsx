@@ -11,13 +11,29 @@ export default function Signup() {
           <S.LoginMainText href="/">localhost</S.LoginMainText>
 
           <S.BlueTopBar></S.BlueTopBar>
-          <S.LoginLabel htmlFor="username">ID</S.LoginLabel>
-          <S.LoginInput type="text" placeholder="ID" id="username" />
 
-          <S.LoginLabel htmlFor="password">Password</S.LoginLabel>
-          <S.LoginInput type="password" placeholder="Password" id="password" />
-
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-start",
+              flexDirection: "column",
+            }}
+          >
+            <div style={{ display: "block", margin: "0 auto" }}>
+              <S.LoginLabel htmlFor="username">ID</S.LoginLabel>
+              <S.LoginInput type="text" placeholder="ID" id="username" />
+            </div>
+            <div style={{ display: "block", margin: "0 auto" }}>
+              <S.LoginLabel htmlFor="password">Password</S.LoginLabel>
+              <S.LoginInput
+                type="password"
+                placeholder="Password"
+                id="password"
+              />
+            </div>
+          </div>
           <S.LoginButton>로그인</S.LoginButton>
+
           <S.Flex>
             <S.LoginBottom href="/signup">회원가입</S.LoginBottom>
             <S.LoginBottom href="/signup">비밀번호 찾기</S.LoginBottom>

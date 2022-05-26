@@ -5,6 +5,7 @@ export const LoginInput = styled.input`
   width: 100%;
   height: 10px;
   margin-bottom: 30px;
+  margin-top: 5px;
   padding: 20px 20px;
   border-radius: 8px;
   border: 1px solid #6e92fa;
@@ -43,7 +44,6 @@ export const LoginLabel = styled.label`
   font-size: 18px;
   display: block;
   font-weight: 700;
-  margin-bottom: 10px;
 `;
 
 export const RedStar = styled.span`
@@ -63,12 +63,11 @@ export const LoginButton = styled.button`
   background-color: #6e92fa;
   color: #ffffff;
   border: 0;
-  border-radius: 12px;
-  width: 100%;
+  border-radius: 8px;
+  width: 270px;
   height: 54px;
   text-align: center;
-  margin-bottom: 48px;
-  margin-top: 60px;
+  margin: 50px auto;
   font-size: 24px;
   font-weight: 900;
   &:hover {
@@ -135,6 +134,8 @@ export const BtnFlex = styled.div`
 
 export const Flex = styled.div`
   display: flex;
+  width: 250px;
+  margin: 0 auto;
 `;
 
 export const BlueTopBar = styled.hr`
