@@ -1,30 +1,27 @@
 /* eslint-disable */
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import * as S from "./Style";
 import $ from "jquery";
 import "../index.css";
 import Header from "./ui/Header";
 export default function Signup() {
   let [id, setId] = useState();
-  const navigate = useNavigate();
-
-  function goBack() {
-    navigate(-1);
-  }
-  function goMain() {
-    navigate("/");
-  }
+  // const navigate = useNavigate();
+  // function goBack() {
+  //   navigate(-1);
+  // }
+  // function goMain() {
+  //   navigate("/");
+  // }
   return (
-    <div>
+    <>
       <Header />
       <div className="container">
         <form action="/라우터" method="post">
           <S.LoginMainText href="/">localhost</S.LoginMainText>
-
           <S.BlueTopBar></S.BlueTopBar>
-
           <div
             style={{
               display: "flex",
@@ -44,7 +41,11 @@ export default function Signup() {
                 Password
                 <S.RedStar>&nbsp;*</S.RedStar>
               </S.LoginLabel>
-              <S.LoginInput type="password" placeholder="Password" id="password" />
+              <S.LoginInput
+                type="password"
+                placeholder="Password"
+                id="password"
+              />
             </div>
             <div style={{ display: "block", margin: "0 auto" }}>
               <S.LoginLabel htmlFor="re-password">
@@ -69,6 +70,6 @@ export default function Signup() {
           </div>
         </form>
       </div>
-    </div>
+    </>
   );
 }

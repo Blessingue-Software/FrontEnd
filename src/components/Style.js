@@ -4,7 +4,7 @@ export const LoginInput = styled.input`
   display: block;
   width: 100%;
   height: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   margin-top: 5px;
   padding: 20px 20px;
   border-radius: 8px;
@@ -47,7 +47,6 @@ export const LoginLabel = styled.label`
 `;
 
 export const RedStar = styled.span`
-  font-size: 24px;
   color: red;
   display: inline;
 `;
@@ -68,7 +67,7 @@ export const LoginButton = styled.button`
 
   height: 54px;
   text-align: center;
-  margin: 50px auto;
+  margin: 50px auto 30px auto;
   font-size: 24px;
   font-weight: 900;
   &:hover {

@@ -33,7 +33,13 @@ export default function Signup() {
               <S.LoginButton>로그인</S.LoginButton>
             </div>
           </div>
-          <div style={{ display: "flex", padding: "0px 10px", justifyContent:"center" }}>
+          <div
+            style={{
+              display: "flex",
+              padding: "0px 10px",
+              justifyContent: "center",
+            }}
+          >
             <S.LoginBottom href="/signup">회원가입</S.LoginBottom>
             <S.LoginBottom href="/signup">비밀번호 찾기</S.LoginBottom>
             <S.LoginBottom href="/signup">아이디 찾기</S.LoginBottom>
