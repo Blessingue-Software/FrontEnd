@@ -36,7 +36,6 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
-
 .navbar__links {
   list-style: none;
   padding-left: 0;
@@ -65,6 +64,7 @@ a {
     align-items: flex-start;
     padding: 8px 24px;
     transition: all 0.2s ease-in-out;
+    background: black;
   }
   .navbar__menu {
     display: none;
@@ -112,11 +112,10 @@ h2 {
 #btn {
   position: absolute;
   width: 80px;
-  height: 80px;
-  top: 25px;
+  top: 18px;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  background: white;
+  background: black;
   border-radius: 50%;
   border: none;
   outline: none;
@@ -125,11 +124,11 @@ h2 {
 
 #btn span {
   position: absolute;
-  width: 50px;
+  width: 33px;
   height: 4px;
   top: 50%;
   left: 50%;
-  background: #262626;
+  background: beige;
   border-radius: 2px;
   overflow: hidden;
   transition: all 0.3s linear;

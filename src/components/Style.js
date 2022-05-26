@@ -159,7 +159,7 @@ export const MainText = styled.a`
   text-align: center;
   display: block;
   color: #6e92fa;
-  font-size: 36px;
+  font-size: 24px;
   text-align: center;
 `;
 export const LoginMainText = styled.a`
