@@ -33,6 +33,13 @@ export const SignupInput = styled.input`
   border: 1px solid #6e92fa;
 `;
 export const SignupLabel = styled.label`
+  font-size: 18px;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+`;
+
+export const LoginLabel = styled.label`
   margin-left: 25px;
   font-size: 18px;
   display: block;

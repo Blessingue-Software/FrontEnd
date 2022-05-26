@@ -10,10 +10,10 @@ export default function Signup() {
         <S.LoginMainText href="/">localhost</S.LoginMainText>
 
         <S.BlueTopBar></S.BlueTopBar>
-        <S.SignupLabel htmlFor="username">ID</S.SignupLabel>
+        <S.LoginLabel htmlFor="username">ID</S.LoginLabel>
         <S.LoginInput type="text" placeholder="ID" id="username" />
 
-        <S.SignupLabel htmlFor="password">Password</S.SignupLabel>
+        <S.LoginLabel htmlFor="password">Password</S.LoginLabel>
         <S.LoginInput type="password" placeholder="Password" id="password" />
 
         <S.LoginButton>로그인</S.LoginButton>
