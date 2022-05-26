@@ -3,29 +3,31 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as S from "./Style";
 import "./Header.scss";
-import $ from "jquery";
+// import $ from "jquery";
+const $ = "document.querySelector";
 export default function Header() {
   const Logo = "localhost";
   let status = 0;
   let eStatus = 0;
   let click = () => {
     if (!status) {
-      $(".navbar__menu").addClass("active");
-      $(".navbar__links").addClass("active");
+      console.log($(".navbar__menu"));
+      // $(".navbar__menu").classList.add("active");
+      // $(".navbar__links").classList.add("active");
       status = 1;
     } else {
-      $(".navbar__menu").removeClass("active");
-      $(".navbar__links").removeClass("active");
+      // $(".navbar__menu").classList.remove("active");
+      // $(".navbar__links").classList.remove("active");
       status = 0;
     }
   };
 
   let eClick = () => {
     if (status) {
-      $("#btn").removeClass("on");
+      // $("#btn").classList.remove("on");
       eStatus = 1;
     } else {
-      $("#btn").addClass("on");
+      // $("#btn").classList.add("on");
       eStatus = 0;
     }
   };

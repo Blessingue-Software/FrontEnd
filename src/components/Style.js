@@ -4,13 +4,13 @@ export const LoginInput = styled.input`
   display: block;
   width: 100%;
   height: 10px;
-  margin: 0 20px;
   margin-bottom: 30px;
-  padding: 20px;
+  padding: 20px 20px;
   border-radius: 8px;
   border: 1px solid #6e92fa;
   &::placeholder {
     font-size: 16px;
+    // padding-left: -10px;
   }
 `;
 
@@ -40,7 +40,6 @@ export const SignupLabel = styled.label`
 `;
 
 export const LoginLabel = styled.label`
-  margin-left: 25px;
   font-size: 18px;
   display: block;
   font-weight: 700;
@@ -70,8 +69,6 @@ export const LoginButton = styled.button`
   text-align: center;
   margin-bottom: 48px;
   margin-top: 60px;
-
-  margin-left: 18px;
   font-size: 24px;
   font-weight: 900;
   &:hover {
