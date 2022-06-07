@@ -6,8 +6,8 @@ export default function Page() {
   return (
     <S.Squre>
       <S.Text>
-        진행 중인
-        <br /> 프로젝트
+        강서구
+        <br /> 관광지
       </S.Text>
       <S.Num>
         <span>0</span>개

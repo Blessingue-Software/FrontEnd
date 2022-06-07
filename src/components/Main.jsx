@@ -10,13 +10,12 @@ import Test from "./test/NavTest";
 import Project from "./ui/Project";
 import Post from "./ui/Post";
 export default function main() {
-  const Logo = "localhost";
   return (
     <div>
-      {/* <Test /> */}
       <Header />
+
       <Slider />
-      <div
+        <div
         style={{
           display: "flex",
           justifyContent: "space-around",

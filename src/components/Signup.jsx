@@ -20,7 +20,7 @@ export default function Signup() {
       <Header />
       <div className="container">
         <form action="/라우터" method="post">
-          <S.LoginMainText href="/">localhost</S.LoginMainText>
+          <S.LoginMainText href="/">강서구</S.LoginMainText>
           <S.BlueTopBar></S.BlueTopBar>
           <div
             style={{
@@ -63,8 +63,8 @@ export default function Signup() {
               <S.LoginInput type="text" placeholder="Email" id="email" />
             </div>
             <div style={{ display: "block", margin: "0 auto" }}>
-              <S.LoginLabel htmlFor="major">Major</S.LoginLabel>
-              <S.LoginInput type="text" placeholder="Major" id="major" />
+              <S.LoginLabel htmlFor="major">주소 </S.LoginLabel>
+              <S.LoginInput type="text" placeholder="주소" id="major" />
               <S.LoginButton>회원가입</S.LoginButton>
             </div>
           </div>

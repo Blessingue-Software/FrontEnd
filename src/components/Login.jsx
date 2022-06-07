@@ -8,10 +8,8 @@ export default function Signup() {
       <Header />
       <div className="container">
         <form action="/라우터" method="post">
-          <S.LoginMainText href="/">localhost</S.LoginMainText>
-
+          <S.LoginMainText href="/">로그인</S.LoginMainText>
           <S.BlueTopBar></S.BlueTopBar>
-
           <div
             style={{
               display: "flex",

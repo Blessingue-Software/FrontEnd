@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import * as S from "../Style";
 import "./Header.scss";
 import $ from "jquery";
-import { CSSTransition } from "react-transition-group";
 export default function Header() {
-  const Logo = "localhost";
+  const Logo = "뱅드림";
   let status = 0;
   let eStatus = 0;
   let click = () => {
@@ -33,24 +32,25 @@ export default function Header() {
 
   return (
     <nav className="navbar">
-      <S.MainText>{Logo}</S.MainText>
+      <S.MainText href="/">{Logo}</S.MainText>
       <ul className="navbar__menu">
         <li>
-          <Link to="#">커뮤니티</Link>
+          <Link to="#">관광지</Link>
         </li>
         <li>
-          <Link to="#">뱅드림</Link>
+          <Link to="#">맛집</Link>
         </li>
         <li>
-          <Link to="#">포럼</Link>
+          <Link to="#">랭킹</Link>
         </li>
         <li>
-          <Link to="#">FAQ</Link>
+          <Link to="#">리뷰</Link>
         </li>
         <li>
-          <Link to="#">채용</Link>
+          <Link to="#">일자리</Link>
         </li>
       </ul>
+
       <ul className="navbar__links">
         <li>
           <Link to="/login">로그인</Link>
