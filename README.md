@@ -10,3 +10,4 @@ yarn add sass<br/>
 yarn add @mui/material<br/>
 yarn add react-router-dom@6<br/>
 yarn add styled-components<br/>
+yarn add jquery<br/>
