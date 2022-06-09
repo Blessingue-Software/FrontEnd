@@ -57,6 +57,22 @@ export const Nav = styled.li`
   font-size: 24px;
   text-align: center;
 `;
+
+export const DisabledLoginButton = styled.button`
+  display: block;
+  background-color: #c8c8c8;
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  width: 100%;
+  height: 54px;
+  text-align: center;
+  margin: 50px auto 30px auto;
+  font-size: 24px;
+  font-weight: 900;
+  transition: 0.3s;
+`;
+
 export const LoginButton = styled.button`
   display: block;
   background-color: #6e92fa;
@@ -64,7 +80,6 @@ export const LoginButton = styled.button`
   border: 0;
   border-radius: 8px;
   width: 100%;
-
   height: 54px;
   text-align: center;
   margin: 50px auto 30px auto;

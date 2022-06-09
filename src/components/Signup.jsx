@@ -59,11 +59,15 @@ export default function Signup() {
             </div>
             <div style={{ display: "block", margin: "0 auto" }}>
               <S.LoginLabel htmlFor="email">Email</S.LoginLabel>
-              <S.LoginInput type="text" placeholder="Email" id="email" />
+              <S.LoginInput type="text" placeholder="@bssm.hs.kr" id="email" />
             </div>
             <div style={{ display: "block", margin: "0 auto" }}>
               <S.LoginLabel htmlFor="major">분야</S.LoginLabel>
-              <S.LoginInput type="text" placeholder="분야" id="major" />
+              <S.LoginInput
+                type="text"
+                placeholder="알고리즘"
+                id="major"
+              />
               <S.LoginButton>회원가입</S.LoginButton>
             </div>
           </div>

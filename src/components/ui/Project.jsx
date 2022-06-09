@@ -6,8 +6,8 @@ export default function Page() {
   return (
     <S.Squre>
       <S.Text>
-        강서구
-        <br /> 관광지
+        엄
+        <br />준식
       </S.Text>
       <S.Num>
         <span>0</span>개
