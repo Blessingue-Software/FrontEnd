@@ -159,14 +159,13 @@ export const MainText = styled.a`
   display: block;
   color: #6e92fa;
   font-size: 24px;
-  text-align: center;
 `;
-export const LoginMainText = styled.a`
+export const LoginMainText = styled.p`
   text-align: center;
   display: block;
   color: #6e92fa;
   font-size: 36px;
-  text-align: center;
+  font-weight: bold;
 `;
 export const OverlapButton = styled.button`
   display: flex;

@@ -3,36 +3,36 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as S from "../Style";
 import "./Header.scss";
-import $ from "jquery";
 export default function Header() {
-  const Logo = "뱅드림";
+  const Logo = "Ber";
   let status = 0;
   let eStatus = 0;
+  const $ = document.querySelector.bind(document);
   let click = () => {
     if (!status) {
-      $(".navbar__menu").addClass("active");
-      $(".navbar__links").addClass("active");
+      $(".navbar__menu").classList.add("active");
+      $(".navbar__links").classList.add("active");
       status = 1;
     } else {
-      $(".navbar__menu").removeClass("active");
-      $(".navbar__links").removeClass("active");
+      $(".navbar__menu").classList.remove("active");
+      $(".navbar__links").classList.remove("active");
       status = 0;
     }
   };
 
   let eClick = () => {
     if (status) {
-      $("#btn").removeClass("on");
+      $("#btn").classList.remove("on");
       eStatus = 1;
     } else {
-      $("#btn").addClass("on");
+      $("#btn").classList.add("on");
       eStatus = 0;
     }
   };
 
   return (
     <nav className="navbar">
-      <S.MainText href="/">{Logo}</S.MainText>
+      <S.MainText href="/" style={{paddingLeft:"15px"}}>{Logo}</S.MainText>
       <ul className="navbar__menu">
         <li>
           <Link to="#">관광지</Link>
@@ -51,7 +51,7 @@ export default function Header() {
         </li>
       </ul>
 
-      <ul className="navbar__links">
+      <ul className="navbar__links" style={{paddingRight:"15px"}}>
         <li>
           <Link to="/login">로그인</Link>
         </li>

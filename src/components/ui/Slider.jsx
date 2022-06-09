@@ -25,9 +25,9 @@ export default function Silder() {
           disableOnInteraction: false,
         }}
       >
-        {[1, 2, 3].map(() => {
+        {[1, 2, 3].map((a, i) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={i}>
               <img src={Banner} alt="1  " className="slide" />
             </SwiperSlide>
           );

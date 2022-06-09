@@ -18,7 +18,7 @@ export default function Signup() {
             }}
           >
             <div style={{ display: "block", margin: "0 auto" }}>
-              <S.LoginLabel htmlFor="username">ID</S.LoginLabel>
+              <S.LoginLabel htmlFor="username">Email</S.LoginLabel>
               <S.LoginInput type="text" placeholder="ID" id="username" />
             </div>
             <div style={{ display: "block", margin: "0 auto" }}>
