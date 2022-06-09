@@ -5,12 +5,12 @@ import Header from "./ui/Header";
 import { useState, useEffect } from "react";
 
 export default function Signup() {
-  let [id, setId] = useState(null);
+  let [email, setEmail] = useState(null);
   let [password, setPassword] = useState(null);
 
   useEffect(() => {
-    console.log(id);
-  }, [id]);
+    console.log(email);
+  }, [email]);
 
   useEffect(() => {
     console.log(password);
@@ -33,11 +33,11 @@ export default function Signup() {
             <div style={{ display: "block", margin: "0 auto" }}>
               <S.LoginLabel htmlFor="username">Email</S.LoginLabel>
               <S.LoginInput
-                type="text"
-                placeholder="ID"
+                type="email"
+                placeholder="@bssm.hs.kr"
                 id="username"
                 onChange={(e) => {
-                  setId(e.target.value);
+                  setEmail(e.target.value);
                 }}
               />
             </div>
@@ -51,7 +51,7 @@ export default function Signup() {
                   setPassword(e.target.value);
                 }}
               />
-              {id && password !== null ? (
+              {email && password !== null ? (
                 <S.LoginButton>로그인</S.LoginButton>
               ) : (
                 <S.DisabledLoginButton disabled>로그인</S.DisabledLoginButton>

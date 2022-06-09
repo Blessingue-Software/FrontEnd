@@ -68,7 +68,7 @@ export const DisabledLoginButton = styled.button`
   height: 54px;
   text-align: center;
   margin: 50px auto 30px auto;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 900;
   transition: 0.3s;
 `;
