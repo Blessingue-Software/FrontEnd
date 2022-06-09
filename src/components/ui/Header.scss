@@ -41,7 +41,8 @@ a {
   padding-left: 0;
   display: flex;
   transition: all 0.2s ease-in-out;
-  margin: 0;
+  padding-right: 15px;
+    margin: 0;
 }
 
 .navbar__toggleBtn {
@@ -77,6 +78,7 @@ a {
   .navbar__links {
     display: none;
     justify-content: center;
+    padding-right: 0;
     width: 100%;
   }
   .navbar__toggleBtn {

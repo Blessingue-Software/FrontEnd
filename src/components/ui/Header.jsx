@@ -32,7 +32,9 @@ export default function Header() {
 
   return (
     <nav className="navbar">
-      <S.MainText href="/" style={{paddingLeft:"15px"}}>{Logo}</S.MainText>
+      <S.MainText href="/" style={{ paddingLeft: "15px" }}>
+        {Logo}
+      </S.MainText>
       <ul className="navbar__menu">
         <li>
           <Link to="#">관광지</Link>
@@ -51,7 +53,7 @@ export default function Header() {
         </li>
       </ul>
 
-      <ul className="navbar__links" style={{paddingRight:"15px"}}>
+      <ul className="navbar__links">
         <li>
           <Link to="/login">로그인</Link>
         </li>
