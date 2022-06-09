@@ -3,7 +3,6 @@ import React from "react";
 import { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 import * as S from "./Style";
-import $ from "jquery";
 import "../index.css";
 import Header from "./ui/Header";
 export default function Signup() {
@@ -20,7 +19,7 @@ export default function Signup() {
       <Header />
       <div className="container">
         <form action="/라우터" method="post">
-          <S.LoginMainText href="/">강서구</S.LoginMainText>
+          <S.LoginMainText href="/">Ber 회원가입</S.LoginMainText>
           <S.BlueTopBar></S.BlueTopBar>
           <div
             style={{
@@ -63,8 +62,8 @@ export default function Signup() {
               <S.LoginInput type="text" placeholder="Email" id="email" />
             </div>
             <div style={{ display: "block", margin: "0 auto" }}>
-              <S.LoginLabel htmlFor="major">주소 </S.LoginLabel>
-              <S.LoginInput type="text" placeholder="주소" id="major" />
+              <S.LoginLabel htmlFor="major">분야</S.LoginLabel>
+              <S.LoginInput type="text" placeholder="분야" id="major" />
               <S.LoginButton>회원가입</S.LoginButton>
             </div>
           </div>
