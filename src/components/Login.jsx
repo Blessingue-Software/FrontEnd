@@ -13,13 +13,6 @@ export default function Signup() {
       setAuth(email.substr(9, 23));
     }
   }, [email]);
-  useEffect(() => {
-    console.log(auth);
-  }, [auth]);
-
-  useEffect(() => {
-    console.log(password);
-  }, [password]);
 
   return (
     <div>

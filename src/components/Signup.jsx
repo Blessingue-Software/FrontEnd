@@ -17,18 +17,6 @@ export default function Signup() {
     }
   }, [email]);
 
-  // useEffect(() => {
-  //   console.log(password);
-  // }, [password]);
-
-  // useEffect(() => {
-  //   console.log(rePassword);
-  // }, [rePassword]);
-
-  // useEffect(() => {
-  //   console.log(major);
-  // }, [major]);
-
   // const navigate = useNavigate();
   // function goBack() {
   //   navigate(-1);
