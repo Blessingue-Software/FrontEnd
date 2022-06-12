@@ -113,7 +113,7 @@ export default function Signup() {
                   setMajor(e.target.value);
                 }}
               />
-              {email &&
+              {email !== null &&
               password !== null &&
               password === rePassword &&
               auth === "@bssm.hs.kr" ? (

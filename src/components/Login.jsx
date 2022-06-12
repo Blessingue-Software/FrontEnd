@@ -7,10 +7,15 @@ import { useState, useEffect } from "react";
 export default function Signup() {
   let [email, setEmail] = useState(null);
   let [password, setPassword] = useState(null);
-
+  let [auth, setAuth] = useState(null);
   useEffect(() => {
-    console.log(email);
+    if (email !== null) {
+      setAuth(email.substr(9, 23));
+    }
   }, [email]);
+  useEffect(() => {
+    console.log(auth);
+  }, [auth]);
 
   useEffect(() => {
     console.log(password);
@@ -51,7 +56,8 @@ export default function Signup() {
                   setPassword(e.target.value);
                 }}
               />
-              {email && password !== null ? (
+
+              {email !== null && password !== null && auth === "@bssm.hs.kr" ? (
                 <S.LoginButton>로그인</S.LoginButton>
               ) : (
                 <S.DisabledLoginButton disabled>로그인</S.DisabledLoginButton>
