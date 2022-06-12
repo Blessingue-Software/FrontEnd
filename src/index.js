@@ -6,6 +6,7 @@ import App from "./App";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Reservation from "./components/Reservation";
+import Board from "./components/Board";
 import NotFound from "./components/error/NotFound";
 
 const rootElement = document.getElementById("root");
@@ -17,6 +18,7 @@ render(
       <Route path="login" element={<Login />} />
       <Route path="signup" element={<Signup />} />
       <Route path="reservation" element={<Reservation />} />
+      <Route path="board" element={<Board />} />
     </Routes>
   </BrowserRouter>,
   rootElement

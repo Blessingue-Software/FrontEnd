@@ -6,7 +6,7 @@ import * as S from "./Style";
 import Header from "./ui/Header";
 import Project from "./ui/Project";
 import Post from "./ui/Post";
-export default function main() {
+export default function Main() {
   return (
     <div>
       <Header />
