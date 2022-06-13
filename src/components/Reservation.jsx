@@ -24,11 +24,7 @@ export default function Reservation() {
               <S.LoginLabel htmlFor="password" style={{ marginTop: "30px" }}>
                 팀원 이름 (,로 구분)
               </S.LoginLabel>
-              <S.LoginInput
-                type="text"
-                placeholder="팀이름"
-                id="password"
-              />
+              <S.LoginInput type="text" placeholder="팀이름" id="password" />
             </div>
 
             <div style={{ display: "block", margin: "0 auto" }}>
@@ -45,8 +41,7 @@ export default function Reservation() {
               padding: "0px 10px",
               justifyContent: "center",
             }}
-          >
-          </div>
+          ></div>
         </form>
       </div>
     </div>

@@ -1,11 +1,10 @@
 import React from "react";
 import * as S from "./Style";
 import "../index.css";
-import Header from "./ui/Header";
 import { useState, useEffect } from "react";
 // import Password from "antd/lib/input/Password";
 
-export default function Signup() {
+export default function Login() {
   let [email, setEmail] = useState(null);
   let [password, setPassword] = useState(null);
   let [auth, setAuth] = useState(null);
@@ -17,8 +16,7 @@ export default function Signup() {
 
   return (
     <div>
-      <Header />
-      <div className="container">
+      <div className="container" >
         <form action="/라우터" method="post">
           <S.LoginMainText href="/">로그인</S.LoginMainText>
           <S.BlueTopBar></S.BlueTopBar>
@@ -54,7 +52,7 @@ export default function Signup() {
               {email !== null &&
               password !== null &&
               auth === "@bssm.hs.kr" &&
-              password.length >= 4 ? (
+              password.length >= 8 ? (
                 <S.LoginButton>로그인</S.LoginButton>
               ) : (
                 <S.DisabledLoginButton disabled>로그인</S.DisabledLoginButton>

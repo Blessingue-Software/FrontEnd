@@ -107,7 +107,6 @@ export const reset = css`
   section {
     display: block;
   }
-
   body {
     line-height: auto;
     margin: 0;
@@ -141,7 +140,6 @@ export const reset = css`
     color: ${color.black};
     font: ${font.body3};
   }
-
   ::placeholder {
     color: ${color.grey};
     font: ${font.subtitle2};
@@ -149,7 +147,6 @@ export const reset = css`
   ::selection {
     background-color: ${color.grey};
   }
-
   @font-face {
     font-family: "MinSans-Medium";
     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff")

@@ -35,13 +35,13 @@ export default function Header() {
       </S.MainText>
       <ul className="navbar__menu">
         <li>
-          <Link to="#">관광지</Link>
+          <Link to="/">관광지</Link>
         </li>
         <li>
-          <Link to="#">맛집</Link>
+          <Link to="/board">게시판</Link>
         </li>
         <li>
-          <Link to="#">랭킹</Link>
+          <Link to="/reservation">베르실 예약</Link>
         </li>
         <li>
           <Link to="#">리뷰</Link>

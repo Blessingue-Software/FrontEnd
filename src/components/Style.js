@@ -242,10 +242,7 @@ export const Squre = styled.div`
   height: 15%;
   min-height: 100px;
   padding: 10px;
-  margin-left: 100px;
-  margin-right: 0;
-  margin-top: 100px;
-  margin-bottom: 40px;
+  margin: 100px 0 0 40px;
   background-color: #ccc;
 `;
 export const Num = styled.span`
@@ -253,17 +250,13 @@ export const Num = styled.span`
   margin-top: 10px;
   display: block;
 `;
-export const Text = styled.span``;
 
 export const Post = styled.ul`
   width: 800px;
   min-width: 300px;
   height: 300px;
   padding: 30px;
-  margin-right: 100px;
-  margin-left: 50px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin: 40px 50px 100px 40px;
   background-color: #ccc;
   list-style: none;
   overflow: hidden;

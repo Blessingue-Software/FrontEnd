@@ -1,10 +1,11 @@
 /* eslint-disable */
 import React from "react";
 import { useState, useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
 import * as S from "./Style";
 import "../index.css";
 import Header from "./ui/Header";
+// import { useNavigate } from "react-router-dom";
+
 export default function Signup() {
   let [email, setEmail] = useState(null);
   let [password, setPassword] = useState(null);
@@ -27,7 +28,6 @@ export default function Signup() {
 
   return (
     <>
-      <Header />
       <div className="container">
         <form action="/라우터" method="post">
           <S.LoginMainText href="/">Ber 회원가입</S.LoginMainText>
@@ -90,8 +90,6 @@ export default function Signup() {
                 }}
                 required
               />
-            </div>
-            <div style={{ display: "block", margin: "0 auto" }}>
               <S.LoginLabel htmlFor="major">분야</S.LoginLabel>
               <S.LoginInput
                 type="text"
@@ -104,7 +102,7 @@ export default function Signup() {
               {email !== null &&
               password !== null &&
               password === rePassword &&
-              password.length >= 4 &&
+              password.length >= 8 &&
               auth === "@bssm.hs.kr" ? (
                 <S.LoginButton>회원가입</S.LoginButton>
               ) : (
