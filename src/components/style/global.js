@@ -107,11 +107,12 @@ export const reset = css`
   section {
     display: block;
   }
-  
+
   body {
     line-height: auto;
     margin: 0;
     background-color: ${color.background};
+    color: ${color.black};
   }
   ol,
   ul {
