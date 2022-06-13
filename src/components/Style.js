@@ -4,7 +4,7 @@ export const LoginInput = styled.input`
   display: block;
   width: 100%;
   height: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   margin-top: 5px;
   padding: 20px 20px;
   border-radius: 8px;

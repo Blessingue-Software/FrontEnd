@@ -24,6 +24,7 @@ export default function Header() {
   ]);
 
   const [login, setlogin] = useState(["로그인"]);
+  const [loginLink, setloginLink] = useState(["/login"]);
 
   let liClick = () => {
     $(".navbar__menu").classList.remove("active");
@@ -60,6 +61,7 @@ export default function Header() {
         {headerList.map((a, i) => {
           return (
             <li
+              key={i}
               onClick={() => {
                 liClick();
               }}
@@ -71,13 +73,18 @@ export default function Header() {
       </ul>
 
       <ul className="navbar__links">
-        <li
-          onClick={() => {
-            liClick();
-          }}
-        >
-          <Link to="/login">로그인</Link>
-        </li>
+      {login.map((a, i) => {
+          return (
+            <li
+              key={i}
+              onClick={() => {
+                liClick();
+              }}
+            >
+              <Link to={loginLink[i]}>{a}</Link>
+            </li>
+          );
+        })}
         {/* <li>
           <Link to="/signup">회원가입</Link>
         </li> */}
