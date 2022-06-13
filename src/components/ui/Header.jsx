@@ -8,6 +8,29 @@ export default function Header() {
   let status = 0;
   const $ = document.querySelector.bind(document);
 
+  const [headerList, setHeaderList] = useState([
+    "게시판",
+    "베르실 예약",
+    "더미1",
+    "더미2",
+    "더미3",
+  ]);
+  const [headerLinkList, setHeaderLinkList] = useState([
+    "/board",
+    "/reservation",
+    "/404",
+    "/405",
+    "/406 ",
+  ]);
+
+  const [login, setlogin] = useState(["로그인"]);
+
+  let liClick = () => {
+    $(".navbar__menu").classList.remove("active");
+    $(".navbar__links").classList.remove("active");
+    $("#btn").classList.remove("on");
+  };
+
   let click = () => {
     if (!status) {
       $(".navbar__menu").classList.add("active");
@@ -34,25 +57,25 @@ export default function Header() {
         {Logo}
       </S.MainText>
       <ul className="navbar__menu">
-        <li>
-          <Link to="/">관광지</Link>
-        </li>
-        <li>
-          <Link to="/board">게시판</Link>
-        </li>
-        <li>
-          <Link to="/reservation">베르실 예약</Link>
-        </li>
-        <li>
-          <Link to="#">리뷰</Link>
-        </li>
-        <li>
-          <Link to="#">일자리</Link>
-        </li>
+        {headerList.map((a, i) => {
+          return (
+            <li
+              onClick={() => {
+                liClick();
+              }}
+            >
+              <Link to={headerLinkList[i]}>{a}</Link>
+            </li>
+          );
+        })}
       </ul>
 
       <ul className="navbar__links">
-        <li>
+        <li
+          onClick={() => {
+            liClick();
+          }}
+        >
           <Link to="/login">로그인</Link>
         </li>
         {/* <li>

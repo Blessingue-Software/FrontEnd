@@ -3,7 +3,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import * as S from "./Style";
 import "../index.css";
-import Header from "./ui/Header";
 // import { useNavigate } from "react-router-dom";
 
 export default function Signup() {

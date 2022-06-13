@@ -11,7 +11,7 @@ function App() {
     <div>
       <Global styles={reset} />
       <Header />
-      <Outlet></Outlet>
+      <Outlet />
     </div>
   );
 }

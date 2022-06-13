@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from "react";
 import Slider from "./ui/Slider";
 import Project from "./ui/Project";

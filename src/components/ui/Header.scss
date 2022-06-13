@@ -101,7 +101,6 @@ h2 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  color: #262626;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -110,11 +109,11 @@ h2 {
 
 #btn {
   position: absolute;
-  width: 8px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   top: 18px;
+  background-color: black;
   transform: translate(-50%, -50%);
-  background: black;
   border-radius: 50%;
   border: none;
   outline: none;

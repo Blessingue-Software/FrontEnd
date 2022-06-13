@@ -110,8 +110,7 @@ export const reset = css`
   body {
     line-height: auto;
     margin: 0;
-    background-color: ${color.background};
-    color: ${color.black};
+    
   }
   ol,
   ul {
@@ -136,7 +135,6 @@ export const reset = css`
     list-style: none;
   }
   html {
-    background-color: ${color.background};
     color: ${color.black};
     font: ${font.body3};
   }
