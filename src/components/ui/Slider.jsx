@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import "./Slider.scss";
+
 export default function Silder() {
   return (
     <>

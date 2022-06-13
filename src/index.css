@@ -1,58 +1,6 @@
 * {
   font-family: "MinSans-Medium";
 }
-::placeholder {
-  color: #a5a3a3;
-  font-weight: 500;
-  font-size: 16px;
-  font-weight: 600;
-}
-::selection {
-  background-color: #a5a3a3;
-}
-a {
-  text-decoration: none;
-}
-
-input {
-  font-weight: 700;
-}
-
-#left_margin {
-  margin-left: 24px;
-}
-
-#top_margin {
-  margin-top: 180px;
-}
-
-#way_top_margin {
-  margin-top: 50px;
-}
-a {
-  transition: 0.3s;
-}
-a:hover {
-  text-decoration: none;
-  transition: 0.3s;
-  color: #61dafb;
-}
-form {
-  padding: 50px 35px;
-}
-
-form * {
-  color: #6e92fa;
-  outline: none;
-  border: none;
-}
-
-#black {
-  background-color: #ccc;
-  display: block;
-  width: 33%;
-  height: 100px;
-}
 
 @font-face {
   font-family: "MinSans-Medium";
@@ -62,6 +10,13 @@ form * {
   font-style: normal;
 }
 
-.flo {
-  float: left;
+form {
+  padding: 35px 50px;
+}
+
+#section {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
 }

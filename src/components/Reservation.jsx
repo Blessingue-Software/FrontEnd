@@ -46,10 +46,6 @@ export default function Reservation() {
               justifyContent: "center",
             }}
           >
-            {/* <S.LoginBottom href="/signup">회원가입</S.LoginBottom>
-            <S.LoginBottom href="/signup">비밀번호 찾기</S.LoginBottom>
-            <S.LoginBottom href="/signup">아이디 찾기</S.LoginBottom>
-           */}
           </div>
         </form>
       </div>

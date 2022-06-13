@@ -1,21 +1,21 @@
+$blue: #6e92fa;
+
+
 .slide {
   width: 100%;
   text-align: center;
   margin: 0 auto;
   display: block;
-  // min-height: 400px;
 }
 .swiper-pagenation-bullet {
-  background-color: #6e92fa !important;
+  background-color: $blue !important;
 }
 .swiper-pagination-bullet {
-  background-color: #6e92fa !important;
+  background-color: $blue !important;
 }
 .swiper-button-prev {
-  /* background-color: #6e92fa !important; */
-  color: #6e92fa !important;
+  color: $blue !important;
 }
 .swiper-button-next {
-  /* color: #6e92fa !important; */
-  color: #6e92fa !important;
+  color: $blue !important;
 }

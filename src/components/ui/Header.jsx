@@ -6,8 +6,8 @@ import "./Header.scss";
 export default function Header() {
   const Logo = "Ber";
   let status = 0;
-  let eStatus = 0;
   const $ = document.querySelector.bind(document);
+
   let click = () => {
     if (!status) {
       $(".navbar__menu").classList.add("active");
@@ -23,10 +23,8 @@ export default function Header() {
   let eClick = () => {
     if (status) {
       $("#btn").classList.remove("on");
-      eStatus = 1;
     } else {
       $("#btn").classList.add("on");
-      eStatus = 0;
     }
   };
 

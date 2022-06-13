@@ -3,6 +3,7 @@ import * as S from "./Style";
 import "../index.css";
 import Header from "./ui/Header";
 import { useState, useEffect } from "react";
+// import Password from "antd/lib/input/Password";
 
 export default function Signup() {
   let [email, setEmail] = useState(null);
@@ -50,7 +51,10 @@ export default function Signup() {
                 }}
               />
 
-              {email !== null && password !== null && auth === "@bssm.hs.kr" ? (
+              {email !== null &&
+              password !== null &&
+              auth === "@bssm.hs.kr" &&
+              password.length >= 4 ? (
                 <S.LoginButton>로그인</S.LoginButton>
               ) : (
                 <S.DisabledLoginButton disabled>로그인</S.DisabledLoginButton>

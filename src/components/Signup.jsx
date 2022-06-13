@@ -104,6 +104,7 @@ export default function Signup() {
               {email !== null &&
               password !== null &&
               password === rePassword &&
+              password.length >= 4 &&
               auth === "@bssm.hs.kr" ? (
                 <S.LoginButton>회원가입</S.LoginButton>
               ) : (
