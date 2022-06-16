@@ -11,33 +11,7 @@ export const LoginInput = styled.input`
   border: 1px solid #6e92fa;
   &::placeholder {
     font-size: 16px;
-    // padding-left: -10px;
   }
-`;
-
-export const Signup = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-`;
-
-export const SignupInput = styled.input`
-  display: block;
-  width: 60%;
-  height: 8px;
-  margin: 0 auto;
-  margin-bottom: 45px;
-  padding: 20px;
-  font-size: 24px;
-  border-radius: 12px;
-  border: 1px solid #6e92fa;
-`;
-export const SignupLabel = styled.label`
-  font-size: 18px;
-  display: block;
-  margin: 0 auto;
-  font-weight: 700;
 `;
 
 export const LoginLabel = styled.label`
@@ -104,67 +78,12 @@ export const LoginBottom = styled.a`
   }
   transition: 0.3s;
 `;
-export const SignupButton = styled.button`
-  display: block;
-  background-color: #6e92fa;
-  color: #ffffff;
-  border: 0;
-  border-radius: 12px;
-  margin: 0 auto;
-  width: 80%;
-  height: 72px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 900;
-  &:hover {
-    background-color: #61dafb;
-    transition: 0.3s;
-  }
-  transition: 0.3s;
-`;
-
-export const SignupCancelButton = styled.button`
-  display: block;
-  background-color: #cccccc;
-  color: #ffffff;
-  border: 0;
-  border-radius: 12px;
-  width: 150px;
-  height: 72px;
-  margin: 24px auto;
-  font-size: 24px;
-  font-weight: 900;
-  &:hover {
-    background-color: #b1b1b1;
-    transition: 0.3s;
-  }
-  transition: 0.3s;
-`;
-
-export const BtnFlex = styled.div`
-  display: flex;
-  margin: 0 auto;
-`;
-
-export const Flex = styled.div`
-  display: flex;
-  margin: 0 auto;
-`;
 
 export const BlueTopBar = styled.hr`
   display: block;
   width: 15%;
   height: 5px;
   background-color: #6e92fa;
-  margin: 36px auto;
-  border: 0;
-`;
-
-export const BlueTopBar_Signup = styled.hr`
-  display: block;
-  width: 30%;
-  height: 5px;
-  background-color: #63500f692fa;
   margin: 36px auto;
   border: 0;
 `;
@@ -216,23 +135,6 @@ export const LoginMainText = styled.p`
   font-size: 36px;
   font-weight: bold;
 `;
-export const OverlapButton = styled.button`
-  display: flex;
-  background-color: #6e92fa;
-  color: #ffffff;
-  border-radius: 4px;
-  border: 0;
-  height: 24px;
-  font-size: 12px;
-  text-align: center;
-  align-items: center;
-`;
-
-export const LoginMenu = styled.div`
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-`;
 
 export const Squre = styled.div`
   text-align: center;
@@ -270,18 +172,4 @@ export const PostList = styled.li`
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   -ms-text-overflow: ellipsis;
-`;
-// export const PostedPeople = styled.span`
-//   font-size: 28px;
-//   white-space: nowrap;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-//   -o-text-overflow: ellipsis;
-//   -ms-text-overflow: ellipsis;
-// `;
-export const HeaderLogo = styled.span`
-  display: block;
-  color: #6e92fa;
-  font-size: 26px;
-  text-align: center;
 `;
