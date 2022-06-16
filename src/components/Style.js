@@ -1,4 +1,3 @@
-import { Calendar } from "antd";
 import styled from "styled-components";
 const blue = "#6e92fa";
 export const LoginInput = styled.input`
