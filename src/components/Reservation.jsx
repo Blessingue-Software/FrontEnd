@@ -22,16 +22,16 @@ export default function Reservation() {
 
             <div style={{ display: "block", margin: "0 auto" }}>
               <S.LoginLabel htmlFor="password" style={{ marginTop: "30px" }}>
-                팀원 이름 (,로 구분)
+                이름
               </S.LoginLabel>
-              <S.LoginInput type="text" placeholder="팀이름" id="password" />
+              <S.LoginInput type="text" placeholder="이름" id="password" />
             </div>
 
             <div style={{ display: "block", margin: "0 auto" }}>
               <S.LoginLabel htmlFor="name" style={{ marginTop: "30px" }}>
-                팀이름
+                성별
               </S.LoginLabel>
-              <S.LoginInput type="text" placeholder="팀이름" id="name" />
+              <S.LoginInput type="text" placeholder="성별" id="name" />
               <S.LoginButton>신청하기</S.LoginButton>
             </div>
           </div>

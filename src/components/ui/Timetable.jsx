@@ -37,6 +37,38 @@ export default function TimeTable() {
     },
   ];
 
+  const [classList, setClassList] = useState([
+    "breakfast",
+    "1period",
+    "2period",
+    "3period",
+    "4period",
+    "lunch",
+    "5period",
+    "6period",
+    "7period",
+    "afterSchool1",
+    "dinner",
+    "afterSchool2",
+    "domitory",
+  ]);
+
+  const [periodList, setPeriodList] = useState([
+    "아침",
+    "1",
+    "2",
+    "3",
+    "4",
+    "점심",
+    "5",
+    "6",
+    "7",
+    "방과후",
+    "저녁",
+    "방과후",
+    "기숙사",
+  ]);
+
   function getTodayLabel() {
     let week = ["일", "월", "화", "수", "목", "금", "토"];
     let today = new Date().getDay();
@@ -51,7 +83,21 @@ export default function TimeTable() {
   for (var i = 0; i < 7; i++) {
     period.push(exjson[i].title);
   }
-  1;
+  const [periodNameList, setPeriodNameList] = useState([
+    "아침",
+    period[0],
+    period[1],
+    period[2],
+    period[3],
+    "점심",
+    period[4],
+    period[5],
+    period[6],
+    "방과후",
+    "저녁",
+    "방과후",
+    "기숙사",
+  ]);
 
   let now = dayjs();
   let nowMonth = now.format("M월DD일");
@@ -179,54 +225,6 @@ export default function TimeTable() {
       document.querySelector("#domitory").style.color = "#ffffff";
     }, []);
   }
-
-  const [classList, setClassList] = useState([
-    "breakfast",
-    "1period",
-    "2period",
-    "3period",
-    "4period",
-    "lunch",
-    "5period",
-    "6period",
-    "7period",
-    "afterSchool1",
-    "dinner",
-    "afterSchool2",
-    "domitory",
-  ]);
-
-  const [periodList, setPeriodList] = useState([
-    "아침",
-    "1",
-    "2",
-    "3",
-    "4",
-    "점심",
-    "5",
-    "6",
-    "7",
-    "방과후",
-    "저녁",
-    "방과후",
-    "기숙사",
-  ]);
-
-  const [periodNameList, setPeriodNameList] = useState([
-    "아침",
-    period[0],
-    period[1],
-    period[2],
-    period[3],
-    "점심",
-    period[4],
-    period[5],
-    period[6],
-    "방과후",
-    "저녁",
-    "방과후",
-    "기숙사",
-  ]);
 
   // console.log("준식:", classList, periodList, periodNameList);
   return (
