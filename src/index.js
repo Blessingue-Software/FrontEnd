@@ -8,6 +8,8 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Reservation from "./components/Reservation";
 import Board from "./components/Board";
+import Calendar from "./components/ui/Calendar";
+import Timetable from "./components/ui/Timetable";
 import NotFound from "./components/error/NotFound";
 const rootElement = document.getElementById("root");
 render(
@@ -20,6 +22,8 @@ render(
         <Route path="signup" element={<Signup />} />
         <Route path="reservation" element={<Reservation />} />
         <Route path="board" element={<Board />} />
+        <Route path="calendar" element={<Calendar />} />
+        <Route path="timetable" element={<Timetable />} />
       </Route>
     </Routes>
   </BrowserRouter>,

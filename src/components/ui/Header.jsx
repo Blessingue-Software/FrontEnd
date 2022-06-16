@@ -11,15 +11,15 @@ export default function Header() {
   const [headerList, setHeaderList] = useState([
     "게시판",
     "베르실 예약",
-    "더미1",
-    "더미2",
+    "달력",
+    "시간표",
     "더미3",
   ]);
   const [headerLinkList, setHeaderLinkList] = useState([
     "/board",
     "/reservation",
-    "/404",
-    "/405",
+    "/calendar",
+    "/timetable",
     "/406 ",
   ]);
 

@@ -1,0 +1,22 @@
+#date {
+  box-sizing: border-box;
+}
+.App {
+  display: flex;
+  flex-direction: column; /* 세로순으로 */
+  align-items: center; /* 가로 중앙 css*/
+  justify-content: center; /* 세로 중앙 css*/
+}
+
+.App .control {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+.control button {
+  margin: 20px;
+}
+.App #main {
+  display: flex;
+  flex-direction: row;
+}
