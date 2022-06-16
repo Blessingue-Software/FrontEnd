@@ -14,12 +14,13 @@ export default function Calendar() {
 
   const calendarArr = () => {
     let result = [];
+    let issue = ["일", "월", "화", "수", "목", "금", "토"];
+
     let week = firstWeek;
     for (week; week <= lastWeek; week++) {
       result = result.concat(
         <div id="main" key={week}>
-          {Array(7)
-            .fill(0)
+          {[1, 2, 3, 4, 5, 6, 7]
             // eslint-disable-next-line no-loop-func
             .map((data, index) => {
               let days = today
@@ -28,11 +29,11 @@ export default function Calendar() {
                 .week(week)
                 .startOf("week")
                 .add(index, "day");
-
               if (moment().format("YYYYMMDD") === days.format("YYYYMMDD")) {
                 return (
                   <S.Today id="date" key={index}>
-                    <S.Day>{days.format("D")}</S.Day>
+                    <S.Day>{days.format("D")}</S.Day> <br />
+                    <S.Day>{issue[index]}</S.Day>
                   </S.Today>
                 );
               } else if (days.format("MM") !== today.format("MM")) {
@@ -44,7 +45,8 @@ export default function Calendar() {
               } else {
                 return (
                   <S.Date id="date" key={index}>
-                    <S.Day>{days.format("D")}</S.Day>
+                    <S.Day>{days.format("D")}</S.Day> <br />
+                    <S.Day>{issue[index]}</S.Day>
                   </S.Date>
                 );
               }
@@ -60,22 +62,22 @@ export default function Calendar() {
   return (
     <div className="App">
       <div className="control">
-        <button
+        <S.calendarBtn
           onClick={() => {
             setMoment(getMoment.clone().subtract(1, "month"));
           }}
         >
           {"<"}
-        </button>
+        </S.calendarBtn>
         {/* <S.Month>{today.format("YYYY 년 MM 월")}</S.Month> */}
         <S.Month>{today.format("MM 월")}</S.Month>
-        <button
+        <S.calendarBtn
           onClick={() => {
             setMoment(getMoment.clone().add(1, "month"));
           }}
         >
           {">"}
-        </button>
+        </S.calendarBtn>
       </div>
       <div>{calendarArr()}</div>
     </div>

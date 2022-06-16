@@ -10,8 +10,10 @@
 
 .App .control {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 50px;
+  width: 200px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px auto;
 }
 .control button {
   margin: 20px;

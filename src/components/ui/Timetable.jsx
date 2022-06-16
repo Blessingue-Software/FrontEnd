@@ -4,7 +4,6 @@ import * as S from "../Style";
 import { useState } from "react";
 import "./Timetable.scss";
 import dayjs from "dayjs";
-import $ from "jquery";
 import axios from "axios";
 export default function TimeTable() {
   let exjson = [
@@ -52,6 +51,7 @@ export default function TimeTable() {
   for (var i = 0; i < 7; i++) {
     period.push(exjson[i].title);
   }
+  1;
 
   let now = dayjs();
   let nowMonth = now.format("M월DD일");
@@ -61,88 +61,123 @@ export default function TimeTable() {
   let minutes = nowjs.getMinutes(); // 분
 
   let nowtime = hours + ":" + minutes; // 이게 지금 시간입니다잉
-  // let nowtime = "18:31";
+  // let nowtime = "08:31";
 
   console.log("nowtime : ", nowtime);
+
   if (
     // 아침
     nowtime >= `07:30` &&
     nowtime <= `08:39`
   ) {
-    $(".1period").css("color", "#ffffff").css("background-color", "#ae6fff");
+    useEffect(() => {
+      document.querySelector("#breakfast").style.background = "#6e92fa";
+      document.querySelector("#breakfast").style.color = "#ffffff";
+    }, []);
   } else if (
     // 1교시
     nowtime >= `08:40` &&
     nowtime <= `09:39`
   ) {
-    $(".1period").css("color", "#ffffff").css("background-color", "#ae6fff");
+    useEffect(() => {
+      document.querySelector("#1period").style.background = "#6e92fa";
+      document.querySelector("#1period").style.color = "#ffffff";
+    }, []);
   } else if (
     // 2교시
     nowtime >= `09:40` &&
     nowtime <= `10:39`
   ) {
-    $(".2period").css("color", "#ffffff").css("background-color", "#ae6fff");
+    useEffect(() => {
+      document.querySelector("#2period").style.background = "#6e92fa";
+      document.querySelector("#2period").style.color = "#ffffff";
+    }, []);
   } else if (
     // 3교시
     nowtime >= `10:40` &&
     nowtime <= `11:39`
   ) {
-    $(".3period").css("color", "#ffffff").css("background-color", "#ae6fff");
+    useEffect(() => {
+      document.querySelector("#3period").style.background = "#6e92fa";
+      document.querySelector("#3period").style.color = "#ffffff";
+    }, []);
   } else if (
     // 4교시
     nowtime >= `11:40` &&
     nowtime <= `12:29`
   ) {
-    $(".4period").css("color", "#ffffff").css("background-color", "#ae6fff");
+    useEffect(() => {
+      document.querySelector("#4period").style.background = "#6e92fa";
+      document.querySelector("#4period").style.color = "#ffffff";
+    }, []);
   } else if (
     // 점심
     nowtime >= `12:30` &&
     nowtime <= `13:19`
   ) {
-    $(".lunch").css("color", "#ffffff").css("background-color", "#ae6fff");
+    useEffect(() => {
+      document.querySelector("#lunch").style.background = "#6e92fa";
+      document.querySelector("#lunch").style.color = "#ffffff";
+    }, []);
   } else if (
     // 5교시
     nowtime >= `13:20` &&
     nowtime <= `14:19`
   ) {
-    $(".5period").css("color", "#ffffff").css("background-color", "#ae6fff");
+    useEffect(() => {
+      document.querySelector("#5period").style.background = "#6e92fa";
+      document.querySelector("#5period").style.color = "#ffffff";
+    }, []);
   } else if (
     // 6교시
     nowtime >= `14:20` &&
     nowtime <= `15:19`
   ) {
-    $(".6period").css("color", "#ffffff").css("background-color", "#ae6fff");
+    useEffect(() => {
+      document.querySelector("#6period").style.background = "#6e92fa";
+      document.querySelector("#6period").style.color = "#ffffff";
+    }, []);
   } else if (
     // 7교시
     nowtime >= `15:20` &&
     nowtime <= `16:29`
   ) {
-    $(".7period").css("color", "#ffffff").css("background-color", "#ae6fff");
+    useEffect(() => {
+      document.querySelector("#7period").style.background = "#6e92fa";
+      document.querySelector("#7period").style.color = "#ffffff";
+    }, []);
   } else if (
     // 방과후1
     nowtime >= `16:30` &&
     nowtime <= `18:09`
   ) {
-    $(".afterSchool1")
-      .css("color", "#ffffff")
-      .css("background-color", "#ae6fff");
+    useEffect(() => {
+      document.querySelector("#afterSchool1").style.background = "#6e92fa";
+      document.querySelector("#afterSchool1").style.color = "#ffffff";
+    }, []);
   } else if (
     // 저녁
     nowtime >= `18:10` &&
     nowtime <= `18:59`
   ) {
-    $(".dinner").css("color", "#ffffff").css("background-color", "#ae6fff");
+    useEffect(() => {
+      document.querySelector("#dinner").style.background = "#6e92fa";
+      document.querySelector("#dinner").style.color = "#ffffff";
+    }, []);
   } else if (
     // 방과후2
     nowtime >= `19:00` &&
     nowtime <= `20:39`
   ) {
-    $(".afterSchool2")
-      .css("color", "#ffffff")
-      .css("background-color", "#ae6fff");
+    useEffect(() => {
+      document.querySelector("#afterSchool2").style.background = "#6e92fa";
+      document.querySelector("#afterSchool2").style.color = "#ffffff";
+    }, []);
   } else {
-    $(".domitory").css("color", "#ffffff").css("background-color", "#ae6fff");
-    console.log("엄준식");
+    useEffect(() => {
+      document.querySelector("#domitory").style.background = "#6e92fa";
+      document.querySelector("#domitory").style.color = "#ffffff";
+    }, []);
   }
 
   const [classList, setClassList] = useState([
@@ -192,7 +227,8 @@ export default function TimeTable() {
     "방과후",
     "기숙사",
   ]);
-  console.log("준식:", classList, periodList, periodNameList);
+
+  // console.log("준식:", classList, periodList, periodNameList);
   return (
     <>
       <S.Timetable>
@@ -203,7 +239,7 @@ export default function TimeTable() {
         {classList.map((a, i) => {
           return (
             <S.period key={i}>
-              <S.periodCount className={a}>{periodList[i]}</S.periodCount>
+              <S.periodCount id={a}>{periodList[i]}</S.periodCount>
               <S.periodName>{periodNameList[i]}</S.periodName>
             </S.period>
           );

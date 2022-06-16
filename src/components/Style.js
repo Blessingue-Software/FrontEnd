@@ -1,5 +1,6 @@
+import { Calendar } from "antd";
 import styled from "styled-components";
-
+const blue = "#6e92fa";
 export const LoginInput = styled.input`
   display: block;
   width: 100%;
@@ -8,7 +9,7 @@ export const LoginInput = styled.input`
   margin-top: 5px;
   padding: 20px 20px;
   border-radius: 8px;
-  border: 1px solid #6e92fa;
+  border: 1px solid ${blue};
   &::placeholder {
     font-size: 16px;
   }
@@ -49,7 +50,7 @@ export const DisabledLoginButton = styled.button`
 
 export const LoginButton = styled.button`
   display: block;
-  background-color: #6e92fa;
+  background-color: ${blue};
   color: #ffffff;
   border: 0;
   border-radius: 8px;
@@ -73,7 +74,7 @@ export const LoginBottom = styled.a`
   font-size: 12px;
   text-decoration-line: none;
   &:hover {
-    color: #6e92fa;
+    color: ${blue};
     transition: 0.3s;
   }
   transition: 0.3s;
@@ -83,7 +84,7 @@ export const BlueTopBar = styled.hr`
   display: block;
   width: 15%;
   height: 5px;
-  background-color: #6e92fa;
+  background-color: ${blue};
   margin: 36px auto;
   border: 0;
 `;
@@ -91,7 +92,7 @@ export const BlueTopBar = styled.hr`
 export const MainText = styled.a`
   text-align: center;
   display: block;
-  color: #6e92fa;
+  color: ${blue};
   transition: 0.3s;
   font-size: 24px;
   &:hover {
@@ -131,7 +132,7 @@ export const MainText = styled.a`
 export const LoginMainText = styled.p`
   text-align: center;
   display: block;
-  color: #6e92fa;
+  color: ${blue};
   font-size: 36px;
   font-weight: bold;
 `;
@@ -179,13 +180,12 @@ export const Month = styled.span`
 `;
 export const Day = styled.span`
   margin-top: 10px;
-  margin-left: 14px;
-  font-size: 13px;
+  margin-left: 4px;
   font-weight: bold;
 `;
 export const Date = styled.div`
-  width: 118px;
-  height: 118px;
+  width: 80px;
+  height: 80px;
   margin: 10px;
   font-size: 13px;
   background-color: #fff;
@@ -195,13 +195,12 @@ export const Date = styled.div`
 `;
 // background-color: rgb(197, 197, 197);
 export const Today = styled.div`
-  width: 118px;
-  height: 118px;
+  width: 100px;
+  height: 100px;
   margin: 10px;
-  font-size: 13px;
   background-color: #fff;
   border-radius: 4px;
-  border: 2px solid #ae6fff;
+  border: 2px solid ${blue};
   box-shadow: 3px 3px 3px 3px #e1e1e1;
 `;
 // background-color: rgb(197, 197, 197);
@@ -217,7 +216,7 @@ export const ScheduleTitle = styled.span`
   display: block;
   font-size: 36px;
   font-weight: bold;
-  color: #ae6fff;
+  color: ${blue};
   text-align: center;
 `;
 // text-align: center;
@@ -245,14 +244,14 @@ export const TodayTitle = styled.span`
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  color: #ae6fff;
+  color: ${blue};
 `;
 export const LongButton = styled.button`
   width: 80%;
   height: 32px;
   display: block;
   font-size: 18px;
-  background-color: #ae6fff;
+  background-color: ${blue};
   color: #ffffff;
   box-sizing: border-box;
   border: 0;
@@ -277,7 +276,7 @@ export const TimetableTitle = styled.span`
   padding-top: 48px;
   font-size: 36px;
   font-weight: bold;
-  color: #ae6fff;
+  color: ${blue};
   text-align: center;
   margin-bottom: 46px;
 `;
@@ -304,8 +303,8 @@ export const periodCount = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  color: #ae6fff;
-  border: solid 1.5px #ae6fff;
+  color: ${blue};
+  border: solid 1.5px ${blue};
   background-color: #ffffff;
   margin-left: 3px;
   margin-top: 3px;
@@ -324,7 +323,7 @@ export const restTime = styled.div`
   display: inline;
   width: 105px;
   height: 60px;
-  background-color: #ae6fff;
+  background-color: ${blue};
   color: #ffffff;
   font-size: 16px;
   border-radius: 8px;
@@ -332,6 +331,23 @@ export const restTime = styled.div`
   vertical-align: middle;
   text-align: center;
   float: right;
-  z-index: 2;
   margin-left: 220px;
+`;
+
+export const calendarBtn = styled.div`
+  display: block;
+  background-color: ${blue};
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  &:hover {
+    background-color: #61dafb;
+    transition: 0.3s;
+  }
+  transition: 0.3s;
 `;
