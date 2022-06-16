@@ -73,7 +73,7 @@ export default function Header() {
       </ul>
 
       <ul className="navbar__links">
-      {login.map((a, i) => {
+        {login.map((a, i) => {
           return (
             <li
               key={i}
