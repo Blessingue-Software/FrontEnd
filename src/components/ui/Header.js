@@ -13,14 +13,14 @@ export default function Header() {
     "베르실 예약",
     "달력",
     "시간표",
-    "더미3",
+    "404",
   ]);
   const [headerLinkList, setHeaderLinkList] = useState([
     "/board",
     "/reservation",
     "/calendar",
     "/timetable",
-    "/406 ",
+    "/이상한라우팅",
   ]);
 
   const [login, setlogin] = useState(["로그인"]);

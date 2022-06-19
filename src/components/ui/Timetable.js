@@ -106,8 +106,11 @@ export default function TimeTable() {
   let hours = nowjs.getHours();
   let minutes = nowjs.getMinutes(); // 분
 
+  // var nowtime = "20:1";
   let nowtime = hours + ":" + minutes; // 이게 지금 시간입니다잉
-  // let nowtime = "08:31";
+  if (minutes.length === 1) {
+    minutes = "0" + minutes;
+  }
 
   console.log("nowtime : ", nowtime);
 
@@ -225,8 +228,6 @@ export default function TimeTable() {
       document.querySelector("#domitory").style.color = "#ffffff";
     }, []);
   }
-
-  // console.log("준식:", classList, periodList, periodNameList);
   return (
     <>
       <S.Timetable>

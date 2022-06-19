@@ -20,7 +20,7 @@ export default function Error() {
                 Unfortunately we're having trouble loading the page you are
                 looking for. Please come back in a while.
               </span>
-              <div className="button-box">
+              <div className="button-box" style={{ marginBottom: "100px" }}>
                 <button
                   type="button"
                   className="btn btn-primary btn-lg"

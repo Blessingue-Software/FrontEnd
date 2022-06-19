@@ -22,3 +22,41 @@
   display: flex;
   flex-direction: row;
 }
+
+.wrap {
+  vertical-align: middle;
+}
+
+.wrap .arrow {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.wrap .arrow:before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+  margin-top: 2px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+.wrap .arrow.top:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.wrap .arrow.down:before {
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+.wrap .arrow.left:before {
+  transform: translate(-50%, -50%) rotate(315deg);
+}
+.wrap .arrow.right:before {
+  transform: translate(-50%, -50%) rotate(135deg);
+}

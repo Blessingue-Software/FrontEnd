@@ -199,7 +199,7 @@ export const Today = styled.div`
   margin: 10px;
   background-color: #fff;
   border-radius: 4px;
-  border: 2px solid ${blue};
+  border: 4px solid ${blue};
   box-shadow: 3px 3px 3px 3px #e1e1e1;
 `;
 // background-color: rgb(197, 197, 197);
@@ -265,7 +265,7 @@ export const Line = styled.hr`
 // ----------------------- Timetable --------------------
 
 export const Timetable = styled.div`
-  width: 100%;
+  width: 90%;
   height: 1080px;
   background-color: #f0f0f0;
 `;
@@ -286,7 +286,7 @@ export const periodFrame = styled.div`
 `;
 
 export const period = styled.div`
-  width: 510px;
+  width: 80%;
   height: 66px;
   display: flex;
   margin: 10px auto;
