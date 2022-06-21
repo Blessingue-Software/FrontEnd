@@ -265,6 +265,7 @@ export const Line = styled.hr`
 // ----------------------- Timetable --------------------
 
 export const Timetable = styled.div`
+  margin: 0 auto;
   width: 90%;
   height: 1080px;
   background-color: #f0f0f0;
@@ -286,7 +287,7 @@ export const periodFrame = styled.div`
 `;
 
 export const period = styled.div`
-  width: 80%;
+  width: 50%;
   height: 66px;
   display: flex;
   margin: 10px auto;
