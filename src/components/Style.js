@@ -272,7 +272,7 @@ export const Timetable = styled.div`
 
 export const TimetableTitle = styled.span`
   display: block;
-  padding-top: 48px;
+  padding-top: 24px;
   font-size: 36px;
   font-weight: bold;
   color: ${blue};

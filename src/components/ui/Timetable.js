@@ -39,21 +39,21 @@ export default function TimeTable() {
 
   const [classList, setClassList] = useState([
     "breakfast",
-    "1period",
-    "2period",
-    "3period",
-    "4period",
+    "period1",
+    "period2",
+    "period3",
+    "period4",
     "lunch",
-    "5period",
-    "6period",
-    "7period",
+    "period5",
+    "period6",
+    "period7",
     "afterSchool1",
     "dinner",
     "afterSchool2",
     "domitory",
   ]);
 
-  const [periodList, setPeriodList] = useState([
+  const [periodList, sePeriodtList] = useState([
     "아",
     "1",
     "2",
@@ -83,7 +83,7 @@ export default function TimeTable() {
   for (var i = 0; i < 7; i++) {
     period.push(exjson[i].title);
   }
-  const [periodNameList, setPeriodNameList] = useState([
+  const [periodNameList, sePeriodtNameList] = useState([
     "아침",
     period[0],
     period[1],
@@ -101,18 +101,63 @@ export default function TimeTable() {
 
   let now = dayjs();
   let nowMonth = now.format("M월DD일");
+  var nowjs = new Date(); // 현재 날짜 및 시간
+  var hours = nowjs.getHours();
+  var minutes = nowjs.getMinutes(); // 분
+  // var hours = "5";
+  // var minutes = "9"; // 분
 
-  let nowjs = new Date(); // 현재 날짜 및 시간
-  let hours = nowjs.getHours();
-  let minutes = nowjs.getMinutes(); // 분
+  var getHours = hours.toString();
+  var getMinutes = minutes.toString();
 
-  // var nowtime = "20:1";
-  let nowtime = hours + ":" + minutes; // 이게 지금 시간입니다잉
-  if (minutes.length === 1) {
-    minutes = "0" + minutes;
+  switch (hours) {
+    case "7":
+      getHours = "07";
+      break;
+    case "8":
+      getHours = "08";
+      break;
+    case "9":
+      getHours = "09";
+      break;
+    default:
+      break;
+  }
+  switch (minutes) {
+    case "1":
+      getMinutes = "01";
+      break;
+    case "2":
+      getMinutes = "02";
+      break;
+    case "3":
+      getMinutes = "03";
+      break;
+    case "4":
+      getMinutes = "04";
+      break;
+    case "5":
+      getMinutes = "05";
+      break;
+    case "6":
+      getMinutes = "06";
+      break;
+    case "7":
+      getMinutes = "07";
+      break;
+    case "8":
+      getMinutes = "08";
+      break;
+    case "9":
+      getMinutes = "09";
+      break;
+    default:
+      break;
   }
 
-  console.log("nowtime : ", nowtime);
+  var nowtime = getHours + ":" + getMinutes; // 이게 지금 시간입니다잉
+
+  console.log(nowtime);
 
   if (
     // 아침
@@ -129,8 +174,8 @@ export default function TimeTable() {
     nowtime <= `09:39`
   ) {
     useEffect(() => {
-      document.querySelector("#1period").style.background = "#6e92fa";
-      document.querySelector("#1period").style.color = "#ffffff";
+      document.querySelector("#period1").style.background = "#6e92fa";
+      document.querySelector("#period1").style.color = "#ffffff";
     }, []);
   } else if (
     // 2교시
@@ -138,8 +183,8 @@ export default function TimeTable() {
     nowtime <= `10:39`
   ) {
     useEffect(() => {
-      document.querySelector("#2period").style.background = "#6e92fa";
-      document.querySelector("#2period").style.color = "#ffffff";
+      document.querySelector("#period2").style.background = "#6e92fa";
+      document.querySelector("#period2").style.color = "#ffffff";
     }, []);
   } else if (
     // 3교시
@@ -147,8 +192,8 @@ export default function TimeTable() {
     nowtime <= `11:39`
   ) {
     useEffect(() => {
-      document.querySelector("#3period").style.background = "#6e92fa";
-      document.querySelector("#3period").style.color = "#ffffff";
+      document.querySelector("#period3").style.background = "#6e92fa";
+      document.querySelector("#period3").style.color = "#ffffff";
     }, []);
   } else if (
     // 4교시
@@ -156,8 +201,8 @@ export default function TimeTable() {
     nowtime <= `12:29`
   ) {
     useEffect(() => {
-      document.querySelector("#4period").style.background = "#6e92fa";
-      document.querySelector("#4period").style.color = "#ffffff";
+      document.querySelector("#period4").style.background = "#6e92fa";
+      document.querySelector("#period4").style.color = "#ffffff";
     }, []);
   } else if (
     // 점심
@@ -174,8 +219,8 @@ export default function TimeTable() {
     nowtime <= `14:19`
   ) {
     useEffect(() => {
-      document.querySelector("#5period").style.background = "#6e92fa";
-      document.querySelector("#5period").style.color = "#ffffff";
+      document.querySelector("#period5").style.background = "#6e92fa";
+      document.querySelector("#period5").style.color = "#ffffff";
     }, []);
   } else if (
     // 6교시
@@ -183,8 +228,8 @@ export default function TimeTable() {
     nowtime <= `15:19`
   ) {
     useEffect(() => {
-      document.querySelector("#6period").style.background = "#6e92fa";
-      document.querySelector("#6period").style.color = "#ffffff";
+      document.querySelector("#period6").style.background = "#6e92fa";
+      document.querySelector("#period6").style.color = "#ffffff";
     }, []);
   } else if (
     // 7교시
@@ -192,8 +237,8 @@ export default function TimeTable() {
     nowtime <= `16:29`
   ) {
     useEffect(() => {
-      document.querySelector("#7period").style.background = "#6e92fa";
-      document.querySelector("#7period").style.color = "#ffffff";
+      document.querySelector("#period7").style.background = "#6e92fa";
+      document.querySelector("#period7").style.color = "#ffffff";
     }, []);
   } else if (
     // 방과후1
@@ -223,28 +268,26 @@ export default function TimeTable() {
       document.querySelector("#afterSchool2").style.color = "#ffffff";
     }, []);
   } else {
+    console.log("확실함?");
     useEffect(() => {
       document.querySelector("#domitory").style.background = "#6e92fa";
       document.querySelector("#domitory").style.color = "#ffffff";
     }, []);
   }
   return (
-    <>
-      <S.Timetable>
-        <S.TimetableTitle>
-          BSSM {nowMonth} &nbsp;
-          {dayof}요일 시간표
-        </S.TimetableTitle>
-        {classList.map((a, i) => {
-          return (
-            <S.period key={i}>
-              <S.periodCount id={a}>{periodList[i]}</S.periodCount>
-              <S.periodName>{periodNameList[i]}</S.periodName>
-            </S.period>
-          );
-        })}
-      </S.Timetable>
-      <div style={{ height: "100px" }}></div>
-    </>
+    <S.Timetable>
+      <S.TimetableTitle>
+        BSSM {nowMonth} &nbsp;
+        {dayof}요일 시간표
+      </S.TimetableTitle>
+      {classList.map((a, i) => {
+        return (
+          <S.period key={i}>
+            <S.periodCount id={a}>{periodList[i]}</S.periodCount>
+            <S.periodName>{periodNameList[i]}</S.periodName>
+          </S.period>
+        );
+      })}
+    </S.Timetable>
   );
 }
