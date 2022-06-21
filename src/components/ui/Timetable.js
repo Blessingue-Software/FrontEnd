@@ -54,19 +54,19 @@ export default function TimeTable() {
   ]);
 
   const [periodList, setPeriodList] = useState([
-    "아침",
+    "아",
     "1",
     "2",
     "3",
     "4",
-    "점심",
+    "점",
     "5",
     "6",
     "7",
-    "방과후",
-    "저녁",
-    "방과후",
-    "기숙사",
+    "방",
+    "저",
+    "방",
+    "기",
   ]);
 
   function getTodayLabel() {
