@@ -123,32 +123,33 @@ export default function TimeTable() {
     default:
       break;
   }
+
   switch (minutes) {
-    case "1":
+    case 1:
       getMinutes = "01";
       break;
-    case "2":
+    case 2:
       getMinutes = "02";
       break;
-    case "3":
+    case 3:
       getMinutes = "03";
       break;
-    case "4":
+    case 4:
       getMinutes = "04";
       break;
     case "5":
       getMinutes = "05";
       break;
-    case "6":
+    case 6:
       getMinutes = "06";
       break;
-    case "7":
+    case 7:
       getMinutes = "07";
       break;
-    case "8":
+    case 8:
       getMinutes = "08";
       break;
-    case "9":
+    case 9:
       getMinutes = "09";
       break;
     default:
