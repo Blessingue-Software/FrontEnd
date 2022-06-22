@@ -111,13 +111,13 @@ export default function TimeTable() {
   var getMinutes = minutes.toString();
 
   switch (hours) {
-    case "7":
+    case 7:
       getHours = "07";
       break;
-    case "8":
+    case 8:
       getHours = "08";
       break;
-    case "9":
+    case 9:
       getHours = "09";
       break;
     default:
