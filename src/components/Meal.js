@@ -46,7 +46,7 @@ export default function SchoolLunch() {
     }
   }
   axios.get(URL).then((response) => {
-    console.log(getTodayLabel());
+    // console.log(getTodayLabel());
     loadMeal(response);
   });
 
