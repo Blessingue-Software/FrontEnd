@@ -2,49 +2,53 @@ import React from "react";
 import axios from "axios";
 import dayjs from "dayjs";
 import "./Meal.scss";
-import { useState } from "react";
+
 export default function SchoolLunch() {
-  const week = ["일", "월", "화", "수", "목", "금", "토"];
-  let today = new Date().getDay();
   const $ = document.querySelector.bind(document);
-  let [dayof, setDayof] = useState(week[today]);
   const SCHOOLCODE = 7150658;
   const LOCALCODE = "C10";
+
   const TODAY = dayjs().format("YYYYMMDD"); // 20220623
   let date = parseInt(TODAY);
-  const URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
+
+  let URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
+
+  let today = new Date().getDay();
 
   function getTodayLabel() {
-    let todayLabel = week[today];
-    setDayof(todayLabel);
+    let week = ["일", "월", "화", "수", "목", "금", "토"];
+    let todayLabel = week[today % 7];
+    return todayLabel;
   }
-
-  axios.get(URL).then((response) => {
-    console.log(dayof);
-    if (dayof === "금") {
-      let breakfastMenu =
+  function loadMeal(response) {
+    if (getTodayLabel() === "금") {
+      const breakfastMenu =
         response.data.mealServiceDietInfo[1]?.row[0]?.DDISH_NM;
-      let lunchMenu = response.data.mealServiceDietInfo[1]?.row[1]?.DDISH_NM;
-      let dinnerMenu = "없어요";
+      const lunchMenu = response.data.mealServiceDietInfo[1]?.row[1]?.DDISH_NM;
+      const dinnerMenu = "없어요";
       $(".breakfast").innerHTML = breakfastMenu;
       $(".lunch").innerHTML = lunchMenu;
       $(".dinner").innerHTML = dinnerMenu;
-    } else if (dayof === "토" || dayof === "일") {
-      let breakfastMenu = "없어요";
-      let lunchMenu = "없어요";
-      let dinnerMenu = "없어요";
+    } else if (getTodayLabel() === "토" || getTodayLabel() === "일") {
+      const breakfastMenu = "없어요";
+      const lunchMenu = "없어요";
+      const dinnerMenu = "없어요";
       $(".breakfast").innerHTML = breakfastMenu;
       $(".lunch").innerHTML = lunchMenu;
       $(".dinner").innerHTML = dinnerMenu;
     } else {
-      let breakfastMenu =
+      const breakfastMenu =
         response.data.mealServiceDietInfo[1]?.row[0]?.DDISH_NM;
-      let lunchMenu = response.data.mealServiceDietInfo[1]?.row[1]?.DDISH_NM;
-      let dinnerMenu = response.data.mealServiceDietInfo[1]?.row[2]?.DDISH_NM;
+      const lunchMenu = response.data.mealServiceDietInfo[1]?.row[1]?.DDISH_NM;
+      const dinnerMenu = response.data.mealServiceDietInfo[1]?.row[2]?.DDISH_NM;
       $(".breakfast").innerHTML = breakfastMenu;
       $(".lunch").innerHTML = lunchMenu;
       $(".dinner").innerHTML = dinnerMenu;
     }
+  }
+  axios.get(URL).then((response) => {
+    console.log(getTodayLabel());
+    loadMeal(response);
   });
 
   function upDate() {
@@ -52,39 +56,14 @@ export default function SchoolLunch() {
     today++;
     getTodayLabel();
     console.log(date);
-    console.log(dayof);
-
-    // URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
+    console.log(getTodayLabel());
+    URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
     axios.get(URL).then((response) => {
-      if (dayof === "금") {
-        let breakfastMenu =
-          response.data.mealServiceDietInfo[1]?.row[0]?.DDISH_NM;
-        let lunchMenu = response.data.mealServiceDietInfo[1]?.row[1]?.DDISH_NM;
-        let dinnerMenu = "없어요";
-        $(".breakfast").innerHTML = breakfastMenu;
-        $(".lunch").innerHTML = lunchMenu;
-        $(".dinner").innerHTML = dinnerMenu;
-      } else if (dayof === "토" || dayof === "일") {
-        let breakfastMenu = "없어요";
-        let lunchMenu = "없어요";
-        let dinnerMenu = "없어요";
-        $(".breakfast").innerHTML = breakfastMenu;
-        $(".lunch").innerHTML = lunchMenu;
-        $(".dinner").innerHTML = dinnerMenu;
-      } else {
-        let breakfastMenu =
-          response.data.mealServiceDietInfo[1]?.row[0]?.DDISH_NM;
-        let lunchMenu = response.data.mealServiceDietInfo[1]?.row[1]?.DDISH_NM;
-        let dinnerMenu = response.data.mealServiceDietInfo[1]?.row[2]?.DDISH_NM;
-        $(".breakfast").innerHTML = breakfastMenu;
-        $(".lunch").innerHTML = lunchMenu;
-        $(".dinner").innerHTML = dinnerMenu;
-      }
+      loadMeal(response);
     });
   }
   return (
     <div className="meal-container">
-      {dayof}
       {date}
       <button onClick={upDate}>+</button>
       <div className="breakfast-container">
