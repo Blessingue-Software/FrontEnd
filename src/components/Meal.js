@@ -11,7 +11,10 @@ export default function SchoolLunch() {
   console.log(date);
   let URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
 
+  // https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=C10&SD_SCHUL_CODE=7150658&MLSV_YMD=20220624
+
   axios.get(URL).then((response) => {
+    console.log(response.data.mealServiceDietInfo[1].row[0].DDISH_NM);
     $(".breakfast").innerHTML =
       response.data.mealServiceDietInfo[1].row[0].DDISH_NM;
     $(".lunch").innerHTML =
@@ -24,26 +27,30 @@ export default function SchoolLunch() {
     console.log(date);
     URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
     axios.get(URL).then((response) => {
-      let breakfastMenu = response.data.mealServiceDietInfo[1].row[0].DDISH_NM;
-      let lunchMenu = response.data.mealServiceDietInfo[1].row[1].DDISH_NM;
-      let dinnerMenu = response.data.mealServiceDietInfo[1].row[2].DDISH_NM;
+      let breakfastMenu =
+        response.data.mealServiceDietInfo[1]?.row[0]?.DDISH_NM;
+      let lunchMenu = response.data.mealServiceDietInfo[1]?.row[1]?.DDISH_NM;
+      let dinnerMenu = response.data.mealServiceDietInfo[1]?.row[2]?.DDISH_NM;
       if (breakfastMenu && lunchMenu && dinnerMenu) {
-        $(".breakfast").innerHTML = breakfastMenu;
-        $(".lunch").innerHTML = lunchMenu;
-        $(".dinner").innerHTML = dinnerMenu;
         console.log("메뉴있");
-      } else if (breakfastMenu && lunchMenu && dinnerMenu === undefined) {
-        // 금요일
-        console.log("저녁메뉴없");
         $(".breakfast").innerHTML = breakfastMenu;
         $(".lunch").innerHTML = lunchMenu;
-        dinnerMenu = "undefined";
         $(".dinner").innerHTML = dinnerMenu;
-      } else {
+      } else if (breakfastMenu && lunchMenu && !dinnerMenu) {
+        console.log("저녁메뉴없");
+        dinnerMenu = "undefined";
+        $(".breakfast").innerHTML = breakfastMenu;
+        $(".lunch").innerHTML = lunchMenu;
+        $(".dinner").innerHTML = dinnerMenu;
+      } else if (!breakfastMenu) {
+        // 주말
         console.log("주말");
-        $(".breakfast").innerHTML = "breakfastMenu";
-        $(".lunch").innerHTML = "lunchMenu";
-        $(".dinner").innerHTML = "dinnerMenu";
+        breakfastMenu = "undefined";
+        lunchMenu = "undefined";
+        dinnerMenu = "undefined";
+        $(".breakfast").innerHTML = breakfastMenu;
+        $(".lunch").innerHTML = lunchMenu;
+        $(".dinner").innerHTML = dinnerMenu;
       }
     });
   }
