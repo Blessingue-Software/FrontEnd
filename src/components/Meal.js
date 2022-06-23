@@ -10,6 +10,7 @@ export default function SchoolLunch() {
   const LOCALCODE = "C10";
   const TODAY = dayjs().format("YYYYMMDD"); // 20220623
   let date = parseInt(TODAY);
+  // let date = 20220701;
   let URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
   let today = new Date().getDay();
   function getTodayLabel() {
