@@ -1,25 +1,37 @@
-// MLSV_FGR,
-// MESSAGE,
-// RESULT,
-// CODE,
-// list_total_count,
-// orplc_info,
-// ntr_info {
-//   display: none;
-// }
-orplc_info {
-  display: none;
+.meal-container {
+  display: flex;
+  justify-content: space-around;
+}
 
+.breakfast-container {
+  justify-content: space-around;
 }
-cal_info {
-  display: block;
-}
-DDISH_NM {
-  display: block;
+.breakfast-title {
+  text-align: center;
   font-size: 30px;
-  margin-bottom: 50px;
+}
+.breakfast {
+  display: block;
 }
 
-row:nth-child(0) {
-  background: #000;
+.lunch-title {
+  font-size: 30px;
+  text-align: center;
+}
+.lunch {
+  display: block;
+}
+.lunch-container {
+  justify-content: space-around;
+}
+
+.dinner-title {
+  font-size: 30px;
+  text-align: center;
+}
+.dinner {
+  display: block;
+}
+.dinner-container {
+  justify-content: space-around;
 }
