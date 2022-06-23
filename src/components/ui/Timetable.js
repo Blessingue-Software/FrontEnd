@@ -111,6 +111,27 @@ export default function TimeTable() {
   var getMinutes = minutes.toString();
 
   switch (hours) {
+    case 0:
+      getHours = "24";
+      break;
+    case 1:
+      getHours = "01";
+      break;
+    case 2:
+      getHours = "02";
+      break;
+    case 3:
+      getHours = "03";
+      break;
+    case 4:
+      getHours = "04";
+      break;
+    case 5:
+      getHours = "05";
+      break;
+    case 6:
+      getHours = "06";
+      break;
     case 7:
       getHours = "07";
       break;
@@ -137,7 +158,7 @@ export default function TimeTable() {
     case 4:
       getMinutes = "04";
       break;
-    case "5":
+    case 5:
       getMinutes = "05";
       break;
     case 6:
