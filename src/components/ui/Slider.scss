@@ -1,4 +1,4 @@
-$blue: #6e92fa;
+$main: #f9d142;
 
 .slide {
   width: 100%;
@@ -7,14 +7,14 @@ $blue: #6e92fa;
   display: block;
 }
 .swiper-pagenation-bullet {
-  background-color: $blue !important;
+  background-color: $main !important;
 }
 .swiper-pagination-bullet {
-  background-color: $blue !important;
+  background-color: $main !important;
 }
 .swiper-button-prev {
-  color: $blue !important;
+  color: $main !important;
 }
 .swiper-button-next {
-  color: $blue !important;
+  color: $main !important;
 }

@@ -1,0 +1,25 @@
+// MLSV_FGR,
+// MESSAGE,
+// RESULT,
+// CODE,
+// list_total_count,
+// orplc_info,
+// ntr_info {
+//   display: none;
+// }
+orplc_info {
+  display: none;
+
+}
+cal_info {
+  display: block;
+}
+DDISH_NM {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+row:nth-child(0) {
+  background: #000;
+}

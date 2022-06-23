@@ -1,20 +1,19 @@
-$blue: #6e92fa;
-
+$main: #f9d142;
+$black: #292826;
 body {
   transition: all 0.2s ease-in-out;
 }
 
 a {
   text-decoration: none;
-  color: $blue;
+  color: $main;
 }
 
-.navbar { 
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #191919;
-  padding: 8px 12px;
+  background-color: $black;
   transition: all 0.2s ease-in-out;
 }
 
@@ -69,7 +68,7 @@ a {
     align-items: center;
     width: 100%;
   }
-  .navbar__menu li {
+    .navbar__menu li {
     width: 100%;
     text-align: center;
   }

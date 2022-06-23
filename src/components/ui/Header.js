@@ -66,7 +66,9 @@ export default function Header() {
                 liClick();
               }}
             >
-              <Link to={headerLinkList[i]}>{a}</Link>
+              <Link style={{ textDecoration: "none" }} to={headerLinkList[i]}>
+                {a}
+              </Link>
             </li>
           );
         })}
@@ -81,7 +83,9 @@ export default function Header() {
                 liClick();
               }}
             >
-              <Link to={loginLink[i]}>{a}</Link>
+              <Link style={{ textDecoration: "none" }} to={loginLink[i]}>
+                {a}
+              </Link>
             </li>
           );
         })}

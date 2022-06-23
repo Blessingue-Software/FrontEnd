@@ -1,5 +1,5 @@
 import styled from "styled-components";
-const blue = "#6e92fa";
+const blue = "#F9D142";
 export const LoginInput = styled.input`
   display: block;
   width: 100%;
@@ -97,6 +97,8 @@ export const MainText = styled.a`
   &:hover {
     animation: rainbow 5s infinite linear;
     transition: 0.3s;
+    text-decoration: none;
+
     @keyframes rainbow {
       0% {
         color: red;
