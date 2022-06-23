@@ -4,25 +4,20 @@ import dayjs from "dayjs";
 import "./Meal.scss";
 import { useState } from "react";
 export default function SchoolLunch() {
-  let week = ["일", "월", "화", "수", "목", "금", "토"];
+  const week = ["일", "월", "화", "수", "목", "금", "토"];
   let today = new Date().getDay();
-
-  function getTodayLabel() {
-    let todayLabel = week[today];
-    return todayLabel;
-  }
-
-  let [dayof, setDayof] = useState(getTodayLabel());
-
+  const $ = document.querySelector.bind(document);
+  let [dayof, setDayof] = useState(week[today]);
   const SCHOOLCODE = 7150658;
   const LOCALCODE = "C10";
   const TODAY = dayjs().format("YYYYMMDD"); // 20220623
+  let date = parseInt(TODAY);
+  const URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
 
-  const $ = document.querySelector.bind(document);
-  // let [date,setDate] = useState(parseInt(TODAY))
-  let date = parseInt(TODAY)
-
-  let URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
+  function getTodayLabel() {
+    let todayLabel = week[today];
+    setDayof(todayLabel);
+  }
 
   axios.get(URL).then((response) => {
     console.log(dayof);
@@ -55,11 +50,11 @@ export default function SchoolLunch() {
   function upDate() {
     date++;
     today++;
-    setDayof(getTodayLabel());
+    getTodayLabel();
     console.log(date);
     console.log(dayof);
 
-    URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
+    // URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
     axios.get(URL).then((response) => {
       if (dayof === "금") {
         let breakfastMenu =
