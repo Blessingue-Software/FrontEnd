@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import dayjs from "dayjs";
 import "./Meal.scss";
-import { useState } from "react";
+// import { useState } from "react";
 import * as S from "./Style";
 export default function SchoolLunch() {
   const $ = document.querySelector.bind(document);
@@ -18,7 +18,6 @@ export default function SchoolLunch() {
     let todayLabel = week[today % 7];
     return todayLabel;
   }
-  let [showDate, setShowDate] = useState(getTodayLabel());
   function loadMeal(response) {
     if (getTodayLabel() === "금") {
       const breakfastMenu =
@@ -61,7 +60,6 @@ export default function SchoolLunch() {
   }
   return (
     <div className="meal-container">
-      날짜 : {showDate}
       <S.calendarBtn onClick={upDate}>+</S.calendarBtn>
       <div className="breakfast-container">
         <div className="breakfast-title">조식</div>
