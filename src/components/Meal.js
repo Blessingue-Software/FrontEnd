@@ -49,33 +49,6 @@ export default function SchoolLunch() {
     while (menu.includes("9")) {
       menu = menu.replace("9", "");
     }
-    while (menu.includes("10")) {
-      menu = menu.replace("10", "");
-    }
-    while (menu.includes("11")) {
-      menu = menu.replace("11", "");
-    }
-    while (menu.includes("12")) {
-      menu = menu.replace("12", "");
-    }
-    while (menu.includes("13")) {
-      menu = menu.replace("13", "");
-    }
-    while (menu.includes("14")) {
-      menu = menu.replace("14", "");
-    }
-    while (menu.includes("15")) {
-      menu = menu.replace("15", "");
-    }
-    while (menu.includes("16")) {
-      menu = menu.replace("16", "");
-    }
-    while (menu.includes("17")) {
-      menu = menu.replace("17", "");
-    }
-    while (menu.includes("18")) {
-      menu = menu.replace("18", "");
-    }
     while (menu.includes(".")) {
       menu = menu.replace(".", "");
     }
