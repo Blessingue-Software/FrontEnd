@@ -20,10 +20,147 @@ export default function SchoolLunch() {
   }
   function loadMeal(response) {
     if (getTodayLabel() === "금") {
-      const breakfastMenu =
+      let breakfastMenu =
         response.data.mealServiceDietInfo[1]?.row[0]?.DDISH_NM;
-      const lunchMenu = response.data.mealServiceDietInfo[1]?.row[1]?.DDISH_NM;
-      const dinnerMenu = "없어요";
+      let lunchMenu = response.data.mealServiceDietInfo[1]?.row[1]?.DDISH_NM;
+      let dinnerMenu = "없어요";
+
+      console.log(lunchMenu.replace("(산고)", ""));
+      while (breakfastMenu.includes("0")) {
+        breakfastMenu = breakfastMenu.replace("0", "");
+      }
+      while (breakfastMenu.includes("1")) {
+        breakfastMenu = breakfastMenu.replace("1", "");
+      }
+      while (breakfastMenu.includes("2")) {
+        breakfastMenu = breakfastMenu.replace("2", "");
+      }
+      while (breakfastMenu.includes("3")) {
+        breakfastMenu = breakfastMenu.replace("3", "");
+      }
+      while (breakfastMenu.includes("4")) {
+        breakfastMenu = breakfastMenu.replace("4", "");
+      }
+      while (breakfastMenu.includes("5")) {
+        breakfastMenu = breakfastMenu.replace("5", "");
+      }
+      while (breakfastMenu.includes("6")) {
+        breakfastMenu = breakfastMenu.replace("6", "");
+      }
+      while (breakfastMenu.includes("7")) {
+        breakfastMenu = breakfastMenu.replace("7", "");
+      }
+      while (breakfastMenu.includes("8")) {
+        breakfastMenu = breakfastMenu.replace("8", "");
+      }
+      while (breakfastMenu.includes("9")) {
+        breakfastMenu = breakfastMenu.replace("9", "");
+      }
+      while (breakfastMenu.includes("10")) {
+        breakfastMenu = breakfastMenu.replace("10", "");
+      }
+      while (breakfastMenu.includes("11")) {
+        breakfastMenu = breakfastMenu.replace("11", "");
+      }
+      while (breakfastMenu.includes("12")) {
+        breakfastMenu = breakfastMenu.replace("12", "");
+      }
+      while (breakfastMenu.includes("13")) {
+        breakfastMenu = breakfastMenu.replace("13", "");
+      }
+      while (breakfastMenu.includes("14")) {
+        breakfastMenu = breakfastMenu.replace("14", "");
+      }
+      while (breakfastMenu.includes("15")) {
+        breakfastMenu = breakfastMenu.replace("15", "");
+      }
+      while (breakfastMenu.includes("16")) {
+        breakfastMenu = breakfastMenu.replace("16", "");
+      }
+      while (breakfastMenu.includes("17")) {
+        breakfastMenu = breakfastMenu.replace("17", "");
+      }
+      while (breakfastMenu.includes("18")) {
+        breakfastMenu = breakfastMenu.replace("18", "");
+      }
+      while (breakfastMenu.includes(".")) {
+        breakfastMenu = breakfastMenu.replace(".", "");
+      }
+      while (breakfastMenu.includes("()")) {
+        breakfastMenu = breakfastMenu.replace("()", "");
+      }
+      while (breakfastMenu.includes("(산고)")) {
+        breakfastMenu = breakfastMenu.replace("(산고)", "");
+      }
+      while (lunchMenu.includes("0")) {
+        lunchMenu = lunchMenu.replace("0", "");
+      }
+      while (lunchMenu.includes("1")) {
+        lunchMenu = lunchMenu.replace("1", "");
+      }
+      while (lunchMenu.includes("2")) {
+        lunchMenu = lunchMenu.replace("2", "");
+      }
+      while (lunchMenu.includes("3")) {
+        lunchMenu = lunchMenu.replace("3", "");
+      }
+      while (lunchMenu.includes("4")) {
+        lunchMenu = lunchMenu.replace("4", "");
+      }
+      while (lunchMenu.includes("5")) {
+        lunchMenu = lunchMenu.replace("5", "");
+      }
+      while (lunchMenu.includes("6")) {
+        lunchMenu = lunchMenu.replace("6", "");
+      }
+      while (lunchMenu.includes("7")) {
+        lunchMenu = lunchMenu.replace("7", "");
+      }
+      while (lunchMenu.includes("8")) {
+        lunchMenu = lunchMenu.replace("8", "");
+      }
+      while (lunchMenu.includes("9")) {
+        lunchMenu = lunchMenu.replace("9", "");
+      }
+      while (lunchMenu.includes("10")) {
+        lunchMenu = lunchMenu.replace("10", "");
+      }
+      while (lunchMenu.includes("11")) {
+        lunchMenu = lunchMenu.replace("11", "");
+      }
+      while (lunchMenu.includes("12")) {
+        lunchMenu = lunchMenu.replace("12", "");
+      }
+      while (lunchMenu.includes("13")) {
+        lunchMenu = lunchMenu.replace("13", "");
+      }
+      while (lunchMenu.includes("14")) {
+        lunchMenu = lunchMenu.replace("14", "");
+      }
+      while (lunchMenu.includes("15")) {
+        lunchMenu = lunchMenu.replace("15", "");
+      }
+      while (lunchMenu.includes("16")) {
+        lunchMenu = lunchMenu.replace("16", "");
+      }
+      while (lunchMenu.includes("17")) {
+        lunchMenu = lunchMenu.replace("17", "");
+      }
+      while (lunchMenu.includes("18")) {
+        lunchMenu = lunchMenu.replace("18", "");
+      }
+      while (lunchMenu.includes(".")) {
+        lunchMenu = lunchMenu.replace(".", "");
+      }
+      while (lunchMenu.includes("()")) {
+        lunchMenu = lunchMenu.replace("()", "");
+      }
+      while (lunchMenu.includes("(산고)")) {
+        lunchMenu = lunchMenu.replace("(산고)", "");
+      }
+
+      lunchMenu.replace("(", "");
+
       $(".breakfast").innerHTML = breakfastMenu;
       $(".lunch").innerHTML = lunchMenu;
       $(".dinner").innerHTML = dinnerMenu;
