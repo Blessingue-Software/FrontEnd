@@ -58,7 +58,6 @@ export default function SchoolLunch() {
     while (menu.includes("(산고)")) {
       menu = menu.replace("(산고)", "");
     }
-
     return menu;
   }
 

@@ -5,7 +5,7 @@ import Post from "./ui/Post";
 import "../index.css";
 export default function Main() {
   return (
-    <div>
+    <div >
       <Slider />
       <div id="section">
         <Project />
