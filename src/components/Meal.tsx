@@ -6,19 +6,20 @@ import "./Meal.scss";
 import * as S from "./Style";
 export default function SchoolLunch() {
   const $ = document.querySelector.bind(document);
-  const SCHOOLCODE = 7150658;
-  const LOCALCODE = "C10";
-  const TODAY = dayjs().format("YYYYMMDD"); // 20220623
-  let date = parseInt(TODAY);
-  // let date = 20220701;
-  let URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
-  let today = new Date().getDay();
+  const SCHOOLCODE: number = 7150658;
+  const LOCALCODE: string = "C10";
+  const TODAY: string = dayjs().format("YYYYMMDD"); // 20220623
+  let date: number = parseInt(TODAY);
+  // let date:number = 20220701;
+  let URL: string = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
+  let today: number = new Date().getDay();
+
   function getTodayLabel() {
     let week = ["일", "월", "화", "수", "목", "금", "토"];
     let todayLabel = week[today % 7];
     return todayLabel;
   }
-  function removeMenu(menu) {
+  function removeMenu(menu: string) {
     while (menu.includes("0")) {
       menu = menu.replace("0", "");
     }
@@ -61,7 +62,7 @@ export default function SchoolLunch() {
     return menu;
   }
 
-  function loadMeal(response) {
+  function loadMeal(response: any) {
     if (getTodayLabel() === "금") {
       let breakfastMenu =
         response.data.mealServiceDietInfo[1]?.row[0]?.DDISH_NM;
@@ -93,7 +94,6 @@ export default function SchoolLunch() {
     }
   }
   axios.get(URL).then((response) => {
-    // console.log(getTodayLabel());
     loadMeal(response);
   });
 
