@@ -8,10 +8,10 @@ import Header from "./components/ui/Header";
 
 function App() {
   return (
-    <div>
+    <div className="main">
       <Global styles={reset} />
       <Header />
-      <div className="main">
+      <div>
         <Outlet />
       </div>
     </div>

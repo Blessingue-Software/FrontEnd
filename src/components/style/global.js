@@ -110,7 +110,6 @@ export const reset = css`
   body {
     line-height: auto;
     margin: 0;
-    
   }
   ol,
   ul {
@@ -136,6 +135,7 @@ export const reset = css`
   }
   html {
     color: ${color.black};
+    background-color: ${color.black};
     font: ${font.body3};
   }
   ::placeholder {

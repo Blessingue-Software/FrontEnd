@@ -9,7 +9,9 @@
   font-style: normal;
 }
 .main {
-  background: #262626;
+  background: #262826;
+  width: 100%;
+  height: 100%;
 }
 form {
   padding: 35px 50px;
