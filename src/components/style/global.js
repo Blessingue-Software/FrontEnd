@@ -134,7 +134,7 @@ export const reset = css`
     list-style: none;
   }
   html {
-    color: ${color.black};
+    color: ${color.white};
     background-color: ${color.black};
     font: ${font.body3};
   }

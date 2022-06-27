@@ -1,5 +1,7 @@
 import styled from "styled-components";
-const blue = "#F9D142";
+import { color } from "./style/color";
+
+const yellow = "#F9D142";
 export const LoginInput = styled.input`
   display: block;
   width: 100%;
@@ -8,7 +10,7 @@ export const LoginInput = styled.input`
   margin-top: 5px;
   padding: 20px 20px;
   border-radius: 8px;
-  border: 1px solid ${blue};
+  border: 1px solid ${yellow};
   &::placeholder {
     font-size: 16px;
   }
@@ -18,6 +20,7 @@ export const LoginLabel = styled.label`
   font-size: 18px;
   display: block;
   font-weight: 700;
+  color: ${yellow};
 `;
 
 export const RedStar = styled.span`
@@ -49,7 +52,7 @@ export const DisabledLoginButton = styled.button`
 
 export const LoginButton = styled.button`
   display: block;
-  background-color: ${blue};
+  background-color: ${yellow};
   color: #ffffff;
   border: 0;
   border-radius: 8px;
@@ -68,12 +71,12 @@ export const LoginButton = styled.button`
 
 export const LoginBottom = styled.a`
   display: block;
-  color: #000000;
+  color: #c8c8c8;
   padding: 0 10px;
   font-size: 12px;
   text-decoration-line: none;
   &:hover {
-    color: ${blue};
+    color: ${yellow};
     transition: 0.3s;
   }
   transition: 0.3s;
@@ -83,7 +86,7 @@ export const BlueTopBar = styled.hr`
   display: block;
   width: 15%;
   height: 5px;
-  background-color: ${blue};
+  background-color: ${yellow};
   margin: 36px auto;
   border: 0;
 `;
@@ -91,7 +94,7 @@ export const BlueTopBar = styled.hr`
 export const MainText = styled.a`
   text-align: center;
   display: block;
-  color: ${blue};
+  color: ${yellow};
   transition: 0.3s;
   font-size: 24px;
   &:hover {
@@ -133,7 +136,7 @@ export const MainText = styled.a`
 export const LoginMainText = styled.p`
   text-align: center;
   display: block;
-  color: ${blue};
+  color: ${yellow};
   font-size: 36px;
   font-weight: bold;
 `;
@@ -178,6 +181,7 @@ export const PostList = styled.li`
 
 export const Month = styled.span`
   font-size: 24px;
+  color: ${yellow};
 `;
 export const Day = styled.span`
   margin-top: 10px;
@@ -189,20 +193,21 @@ export const Date = styled.div`
   height: 80px;
   margin: 10px;
   font-size: 13px;
-  background-color: #fff;
+  background-color: ${yellow};
   border-radius: 4px;
-  border: 2px solid #c8c8c8;
-  box-shadow: 3px 3px 3px 3px #e1e1e1;
+  border: 2px solid ${yellow};
+  // box-shadow: 3px 3px 3px 3px ${yellow};
 `;
 // background-color: rgb(197, 197, 197);
 export const Today = styled.div`
   width: 100px;
   height: 100px;
   margin: 10px;
-  background-color: #fff;
+  background-color: ${yellow};
+
   border-radius: 4px;
-  border: 4px solid ${blue};
-  box-shadow: 3px 3px 3px 3px #e1e1e1;
+  border: 4px solid ${yellow};
+  // box-shadow: 3px 3px 3px 3px #e1e1e1;
 `;
 // background-color: rgb(197, 197, 197);
 
@@ -217,7 +222,7 @@ export const ScheduleTitle = styled.span`
   display: block;
   font-size: 36px;
   font-weight: bold;
-  color: ${blue};
+  color: ${yellow};
   text-align: center;
 `;
 // text-align: center;
@@ -245,14 +250,14 @@ export const TodayTitle = styled.span`
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  color: ${blue};
+  color: ${yellow};
 `;
 export const LongButton = styled.button`
   width: 80%;
   height: 32px;
   display: block;
   font-size: 18px;
-  background-color: ${blue};
+  background-color: ${yellow};
   color: #ffffff;
   box-sizing: border-box;
   border: 0;
@@ -269,7 +274,7 @@ export const Line = styled.hr`
 export const Timetable = styled.div`
   margin: 0 auto;
   width: 90%;
-  background-color: #f0f0f0;
+  background-color: ${color.black};
 `;
 
 export const TimetableTitle = styled.span`
@@ -277,7 +282,7 @@ export const TimetableTitle = styled.span`
   padding-top: 24px;
   font-size: 36px;
   font-weight: bold;
-  color: ${blue};
+  color: ${yellow};
   text-align: center;
   margin-bottom: 46px;
 `;
@@ -304,8 +309,8 @@ export const periodCount = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  color: ${blue};
-  border: solid 1.5px ${blue};
+  color: ${yellow};
+  border: solid 1.5px ${yellow};
   background-color: #ffffff;
   margin-left: 3px;
   margin-top: 3px;
@@ -324,7 +329,7 @@ export const restTime = styled.div`
   display: inline;
   width: 105px;
   height: 60px;
-  background-color: ${blue};
+  background-color: ${yellow};
   color: #ffffff;
   font-size: 16px;
   border-radius: 8px;
@@ -337,7 +342,7 @@ export const restTime = styled.div`
 
 export const calendarBtn = styled.div`
   display: block;
-  background-color: ${blue};
+  background-color: ${yellow};
   color: #ffffff;
   border: 0;
   border-radius: 8px;
