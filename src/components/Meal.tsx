@@ -93,14 +93,18 @@ export default function SchoolLunch() {
       $(".dinner").innerHTML = dinnerMenu;
     }
   }
+
   axios.get(URL).then((response) => {
     loadMeal(response);
   });
-
   function upDate() {
     date++;
     today++;
     getTodayLabel();
+    console.log(date)
+    
+    $(".date").innerHTML = date;
+    
     URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
     axios.get(URL).then((response) => {
       loadMeal(response);
@@ -108,6 +112,7 @@ export default function SchoolLunch() {
   }
   return (
     <div className="meal-container">
+      <div className="date">{date}</div>
       <S.calendarBtn onClick={upDate}>+</S.calendarBtn>
       <div className="breakfast-container">
         <div className="breakfast-title">조식</div>
