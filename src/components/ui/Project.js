@@ -6,12 +6,12 @@ export default function Page() {
   return (
     <S.Squre>
       <span>
-        엄
+        디자이너
         <br />
-        준식
+        프론트
       </span>
       <S.Num>
-        <span>0</span>개
+        구인중
       </S.Num>
     </S.Squre>
   );
