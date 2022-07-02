@@ -11,7 +11,7 @@ import Reservation from "./components/Reservation";
 import Board from "./components/Board";
 import Calendar from "./components/ui/Calendar";
 import Timetable from "./components/ui/Timetable";
-import Meal from "./components/Meal.tsx";
+import Meal from "./components/Meal";
 
 const rootElement = document.getElementById("root");
 render(

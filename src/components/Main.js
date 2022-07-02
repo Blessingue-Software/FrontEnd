@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "./ui/Slider.tsx";
+import Slider from "./ui/Slider";
 import Project from "./ui/Project";
 import Post from "./ui/Post";
 import "../index.css";
