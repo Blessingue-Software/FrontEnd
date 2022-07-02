@@ -16,12 +16,12 @@ export default function Calendar() {
   const calendarArr = () => {
     let result = [];
     let issue = ["일", "월", "화", "수", "목", "금", "토"];
-
     let week = firstWeek;
+
     for (week; week <= lastWeek; week++) {
       result = result.concat(
         <div id="main" key={week}>
-          {[1, 2, 3, 4, 5, 6, 7].map((data, index) => {
+          {[1, 2, 3, 4, 5, 6, 7].map((_data, index) => {
             let days = today
               .clone()
               .startOf("year")
@@ -101,8 +101,7 @@ export default function Calendar() {
             <i className="arrow right" role="img" />
           </div>
         </S.calendarBtn>
-        <div className="wrap">
-        </div>
+        <div className="wrap"></div>
       </div>
       <div>{calendarArr()}</div>
     </div>
