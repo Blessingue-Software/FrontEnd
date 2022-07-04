@@ -16,10 +16,10 @@ export default function Login() {
 
   return (
     <div>
-      <div className="container" >
+      <div className="container">
         <form action="/라우터" method="post">
           <S.LoginMainText href="/">로그인</S.LoginMainText>
-          <S.BlueTopBar></S.BlueTopBar>
+          <S.BlueTopBar />
           <div
             style={{
               display: "flex",
