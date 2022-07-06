@@ -187,7 +187,7 @@ export default function TimeTable() {
     nowtime <= `08:39`
   ) {
     useEffect(() => {
-      document.querySelector("#breakfast").style.background = "#f9d142";
+      document.querySelector("#breakfast").style.background = "#000000";
       document.querySelector("#breakfast").style.color = "#ffffff";
     }, []);
   } else if (
@@ -196,7 +196,7 @@ export default function TimeTable() {
     nowtime <= `09:39`
   ) {
     useEffect(() => {
-      document.querySelector("#period1").style.background = "#f9d142";
+      document.querySelector("#period1").style.background = "#000000";
       document.querySelector("#period1").style.color = "#ffffff";
     }, []);
   } else if (
@@ -205,7 +205,7 @@ export default function TimeTable() {
     nowtime <= `10:39`
   ) {
     useEffect(() => {
-      document.querySelector("#period2").style.background = "#f9d142";
+      document.querySelector("#period2").style.background = "#000000";
       document.querySelector("#period2").style.color = "#ffffff";
     }, []);
   } else if (
@@ -214,7 +214,7 @@ export default function TimeTable() {
     nowtime <= `11:39`
   ) {
     useEffect(() => {
-      document.querySelector("#period3").style.background = "#f9d142";
+      document.querySelector("#period3").style.background = "#000000";
       document.querySelector("#period3").style.color = "#ffffff";
     }, []);
   } else if (
@@ -223,7 +223,7 @@ export default function TimeTable() {
     nowtime <= `12:29`
   ) {
     useEffect(() => {
-      document.querySelector("#period4").style.background = "#f9d142";
+      document.querySelector("#period4").style.background = "#000000";
       document.querySelector("#period4").style.color = "#ffffff";
     }, []);
   } else if (
@@ -232,7 +232,7 @@ export default function TimeTable() {
     nowtime <= `13:19`
   ) {
     useEffect(() => {
-      document.querySelector("#lunch").style.background = "#f9d142";
+      document.querySelector("#lunch").style.background = "#000000";
       document.querySelector("#lunch").style.color = "#ffffff";
     }, []);
   } else if (
@@ -241,7 +241,7 @@ export default function TimeTable() {
     nowtime <= `14:19`
   ) {
     useEffect(() => {
-      document.querySelector("#period5").style.background = "#f9d142";
+      document.querySelector("#period5").style.background = "#000000";
       document.querySelector("#period5").style.color = "#ffffff";
     }, []);
   } else if (
@@ -250,7 +250,7 @@ export default function TimeTable() {
     nowtime <= `15:19`
   ) {
     useEffect(() => {
-      document.querySelector("#period6").style.background = "#f9d142";
+      document.querySelector("#period6").style.background = "#000000";
       document.querySelector("#period6").style.color = "#ffffff";
     }, []);
   } else if (
@@ -259,7 +259,7 @@ export default function TimeTable() {
     nowtime <= `16:29`
   ) {
     useEffect(() => {
-      document.querySelector("#period7").style.background = "#f9d142";
+      document.querySelector("#period7").style.background = "#000000";
       document.querySelector("#period7").style.color = "#ffffff";
     }, []);
   } else if (
@@ -268,7 +268,7 @@ export default function TimeTable() {
     nowtime <= `18:09`
   ) {
     useEffect(() => {
-      document.querySelector("#afterSchool1").style.background = "#f9d142";
+      document.querySelector("#afterSchool1").style.background = "#000000";
       document.querySelector("#afterSchool1").style.color = "#ffffff";
     }, []);
   } else if (
@@ -277,7 +277,7 @@ export default function TimeTable() {
     nowtime <= `18:59`
   ) {
     useEffect(() => {
-      document.querySelector("#dinner").style.background = "#f9d142";
+      document.querySelector("#dinner").style.background = "#000000";
       document.querySelector("#dinner").style.color = "#ffffff";
     }, []);
   } else if (
@@ -286,13 +286,12 @@ export default function TimeTable() {
     nowtime <= `20:39`
   ) {
     useEffect(() => {
-      document.querySelector("#afterSchool2").style.background = "#f9d142";
+      document.querySelector("#afterSchool2").style.background = "#000000";
       document.querySelector("#afterSchool2").style.color = "#ffffff";
     }, []);
   } else {
-    console.log("확실함?");
     useEffect(() => {
-      document.querySelector("#domitory").style.background = "#f9d142";
+      document.querySelector("#domitory").style.background = "#000000";
       document.querySelector("#domitory").style.color = "#ffffff";
     }, []);
   }

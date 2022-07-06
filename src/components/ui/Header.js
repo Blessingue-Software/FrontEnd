@@ -66,7 +66,12 @@ export default function Header() {
                 liClick();
               }}
             >
-              <Link style={{ textDecoration: "none" }} to={headerLinkList[i]}>
+              <Link
+                style={{
+                  textDecoration: "none",
+                }}
+                to={headerLinkList[i]}
+              >
                 {a}
               </Link>
             </li>

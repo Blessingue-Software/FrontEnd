@@ -309,7 +309,7 @@ export const periodCount = styled.div`
   font-size: 16px;
   color: ${color.main};
   border: solid 1.5px ${color.main};
-  background-color: #000000;
+  background-color:${color.grey};
   margin-left: 3px;
   margin-top: 3px;
   font-weight: bold;
@@ -335,7 +335,7 @@ export const calendarBtn = styled.div`
   font-size: 24px;
   font-weight: 900;
   &:hover {
-    background-color: #000000;
+    background-color: ${color.darkGrey};
     color: #ffffff;
     transition: 0.3s;
   }
