@@ -12,6 +12,7 @@ import Board from "./components/Board";
 import Calendar from "./components/ui/Calendar";
 import Timetable from "./components/ui/Timetable";
 import Meal from "./components/Meal";
+import StudentCard from "./components/StudentCard";
 
 const rootElement = document.getElementById("root");
 render(
@@ -27,6 +28,7 @@ render(
         <Route path="calendar" element={<Calendar />} />
         <Route path="timetable" element={<Timetable />} />
         <Route path="meal" element={<Meal />} />
+        <Route path="studentcard" element={<StudentCard />} />
       </Route>
     </Routes>
   </BrowserRouter>,

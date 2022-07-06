@@ -14,6 +14,7 @@ export default function Header() {
     "달력",
     "시간표",
     "급식",
+    "학생증",
   ]);
   const [headerLinkList, setHeaderLinkList] = useState([
     "/board",
@@ -21,6 +22,7 @@ export default function Header() {
     "/calendar",
     "/timetable",
     "/meal",
+    "/studentcard",
   ]);
 
   const [login, setlogin] = useState(["로그인"]);
