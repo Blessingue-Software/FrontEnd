@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { color } from "./style/color";
 
-const yellow = "#F9D142";
 export const LoginInput = styled.input`
   display: block;
   width: 100%;
@@ -10,7 +9,7 @@ export const LoginInput = styled.input`
   margin-top: 5px;
   padding: 20px 20px;
   border-radius: 8px;
-  border: 1px solid ${yellow};
+  border: 1px solid ${color.main};
   &::placeholder {
     font-size: 16px;
   }
@@ -20,7 +19,7 @@ export const LoginLabel = styled.label`
   font-size: 18px;
   display: block;
   font-weight: 700;
-  color: ${yellow};
+  color: ${color.main};
 `;
 
 export const RedStar = styled.span`
@@ -38,7 +37,7 @@ export const Nav = styled.li`
 export const DisabledLoginButton = styled.button`
   display: block;
   background-color: #c8c8c8;
-  color: #ffffff;
+  color: #000000;
   border: 0;
   border-radius: 8px;
   width: 100%;
@@ -52,8 +51,8 @@ export const DisabledLoginButton = styled.button`
 
 export const LoginButton = styled.button`
   display: block;
-  background-color: ${yellow};
-  color: #ffffff;
+  background-color: ${color.main};
+  color: #000000;
   border: 0;
   border-radius: 8px;
   width: 100%;
@@ -76,7 +75,7 @@ export const LoginBottom = styled.a`
   font-size: 12px;
   text-decoration-line: none;
   &:hover {
-    color: ${yellow};
+    color: ${color.main};
     transition: 0.3s;
   }
   transition: 0.3s;
@@ -86,7 +85,7 @@ export const BlueTopBar = styled.hr`
   display: block;
   width: 15%;
   height: 5px;
-  background-color: ${yellow};
+  background-color: ${color.main};
   margin: 36px auto;
   border: 0;
 `;
@@ -94,7 +93,7 @@ export const BlueTopBar = styled.hr`
 export const MainText = styled.a`
   text-align: center;
   display: block;
-  color: ${yellow};
+  color: ${color.main};
   transition: 0.3s;
   font-size: 24px;
   &:hover {
@@ -110,10 +109,10 @@ export const MainText = styled.a`
         color: orange;
       }
       23% {
-        color: yellow;
+        color: color.main;
       }
       36% {
-        color: yellowgreen;
+        color: color.maingreen;
       }
       49% {
         color: green;
@@ -136,7 +135,7 @@ export const MainText = styled.a`
 export const LoginMainText = styled.p`
   text-align: center;
   display: block;
-  color: ${yellow};
+  color: ${color.main};
   font-size: 36px;
   font-weight: bold;
 `;
@@ -150,7 +149,7 @@ export const Squre = styled.div`
   min-height: 100px;
   padding: 10px;
   margin: 100px 0 0 40px;
-  background-color: #ccc;
+  background-color: ${color.grey};
 `;
 export const Num = styled.span`
   text-align: center;
@@ -181,7 +180,7 @@ export const PostList = styled.li`
 
 export const Month = styled.span`
   font-size: 24px;
-  color: ${yellow};
+  color: ${color.main};
 `;
 export const Day = styled.span`
   margin-top: 10px;
@@ -193,20 +192,19 @@ export const Date = styled.div`
   height: 80px;
   margin: 10px;
   font-size: 13px;
-  background-color: ${yellow};
+  background-color: ${color.darkGrey};
   border-radius: 4px;
-  border: 2px solid ${yellow};
-  // box-shadow: 3px 3px 3px 3px ${yellow};
+  border: 2px solid ${color.darkGrey};
+  // box-shadow: 3px 3px 3px 3px ${color.main};
 `;
-// background-color: rgb(197, 197, 197);
 export const Today = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin: 10px;
-  background-color: ${yellow};
+  background-color: ${color.main};
 
   border-radius: 4px;
-  border: 4px solid ${yellow};
+  border: 4px solid ${color.main};
   // box-shadow: 3px 3px 3px 3px #e1e1e1;
 `;
 // background-color: rgb(197, 197, 197);
@@ -222,7 +220,7 @@ export const ScheduleTitle = styled.span`
   display: block;
   font-size: 36px;
   font-weight: bold;
-  color: ${yellow};
+  color: ${color.main};
   text-align: center;
 `;
 // text-align: center;
@@ -250,15 +248,15 @@ export const TodayTitle = styled.span`
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  color: ${yellow};
+  color: ${color.main};
 `;
 export const LongButton = styled.button`
   width: 80%;
   height: 32px;
   display: block;
   font-size: 18px;
-  background-color: ${yellow};
-  color: #ffffff;
+  background-color: ${color.main};
+  color: #000000;
   box-sizing: border-box;
   border: 0;
   outline: 0;
@@ -282,18 +280,18 @@ export const TimetableTitle = styled.span`
   padding-top: 24px;
   font-size: 36px;
   font-weight: bold;
-  color: ${yellow};
+  color: ${color.main};
   text-align: center;
   margin-bottom: 46px;
 `;
 
 export const periodFrame = styled.div`
-  width: 800px;
+  width: 100%;
   height: 66px;
 `;
 
 export const period = styled.div`
-  width: 30%;
+  width: 40%;
   height: 36px;
   display: flex;
   margin: 10px auto;
@@ -309,9 +307,9 @@ export const periodCount = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  color: ${yellow};
-  border: solid 1.5px ${yellow};
-  background-color: #ffffff;
+  color: ${color.main};
+  border: solid 1.5px ${color.main};
+  background-color: #000000;
   margin-left: 3px;
   margin-top: 3px;
   font-weight: bold;
@@ -325,25 +323,10 @@ export const periodName = styled.span`
   font-weight: bold;
 `;
 
-export const restTime = styled.div`
-  display: inline;
-  width: 105px;
-  height: 60px;
-  background-color: ${yellow};
-  color: #ffffff;
-  font-size: 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  vertical-align: middle;
-  text-align: center;
-  float: right;
-  margin-left: 220px;
-`;
-
 export const calendarBtn = styled.div`
   display: block;
-  background-color: ${yellow};
-  color: #ffffff;
+  background-color: ${color.main};
+  color: ${color.black};
   border: 0;
   border-radius: 8px;
   width: 30px;
@@ -352,7 +335,8 @@ export const calendarBtn = styled.div`
   font-size: 24px;
   font-weight: 900;
   &:hover {
-    background-color: #61dafb;
+    background-color: #000000;
+    color: #ffffff;
     transition: 0.3s;
   }
   transition: 0.3s;

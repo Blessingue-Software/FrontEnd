@@ -12,12 +12,10 @@ export default function Calendar() {
     today.clone().endOf("month").week() === 1
       ? 53
       : today.clone().endOf("month").week();
-
   const calendarArr = () => {
     let result = [];
     let issue = ["일", "월", "화", "수", "목", "금", "토"];
     let week = firstWeek;
-
     for (week; week <= lastWeek; week++) {
       result = result.concat(
         <div id="main" key={week}>
@@ -90,7 +88,6 @@ export default function Calendar() {
             <i className="arrow left" role="img" />
           </div>
         </S.calendarBtn>
-        {/* <S.Month>{today.format("YYYY 년 MM 월")}</S.Month> */}
         <S.Month>{today.format("MM 월")}</S.Month>
         <S.calendarBtn
           onClick={() => {
@@ -101,7 +98,7 @@ export default function Calendar() {
             <i className="arrow right" role="img" />
           </div>
         </S.calendarBtn>
-        <div className="wrap"></div>
+        {/* <div className="wrap"></div> */}
       </div>
       <div>{calendarArr()}</div>
     </div>
