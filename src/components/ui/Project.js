@@ -1,10 +1,10 @@
 /* eslint-disable */
 import React from "react";
 import * as S from "../Style";
-
+import "./Main.scss"
 export default function Page() {
   return (
-    <S.Squre>
+    <S.Squre id="disabled">
       <span>
         디자이너
         <br />

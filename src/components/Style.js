@@ -143,10 +143,8 @@ export const LoginMainText = styled.p`
 export const Squre = styled.div`
   text-align: center;
   font-size: 36px;
-  width: 20%;
-  min-width: 160px;
-  height: 15%;
-  min-height: 100px;
+  width: 30%;
+  height: 180px;
   padding: 10px;
   margin: 100px 0 0 40px;
   background-color: ${color.grey};
@@ -158,7 +156,7 @@ export const Num = styled.span`
 `;
 
 export const Post = styled.ul`
-  width: 800px;
+  width: 50%;
   min-width: 300px;
   height: 300px;
   padding: 30px;
@@ -170,9 +168,10 @@ export const Post = styled.ul`
   white-space: nowrap;
 `;
 export const PostList = styled.li`
-  font-size: 28px;
+  font-size: 18px;
   white-space: nowrap;
   overflow: hidden;
+  margin-top: 5px;
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   -ms-text-overflow: ellipsis;
@@ -309,7 +308,7 @@ export const periodCount = styled.div`
   font-size: 16px;
   color: ${color.main};
   border: solid 1.5px ${color.main};
-  background-color:${color.grey};
+  background-color: ${color.grey};
   margin-left: 3px;
   margin-top: 3px;
   font-weight: bold;
