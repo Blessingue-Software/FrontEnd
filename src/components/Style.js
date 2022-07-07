@@ -36,7 +36,7 @@ export const Nav = styled.li`
 
 export const DisabledLoginButton = styled.button`
   display: block;
-  background-color: #c8c8c8;
+  background-color: #787878;
   color: #000000;
   border: 0;
   border-radius: 8px;
