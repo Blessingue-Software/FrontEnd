@@ -13,7 +13,7 @@ export default function SchoolLunch() {
   // let date:number = 20220701;
   let URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
   let today = new Date().getDay();
-  let cuttedDate = date%1000;
+  let cuttedDate = date % 1000;
   function getTodayLabel() {
     let week = ["일", "월", "화", "수", "목", "금", "토"];
     let todayLabel = week[today % 7];
@@ -62,18 +62,18 @@ export default function SchoolLunch() {
     return menu;
   }
 
-// 0131
-// 0228
-// 0331
-// 0430
-// 0531
-// 0630
-// 0731
-// 0831
-// 0930
-// 1031
-// 1130
-// 1231
+  // 0131
+  // 0228
+  // 0331
+  // 0430
+  // 0531
+  // 0630
+  // 0731
+  // 0831
+  // 0930
+  // 1031
+  // 1130
+  // 1231
 
   function loadMeal(response) {
     if (getTodayLabel() === "금") {
@@ -114,8 +114,7 @@ export default function SchoolLunch() {
     date++;
     today++;
     cuttedDate++;
-    if(today)
-    getTodayLabel();
+    if (today) getTodayLabel();
     console.log(date);
 
     $(".date").innerHTML = cuttedDate;
@@ -128,7 +127,7 @@ export default function SchoolLunch() {
   return (
     <div className="meal-container">
       <div className="date">{cuttedDate}</div>
-      <S.calendarBtn onClick={upDate}>+</S.calendarBtn>
+      <S.calendarBtn onClick={upDate}>내일</S.calendarBtn>
       <div className="breakfast-container">
         <div className="breakfast-title">조식</div>
         <div className="breakfast"></div>
