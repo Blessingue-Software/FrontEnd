@@ -111,18 +111,20 @@ export default function SchoolLunch() {
     loadMeal(response);
   });
   function upDate() {
-    date++;
-    today++;
-    cuttedDate++;
-    if (today) getTodayLabel();
-    console.log(date);
+    if (date < 20220731) {
+      date++;
+      today++;
+      cuttedDate++;
+      if (today) getTodayLabel();
+      console.log(date);
 
-    $(".date").innerHTML = cuttedDate;
+      $(".date").innerHTML = cuttedDate;
 
-    URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
-    axios.get(URL).then((response) => {
-      loadMeal(response);
-    });
+      URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
+      axios.get(URL).then((response) => {
+        loadMeal(response);
+      });
+    }
   }
   return (
     <div className="meal-container">

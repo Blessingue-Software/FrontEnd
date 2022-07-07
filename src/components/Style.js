@@ -327,9 +327,8 @@ export const calendarBtn = styled.div`
   background-color: ${color.main};
   color: ${color.black};
   border: 0;
+  height:80px;
   border-radius: 8px;
-  width: 30px;
-  height: 30px;
   text-align: center;
   font-size: 24px;
   font-weight: 900;
