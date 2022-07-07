@@ -9,7 +9,6 @@ export default function Header() {
   const $ = document.querySelector.bind(document);
 
   const [headerList, setHeaderList] = useState([
-    "게시판",
     "베르실 예약",
     "달력",
     "시간표",
@@ -17,7 +16,6 @@ export default function Header() {
     "학생증",
   ]);
   const [headerLinkList, setHeaderLinkList] = useState([
-    "/board",
     "/reservation",
     "/calendar",
     "/timetable",

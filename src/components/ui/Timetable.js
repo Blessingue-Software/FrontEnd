@@ -9,31 +9,31 @@ export default function TimeTable() {
   let exjson = [
     {
       id: 1,
-      title: "프로그래밍",
+      title: "한국사",
     },
     {
       id: 2,
-      title: "디지털 논리 회로",
+      title: "DB",
     },
     {
       id: 3,
-      title: "국어",
+      title: "DB",
     },
     {
       id: 4,
-      title: "수학",
+      title: "DB",
     },
     {
       id: 5,
-      title: "창업일반",
+      title: "JAVA",
     },
     {
       id: 6,
-      title: "영어",
+      title: "JAVA",
     },
     {
       id: 7,
-      title: "과학",
+      title: "JAVA",
     },
   ];
 
