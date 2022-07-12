@@ -130,6 +130,15 @@ export default function TimeTable() {
 
         return data;
     }
+    console.log(
+        saveScheduleTime().map((i) => {
+            const [hour, min] = dayjs().format("HH:mm").split(":");
+            const second = parseInt(hour) * 3600 + parseInt(min) * 60;
+
+            if (i.startTime <= second && i.endTime >= second) return true;
+            return false;
+        })
+    );
 
     return (
         <S.Timetable>
@@ -143,7 +152,6 @@ export default function TimeTable() {
 
                     if (i.startTime <= second && i.endTime >= second)
                         return true;
-
                     return false;
                 })
                 .map((isActive, ix) => {
@@ -151,7 +159,9 @@ export default function TimeTable() {
                         <S.period key={ix}>
                             <S.periodCount
                                 style={{
-                                    backgroundColor: isActive ? "red" : "blue",
+                                    backgroundColor: isActive
+                                        ? "black"
+                                        : "gray",
                                 }}
                             >
                                 {periodList[ix]}
