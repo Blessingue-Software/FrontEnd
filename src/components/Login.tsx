@@ -13,9 +13,9 @@ export default function Login() {
     // const setPassword = Store((state) => state.setPassword);
     // const setAuth = Store((state) => state.setAuth);
 
-    let [email, setEmail] = useState(null);
-    let [password, setPassword] = useState(null);
-    let [auth, setAuth] = useState(null);
+    let [email, setEmail] = useState("");
+    let [password, setPassword] = useState("");
+    let [auth, setAuth] = useState("");
     useEffect(() => {
         if (email !== null) {
             setAuth(email.substr(9, 23));

@@ -27,28 +27,28 @@ export default function Header() {
   const [loginLink, setloginLink] = useState(["/login"]);
 
   let liClick = () => {
-    $(".navbar__menu").classList.remove("active");
-    $(".navbar__links").classList.remove("active");
-    $("#btn").classList.remove("on");
+    $(".navbar__menu")!.classList.remove("active");
+    $(".navbar__links")!.classList.remove("active");
+    $("#btn")!.classList.remove("on");
   };
 
   let click = () => {
     if (!status) {
-      $(".navbar__menu").classList.add("active");
-      $(".navbar__links").classList.add("active");
+      $(".navbar__menu")!.classList.add("active");
+      $(".navbar__links")!.classList.add("active");
       status = 1;
     } else {
-      $(".navbar__menu").classList.remove("active");
-      $(".navbar__links").classList.remove("active");
+      $(".navbar__menu")!.classList.remove("active");
+      $(".navbar__links")!.classList.remove("active");
       status = 0;
     }
   };
 
   let eClick = () => {
     if (status) {
-      $("#btn").classList.remove("on");
+      $("#btn")!.classList.remove("on");
     } else {
-      $("#btn").classList.add("on");
+      $("#btn")!.classList.add("on");
     }
   };
 

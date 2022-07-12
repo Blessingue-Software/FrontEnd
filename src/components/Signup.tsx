@@ -6,14 +6,14 @@ import "../index.css";
 // import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
-    let [email, setEmail] = useState(null);
-    let [password, setPassword] = useState(null);
-    let [rePassword, setRePassword] = useState(null);
-    let [auth, setAuth] = useState(null);
+    let [email, setEmail] = useState("");
+    let [password, setPassword] = useState("");
+    let [rePassword, setRePassword] = useState("");
+    let [auth, setAuth] = useState("");
     let [major, setMajor] = useState("알고리즘");
     useEffect(() => {
         if (email !== null) {
-            setAuth(email.substr(10, 23));
+            setAuth(email!.substr(10, 23));
         }
     }, [email]);
 
