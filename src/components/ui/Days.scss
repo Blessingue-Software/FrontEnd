@@ -1,6 +1,14 @@
 #date {
   box-sizing: border-box;
 }
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: #f87171;
+  border-radius: 50%;
+  display: flex;
+  margin-left: 1px;
+}
 .App {
   display: flex;
   flex-direction: column; /* 세로순으로 */

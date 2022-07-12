@@ -77,6 +77,8 @@ export default function SchoolLunch() {
     let lunchMenu = "";
     let dinnerMenu = "";
     function loadMeal(data: any) {
+        console.log(getTodayLabel());
+
         if (getTodayLabel() === "금") {
             breakfastMenu = data.mealServiceDietInfo[1]?.row[0]?.DDISH_NM;
             lunchMenu = data.mealServiceDietInfo[1]?.row[1]?.DDISH_NM;

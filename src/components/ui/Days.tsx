@@ -1,16 +1,35 @@
-/* eslint-disable */
-import "./Days.scss";
 import React, { useState } from "react";
-import * as S from "../Style";
-import 'react-calendar/dist/Calendar.css'; // css import
-import Calendar from 'react-calendar';
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import moment from "moment";
 
 export default function Days() {
-  const [value, onChange] = useState(new Date());
+    const marks = [
+        "15-01-2022",
+        "03-01-2022",
+        "07-01-2022",
+        "12-01-2022",
+        "13-01-2022",
+        "15-01-2022",
+    ];
+    const [value, onChange] = useState(new Date());
 
-  return (
-    <div>
-      <Calendar onChange={onChange} value={value} />
-    </div>
-  );
+    return (
+        <div>
+            <Calendar
+                onChange={onChange}
+                value={value}
+                locale="en-EN"
+                tileClassName={({ date, view }:any) => {
+                    if (
+                        marks.find(
+                            (x) => x === moment(date).format("DD-MM-YYYY")
+                        )
+                    ) {
+                        return "highlight";
+                    }
+                }}
+            />
+        </div>
+    );
 }
