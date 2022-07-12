@@ -4,9 +4,10 @@ import "../index.css";
 import { useEffect } from "react";
 import Store from "./context/Store";
 export default function Login() {
-    const email = Store((state) => state.email);
-    const password = Store((state) => state.password);
-    const auth = Store((state) => state.auth);
+    // const email = Store((state) => state.email);
+    // const password = Store((state) => state.password);
+    // const auth = Store((state) => state.auth);
+    const {email, password, auth} = Store();
     const setEmail = Store((state) => state.setEmail);
     const setPassword = Store((state) => state.setPassword);
     const setAuth = Store((state) => state.setAuth);
