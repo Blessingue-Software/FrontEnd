@@ -1,71 +1,25 @@
-#date {
-  box-sizing: border-box;
+.highlight {
+    background-color: #f871d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.dot {
-  height: 8px;
-  width: 8px;
-  background-color: #f87171;
-  border-radius: 50%;
-  display: flex;
-  margin-left: 1px;
+.days-board {
+    display: block;
+    width: 50%;
+    height: 80%;
+    background-color: aliceblue;
 }
-.App {
-  display: flex;
-  flex-direction: column; /* 세로순으로 */
-  align-items: center; /* 가로 중앙 css*/
-  justify-content: center; /* 세로 중앙 css*/
-}
+.react-calendar {
+    width: 60%;
+    height: fit-content;
+    // height: 100;
 
-.App .control {
-  display: flex;
-  width: 200px;
-  justify-content: space-around;
-  align-items: center;
-  margin: 30px auto;
-}
-.control button {
-  margin: 20px;
-}
-.App #main {
-  display: flex;
-  flex-direction: row;
-}
-
-.wrap {
-  vertical-align: middle;
-  color: #000000;
-}
-
-.wrap .arrow {
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  overflow: hidden;
-  vertical-align: middle;
-}
-
-.wrap .arrow:before {
-  content: "";
-  position: absolute;
-  top: 25%;
-  width: 10px;
-  height: 10px;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-  transform: translate(-50%, -50%) rotate(45deg);
-  margin-top: 2px;
-  border-top: 3px solid #000;
-  border-left: 3px solid #000;
-}
-.wrap .arrow.top:before {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-.wrap .arrow.down:before {
-  transform: translate(-50%, -50%) rotate(-135deg);
-}
-.wrap .arrow.left:before {
-  transform: translate(-50%, -50%) rotate(315deg);
-}
-.wrap .arrow.right:before {
-  transform: translate(-50%, -50%) rotate(135deg);
+    &__tile {
+        width: 100px !important;
+        padding: 25px 15px;
+        &--active {
+            background-color: bisque !important; // actuve
+        }
+    }
 }
