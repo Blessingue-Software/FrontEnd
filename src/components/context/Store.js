@@ -2,10 +2,10 @@ import create from "zustand";
 
 const Store = create((set) => ({
     email: "",
-    password: "",
-    auth: "",
     setEmail: (email) => set({ email }),
+    password: "",
     setPassword: (password) => set({ password }),
+    auth: "",
     setAuth: (auth) => set({ auth }),
 }));
 

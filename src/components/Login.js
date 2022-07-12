@@ -1,16 +1,26 @@
 import React from "react";
 import * as S from "./Style";
 import "../index.css";
-import { useEffect } from "react";
-import Store from "./context/Store";
+import { useState, useEffect } from "react";
+// import Store from "./context/Store";
 export default function Login() {
     // const email = Store((state) => state.email);
     // const password = Store((state) => state.password);
     // const auth = Store((state) => state.auth);
-    const {email, password, auth} = Store();
-    const setEmail = Store((state) => state.setEmail);
-    const setPassword = Store((state) => state.setPassword);
-    const setAuth = Store((state) => state.setAuth);
+
+    // const {email, password, auth} = Store();
+    // const setEmail = Store((state) => state.setEmail);
+    // const setPassword = Store((state) => state.setPassword);
+    // const setAuth = Store((state) => state.setAuth);
+
+    let [email, setEmail] = useState(null);
+    let [password, setPassword] = useState(null);
+    let [auth, setAuth] = useState(null);
+    useEffect(() => {
+        if (email !== null) {
+            setAuth(email.substr(9, 23));
+        }
+    }, [email]);
 
     useEffect(() => {
         if (email !== null) {
@@ -39,6 +49,7 @@ export default function Login() {
                                 type="email"
                                 placeholder="@bssm.hs.kr"
                                 id="username"
+                                autoComplete="on"
                                 onChange={(e) => {
                                     setEmail(e.target.value);
                                 }}
@@ -52,6 +63,7 @@ export default function Login() {
                                 type="password"
                                 placeholder="Password"
                                 id="password"
+                                autoComplete="on"
                                 onChange={(e) => {
                                     setPassword(e.target.value);
                                 }}
