@@ -5,7 +5,16 @@ import "./Meal.scss";
 // import { useState } from "react";
 import * as S from "./Style";
 export default function SchoolLunch() {
-    const $ = document.querySelector.bind(document);
+    // useRef 고고고고고고ㅗ고고
+    // useRef 고고고고고고ㅗ고고
+    // useRef 고고고고고고ㅗ고고
+    // useRef 고고고고고고ㅗ고고
+    // useRef 고고고고고고ㅗ고고
+    // useRef 고고고고고고ㅗ고고
+    // useRef 고고고고고고ㅗ고고
+    // useRef 고고고고고고ㅗ고고
+    // useRef 고고고고고고ㅗ고고
+    const $ = document.querySelector.bind(document); // useRef 고고고고고고ㅗ고고
     const SCHOOLCODE = 7150658;
     const LOCALCODE = "C10";
     const TODAY = dayjs().format("YYYYMMDD"); // 20220623
@@ -17,49 +26,6 @@ export default function SchoolLunch() {
         let todayLabel = week[today % 7];
         return todayLabel;
     }
-
-    // function removeMenu(menu: any) {
-    //     while (menu.includes("0")) {
-    //         menu = menu.replace("0", "");
-    //     }
-    //     while (menu.includes("1")) {
-    //         menu = menu.replace("1", "");
-    //     }
-    //     while (menu.includes("2")) {
-    //         menu = menu.replace("2", "");
-    //     }
-    //     while (menu.includes("3")) {
-    //         menu = menu.replace("3", "");
-    //     }
-    //     while (menu.includes("4")) {
-    //         menu = menu.replace("4", "");
-    //     }
-    //     while (menu.includes("5")) {
-    //         menu = menu.replace("5", "");
-    //     }
-    //     while (menu.includes("6")) {
-    //         menu = menu.replace("6", "");
-    //     }
-    //     while (menu.includes("7")) {
-    //         menu = menu.replace("7", "");
-    //     }
-    //     while (menu.includes("8")) {
-    //         menu = menu.replace("8", "");
-    //     }
-    //     while (menu.includes("9")) {
-    //         menu = menu.replace("9", "");
-    //     }
-    //     while (menu.includes(".")) {
-    //         menu = menu.replace(".", "");
-    //     }
-    //     while (menu.includes("()")) {
-    //         menu = menu.replace("()", "");
-    //     }
-    //     while (menu.includes("(산고)")) {
-    //         menu = menu.replace("(산고)", "");
-    //     }
-    //     return menu;
-    // }
 
     // 0131
     // 0228
@@ -73,60 +39,6 @@ export default function SchoolLunch() {
     // 1031
     // 1130
     // 1231
-    let breakfastMenu = "";
-    let lunchMenu = "";
-    let dinnerMenu = "";
-    function loadMeal(data: any) {
-        console.log(getTodayLabel());
 
-        if (getTodayLabel() === "금") {
-            breakfastMenu = data.mealServiceDietInfo[1]?.row[0]?.DDISH_NM;
-            lunchMenu = data.mealServiceDietInfo[1]?.row[1]?.DDISH_NM;
-            dinnerMenu = "귀가";
-            // breakfastMenu = removeMenu(breakfastMenu);
-            // lunchMenu = removeMenu(lunchMenu);
-            $(".breakfast")!.innerHTML = breakfastMenu;
-            $(".lunch")!.innerHTML = lunchMenu;
-            $(".dinner")!.innerHTML = dinnerMenu;
-        } else if (getTodayLabel() === "토" || getTodayLabel() === "일") {
-            breakfastMenu = "메뉴가 없어요";
-            lunchMenu = "메뉴가 없어요";
-            dinnerMenu = "메뉴가 없어요";
-            $(".breakfast")!.innerHTML = breakfastMenu;
-            $(".lunch")!.innerHTML = lunchMenu;
-            $(".dinner")!.innerHTML = dinnerMenu;
-        } else {
-            breakfastMenu = data.mealServiceDietInfo[1]?.row[0]?.DDISH_NM;
-            lunchMenu = data.mealServiceDietInfo[1]?.row[1]?.DDISH_NM;
-            dinnerMenu = data.mealServiceDietInfo[1]?.row[2]?.DDISH_NM;
-            // breakfastMenu = removeMenu(breakfastMenu);
-            // lunchMenu = removeMenu(lunchMenu);
-            // dinnerMenu = removeMenu(dinnerMenu);
-            $(".breakfast")!.innerHTML = breakfastMenu;
-            $(".lunch")!.innerHTML = lunchMenu;
-            $(".dinner")!.innerHTML = dinnerMenu;
-        }
-    }
-
-    axios.get(URL).then(({ data }) => {
-        loadMeal(data);
-    });
-    function upDate() {
-        if (date < 20220731) {
-            date++;
-            today++;
-            if (today) getTodayLabel();
-            console.log(date);
-            // $(".date")!.innerHTML = cuttedDate.toString();
-            URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${LOCALCODE}&SD_SCHUL_CODE=${SCHOOLCODE}&MLSV_YMD=${date}`;
-            axios.get(URL).then((response) => {
-                loadMeal(response);
-            });
-        }
-    }
-    return (
-        <div className="meal-container">
-            로직 재설정 중입니다
-        </div>
-    );
+    return <div className="meal-container">로직 재설정 중입니다</div>;
 }
